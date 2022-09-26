@@ -1,0 +1,710 @@
+@import url("https://fonts.googleapis.com/css2?family=Bad+Script&family=Patrick+Hand+SC&family=Rajdhani:wght@300;400;600&display=swap");
+
+/* font-family: 'Bad Script', cursive;
+font-family: 'Patrick Hand SC', cursive;
+font-family: 'Rajdhani', sans-serif; */
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  font-size: 62.5%;
+}
+
+.main {
+  background-image: url("./assets/Landing_Page.jpg");
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: 1280px 700px;
+  /* background-size: cover; */
+
+  /* background-size: 100%; */
+  /* background-position: 50% 50%; */
+  position: relative;
+}
+
+/* Navbar */
+.navbar {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* border: 1px solid red; */
+  width: 90vw;
+  height: 95px;
+  left: 4rem;
+  top: 0.8rem;
+}
+
+.left,
+.right,
+.mid {
+  position: relative;
+  top: -1rem;
+  /* border: 1px solid blue; */
+}
+
+.left img {
+  height: 4rem;
+  width: 3rem;
+}
+
+.left p {
+  position: absolute;
+  font-size: 1.2rem;
+  font-family: "Patrick Hand SC", cursive;
+  font-weight: 400;
+  color: #1b7a0d;
+  letter-spacing: 0.06rem;
+  top: 2.8rem;
+}
+
+.mid ul {
+  margin-top: 1rem;
+  list-style: none;
+  text-align: center;
+  padding: 0px;
+}
+
+.mid ul li {
+  display: inline-block;
+}
+
+.mid ul li .navlink {
+  display: block;
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  letter-spacing: 0.06rem;
+  font-family: "Rajdhani", sans-serif;
+  font-weight: 400;
+  text-decoration: none;
+  color: black;
+  position: relative;
+  transition: 0.5s;
+}
+
+.mid ul li .navlink::after {
+  content: "";
+  position: absolute;
+  background-color: #1b7a0d;
+  height: 2px;
+  width: 0%;
+  left: 30px;
+  bottom: 10px;
+  transition: 0.4s;
+}
+
+.mid ul li .navlink:hover {
+  color: #1b7a0d;
+  font-weight: 600;
+}
+
+.mid ul li .navlink:hover::after {
+  width: 50%;
+}
+
+.right {
+  position: relative;
+}
+
+.right .heart,
+.right .cart {
+  position: absolute;
+  /* padding-right: 1rem; */
+  font-size: 25px;
+  transition: 0.2s;
+}
+
+.right .heart {
+  top: 0.4rem;
+  left: -6rem;
+}
+
+.right .cart {
+  top: 0.4rem;
+  left: -3rem;
+}
+
+.right .heart:hover {
+  color: red;
+}
+
+.right .cart:hover {
+  color: goldenrod;
+}
+
+.right button {
+  border: 2px solid #1b7a0d;
+  color: black;
+  font-family: "Rajdhani", sans-serif;
+  background-color: transparent;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  padding: 0.1rem 0.4rem;
+  letter-spacing: 0.2rem;
+  font-weight: 400;
+  transition: 0.6s;
+  margin-bottom: 0.8rem;
+}
+
+.right button:hover {
+  background-color: #1b7a0d;
+  color: white;
+}
+
+/* Main Content Landing Page */
+.mainContent {
+  position: absolute;
+  margin-left: 4rem;
+  top: 13rem;
+}
+
+.mainContent p {
+  width: 30rem;
+  font-size: 3rem;
+  font-family: "Bad Script", cursive;
+  letter-spacing: 0.1rem;
+  font-weight: 500;
+  margin-bottom: 0.8rem;
+}
+
+.mainContent p span {
+  color: #1b7a0d;
+}
+
+.mainContent h1 {
+  font-family: "Rajdhani";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.5rem;
+}
+
+.mainContent button {
+  margin-top: 1rem;
+  font-family: "Patrick Hand SC", cursive;
+  background: #1b7a0d;
+  border-radius: 10px 20px;
+  width: 9rem;
+  font-size: 1rem;
+  border: none;
+  color: white;
+  height: 2rem;
+  text-align: center;
+  letter-spacing: 0.1rem;
+  transition: transform 0.3s;
+}
+
+.mainContent button:hover {
+  transform: scale(1.1);
+}
+
+/* Footer */
+footer {
+  font-family: "Rajdhani", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  color: white;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  padding: 3rem;
+  background-image: url("./assets/footer.jpg");
+  height: 50vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  letter-spacing: 0.1rem;
+}
+
+footer .section-3 {
+  border: 0.01rem solid white;
+  height: 12rem;
+  margin-top: 1rem;
+}
+
+footer .section-4 h1 {
+  color: white;
+  margin-top: 1.5rem;
+  padding-left: 3rem;
+}
+
+footer .section-4 img {
+  height: 3rem;
+  width: 3rem;
+  margin: 0.8rem;
+  transition: transform 0.3s;
+}
+
+footer .section-4 img:hover {
+  transform: scale(1.1);
+}
+
+.copy-right {
+  font-family: "Rajdhani", sans-serif;
+  text-align: center;
+  letter-spacing: 0.1rem;
+  background-color: #eff0ef;
+  padding: 0.3rem;
+}
+
+.copy-right h4 {
+  margin: 0;
+}
+
+/* All Common Heading */
+.heading {
+  margin-left: 4rem;
+  padding-top: 1rem;
+}
+
+.heading img {
+  margin-right: 1rem;
+  height: 3rem;
+}
+
+.heading h1 {
+  font-family: "Patrick Hand SC", cursive;
+  letter-spacing: 0.1rem;
+  font-weight: 600;
+  font-size: 2.5rem;
+}
+
+/* Plant Category */
+.plantCategory {
+  margin: 2rem 2rem;
+  display: flex;
+  justify-content: space-around;
+}
+
+.plantCategory .allCategory {
+  letter-spacing: 0.1rem;
+  font-family: "Rajdhani";
+  font-size: 1rem;
+  padding: 1rem;
+  width: 20rem;
+  height: 10rem;
+  /* display: inline-block; */
+  box-shadow: 0px 2px 10px 2px rgba(0, 0, 0, 0.2);
+  border-radius: 10px 10px 60px 10px;
+  transition: all 0.2s ease-in-out;
+}
+
+.plantCategory img {
+  height: 8rem;
+  width: 6rem;
+  margin-right: 1rem;
+  float: left;
+  transition: 0.2s ease-in-out;
+}
+
+.plantCategory h2 {
+  font-weight: 600;
+}
+
+.plantCategory button {
+  font-weight: 400;
+  border: 1px solid #1b7a0d;
+  background-color: transparent;
+  color: #1b7a0d;
+  border-radius: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  transition: 0.2s ease-in-out;
+}
+
+.plantCategory img:hover {
+  transform: scale(1.1, 1.2) translate(0px, -20px);
+}
+
+.plantCategory button:hover {
+  color: white;
+  background-color: #1b7a0d;
+}
+
+/* Deal of the Day */
+.dealDay {
+  letter-spacing: 0.1rem;
+  background-color: #eff0ef;
+  font-family: "Rajdhani", sans-serif;
+}
+
+.dealDay .deal {
+  padding-bottom: 2rem;
+  justify-content: center;
+  display: grid;
+  grid-template-areas:
+    " lone rone  rtwo  rthree"
+    " lone rfour rfive rsix";
+  grid-gap: 1rem;
+}
+
+.dealDay .deal .left-plant {
+  background-image: url("./assets/Deal_Day_Main.png");
+  /* height: 70vh; */
+  width: 20vw;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  grid-area: lone;
+  border-radius: 1rem;
+  position: relative;
+}
+
+.dealDay .deal .left-plant h2 {
+  /* color: white; */
+  background-color: #4e4e4e7e;
+  border-radius: 0.5rem;
+  font-family: "Bad Script", cursive;
+  line-height: 1.4rem;
+  font-weight: 600;
+  margin-left: 0.9rem;
+  position: absolute;
+  bottom: 1rem;
+  text-align: left;
+}
+
+.dealDay .deal .right-plant {
+  box-shadow: 0px 2px 10px 2px rgba(0, 0, 0, 0.2);
+  border-radius: 1rem;
+  /* border: 1px solid red; */
+}
+
+.dealDay .deal .r-1 {
+  grid-area: rone;
+}
+
+.dealDay .deal .r-2 {
+  grid-area: rtwo;
+}
+
+.dealDay .deal .r-3 {
+  grid-area: rthree;
+}
+
+.dealDay .deal .r-4 {
+  grid-area: rfour;
+}
+
+.dealDay .deal .r-5 {
+  grid-area: rfive;
+}
+
+.dealDay .deal .r-6 {
+  grid-area: rsix;
+}
+
+.dealDay .deal .right-plant img {
+  height: 10rem;
+  width: 11rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  border-radius: 1rem;
+}
+
+.dealDay .deal .right-plant h3 {
+  font-weight: 400;
+  margin-top: 0.2rem;
+  margin-left: 0.5rem;
+  margin-bottom: 0;
+}
+
+.dealDay .deal .right-plant .rating {
+  font-size: 0.8rem;
+  margin-left: 0.5rem;
+}
+
+.dealDay .deal .right-plant p {
+  font-weight: 600;
+  font-size: 1rem;
+  margin-left: 0.5rem;
+  margin-bottom: 0;
+}
+
+.dealDay .deal .right-plant del {
+  font-weight: 600;
+  font-size: 0.7rem;
+  margin-left: 0.2rem;
+  margin-bottom: 0;
+  color: #767676;
+}
+
+.dealDay .deal .right-plant button {
+  letter-spacing: 0.1rem;
+  font-size: 0.8rem;
+  margin-left: 1rem;
+  margin-bottom: 0.5rem;
+  color: white;
+  border: none;
+  background-color: #1b7a0d;
+  border-radius: 0.3rem;
+  height: auto;
+  padding: 0rem 0.5rem;
+  /* width: 2rem; */
+  /* margin: auto; */
+}
+
+/* Meet Your Plant */
+.meetPlant {
+  display: flex;
+  height: 60vh;
+}
+
+.meetPlant .information {
+  box-shadow: 0px 2px 10px 2px rgba(0, 0, 0, 0.2);
+  border-radius: 2px;
+}
+
+.meetPlant .information h3 {
+  margin-top: 2rem;
+  font-family: "Rajdhani", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #208854;
+  letter-spacing: 0.1rem;
+  margin-left: 4rem;
+  margin-right: 4rem;
+}
+
+.meetPlant .information p {
+  letter-spacing: 0.1rem;
+  margin-left: 4rem;
+  margin-right: 4rem;
+  font-family: "Rajdhani", sans-serif;
+  font-size: 1rem;
+}
+
+/* Why Us */
+.whyUs {
+  background-color: #eff0ef;
+}
+
+.whyUs main {
+  padding: 1rem 10rem;
+  display: grid;
+  grid-template-areas:
+    "oneG threeG fourG"
+    "twoG threeG fiveG";
+}
+
+.whyUs main div {
+  font-family: "Rajdhani", sans-serif;
+  text-align: center;
+  width: 14rem;
+}
+
+.whyUs .circle {
+  height: 7rem;
+  width: 7rem;
+}
+
+.whyUs main div h3 {
+  font-weight: 600;
+  color: #208854;
+  font-size: 1.2rem;
+}
+
+.whyUs main div p {
+  font-size: 1rem;
+}
+
+.whyUs .one {
+  grid-area: oneG;
+  justify-self: center;
+}
+.whyUs .two {
+  grid-area: twoG;
+  justify-self: center;
+}
+.whyUs .three {
+  grid-area: threeG;
+  align-self: center;
+}
+.whyUs .three {
+  grid-area: threeG;
+}
+
+.whyUs .three img {
+  height: 20rem;
+  width: 20rem;
+}
+
+.whyUs .four {
+  grid-area: fourG;
+  justify-self: center;
+}
+.whyUs .five {
+  grid-area: fiveG;
+  justify-self: center;
+}
+
+/* Contact Us */
+.contactUs {
+  font-family: "Rajdhani", sans-serif;
+
+  display: flex;
+  background-image: url("./assets/Contact.png");
+  height: 70vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  letter-spacing: 0.1rem;
+}
+
+.contactUs .left-part {
+  margin-top: 8rem;
+  margin-left: 1rem;
+}
+
+.contactUs .left-part .address {
+  margin-top: 1rem;
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+.contactUs .right-part {
+  border-radius: 1rem;
+  background-color: rgb(107, 107, 107);
+  padding: 1rem;
+  height: 15rem;
+  margin-top: 6rem;
+  margin-left: 5rem;
+  color: white;
+}
+
+.contactUs .right-part h3 {
+  color: white;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.contactUs .right-part input {
+  margin-bottom: 1rem;
+  border-radius: 0.3rem;
+  background-color: gray;
+  border: none;
+}
+
+.contactUs .right-part input::placeholder {
+  font-family: "Rajdhani", sans-serif;
+  color: rgba(255, 255, 255, 0.698);
+  padding-left: 0.3rem;
+}
+
+.contactUs .right-part button {
+  background-color: #1b7a0d;
+  border: none;
+  border-radius: 0.2rem;
+  width: 4rem;
+}
+
+/* Testimonial */
+.testimonial {
+  background-image: url("./assets/try-2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 60vh;
+  margin: 0 auto;
+  font-family: "Rajdhani", sans-serif;
+}
+
+.testimonial .slider {
+  margin: 0 auto;
+  background-color: #767676;
+  width: 20rem;
+  height: 15rem;
+  border-radius: 2rem;
+}
+
+.testimonial .slider .feedback {
+  color: white;
+  margin-top: 2rem;
+  text-align: center;
+  font-weight: 600;
+}
+
+.testimonial .slider .feedback h2 {
+  /* color:#208854; */
+  font-weight: 600;
+}
+
+.testimonial .slider .feedback img {
+  margin: auto;
+  height: 5rem;
+  width: 5rem;
+}
+
+/* Nav BG Color */
+.bg-color {
+  background-image: url("./assets/nav-image.jpg");
+  height: 5.8rem;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+/* Products */
+.product .heading-product {
+  background-image: url("./assets/Heading_Product.png");
+  height: 7rem;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: 40% 30%;
+}
+
+.product .main-filter {
+  font-family: "Rajdhani", sans-serif;
+  padding: 1rem;
+  box-shadow: 0px 2px 10px 2px rgba(0, 0, 0, 0.2);
+  margin-top: 2rem;
+  margin-left: 2rem;
+  width: 15rem;
+  border-radius: 1rem;
+  letter-spacing: 0.1rem;
+}
+
+.product .main-filter h2 {
+  font-weight: 600;
+}
+
+.product .main-filter button {
+  border: 0.1rem solid #1b7a0d;
+  color: #1b7a0d;
+  background-color: transparent;
+  font-weight: 600;
+  border-radius: 0.5rem;
+  margin-top: 1rem;
+}
+
+.product .main-filter .ant-checkbox-wrapper {
+  margin-left: 0;
+}
+
+.product .search .search-input {
+  border: 0.2rem solid #1b7a0d;
+  width: 1rem;
+}
+
+.product .filter {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+}
+
+/* Blog */
+.blog .heading-blog {
+  background-image: url("./assets/Heading_Blog.png");
+  height: 7rem;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: 40% 30%;
+}
+
+/* AboutUs */
+.aboutus .heading-aboutus {
+  background-image: url("./assets/Heading_AboutUs.png");
+  height: 7rem;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: 40% 30%;
+}
