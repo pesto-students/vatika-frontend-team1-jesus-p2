@@ -4,6 +4,7 @@ import Product from "../Product/Product";
 import Blog from "../Blog/Blog";
 import AboutUs from "../About Us/AboutUs";
 import Plant from "../ProductDetails/Plant";
+import Cart from "../Cart/Cart";
 
 function Path() {
   return (
@@ -14,6 +15,8 @@ function Path() {
         <Route path="/blog" element={<Blog/>} />
         <Route path="/aboutus" element={<AboutUs/>} />
         <Route path="/product/plant" element={<Plant/>} />
+        <Route path="/cart" element={<Cart/>} />
+
       </Routes>
     </div>
   )
