@@ -441,8 +441,6 @@ footer .section-4 img:hover {
   border-radius: 0.3rem;
   height: auto;
   padding: 0rem 0.5rem;
-  /* width: 2rem; */
-  /* margin: auto; */
 }
 
 /* Meet Your Plant */
@@ -624,7 +622,6 @@ footer .section-4 img:hover {
 }
 
 .testimonial .slider .feedback h2 {
-  /* color:#208854; */
   font-weight: 600;
 }
 
@@ -643,6 +640,10 @@ footer .section-4 img:hover {
 }
 
 /* Products */
+.product .all-section {
+  display: flex;
+}
+
 .product .heading-product {
   background-image: url("./assets/Heading_Product.png");
   height: 7rem;
@@ -660,6 +661,8 @@ footer .section-4 img:hover {
   width: 15rem;
   border-radius: 1rem;
   letter-spacing: 0.1rem;
+  background-color: #e6e5e5;
+  height: 32rem;
 }
 
 .product .main-filter h2 {
@@ -679,16 +682,110 @@ footer .section-4 img:hover {
   margin-left: 0;
 }
 
-.product .search .search-input {
-  border: 0.2rem solid #1b7a0d;
-  width: 1rem;
-}
-
 .product .filter {
   display: flex;
   flex-direction: column;
   margin: 0;
   padding: 0;
+}
+
+.product .filter h3 {
+  font-weight: 600;
+}
+
+.product .search {
+  margin: 5%;
+  position: relative;
+}
+
+.product .search .ant-input-affix-wrapper {
+  border: 0.1rem solid #1b7a0d;
+  width: 20rem;
+  border-radius: 0.5rem;
+}
+
+.product .search .dropDown {
+  border: 0.1rem solid #1b7a0d;
+  border-radius: 0.2rem;
+  padding: 0.2rem;
+  color: #1b7a0d;
+  position: absolute;
+  right: -5rem;
+}
+
+.product section {
+  font-family: "Rajdhani", sans-serif;
+  letter-spacing: 0.1rem;
+  width: 60%;
+  margin: 5%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto;
+  grid-gap: 2rem 2rem;
+}
+
+.product section .cards {
+  box-shadow: 0px 1px 5px 1px rgba(0, 0, 0, 0.1);
+  width: 200px;
+}
+
+.product section .cards .image_box {
+  position: relative;
+}
+
+.product section .cards .imageHeart {
+  position: absolute;
+  top: 0.5rem;
+  right: 1.2rem;
+  font-size: 1rem;
+  color: red;
+}
+
+.product section .cards:hover {
+  box-shadow: 0px 2px 10px 2px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.product section .image_box img {
+  height: 10rem;
+  width: 12rem;
+  padding-left: 0.4rem;
+}
+
+.product section .details h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-top: 0.5rem;
+  margin-left: 0.5rem;
+  margin-bottom: 0;
+}
+
+.product section .details p {
+  font-weight: 600;
+  font-size: 1rem;
+  margin-left: 0.5rem;
+  margin-bottom: 0;
+}
+
+.product section .details del {
+  font-weight: 600;
+  font-size: 0.7rem;
+  margin-left: 0.5rem;
+  margin-bottom: 0;
+  color: #767676;
+}
+
+.product section .details button {
+  letter-spacing: 0.1rem;
+  font-size: 0.8rem;
+  margin-left: 2rem;
+  margin-bottom: 0.5rem;
+  color: white;
+  border: none;
+  background-color: #1b7a0d;
+  border-radius: 0.3rem;
+  height: auto;
+  padding: 0rem 0.5rem;
 }
 
 /* Blog */
@@ -707,4 +804,150 @@ footer .section-4 img:hover {
   background-repeat: no-repeat;
   background-size: 100%;
   background-position: 40% 30%;
+}
+
+/* Plant */
+
+.plant {
+  font-family: "Rajdhani", sans-serif;
+  letter-spacing: 0.1rem;
+}
+
+.plant .collection {
+  display: flex;
+}
+
+.plant .back button {
+  margin-top: 2%;
+  margin-left: 2%;
+  border: none;
+  font-size: 1.2rem;
+  font-weight: 400;
+  background-color: transparent;
+}
+.plant .bigImage {
+  margin: 2%;
+  margin-left: 8%;
+}
+.plant .bigImage img {
+  height: 30rem;
+  width: 30rem;
+}
+
+.plant .plant-details {
+  margin: 5%;
+  margin-left: 2%;
+  line-height: 1.8rem;
+  width: 25rem;
+}
+
+.plant .plant-details h1 {
+  font-weight: 600;
+  font-size: 2rem;
+}
+
+.plant .plant-details h2 {
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+.plant .plant-details del {
+  font-weight: 400;
+  font-size: 1.1rem;
+  margin-left: 1rem;
+  color: #767676;
+}
+
+.plant .plant-details p {
+  font-weight: 600;
+  color: #1b7a0d;
+  font-size: 1rem;
+}
+
+.plant .plant-details h3 {
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.plant .plant-details .quantity {
+  display: flex;
+}
+
+.plant .plant-details .quantity h2 {
+  margin: 0 1rem;
+}
+
+.plant .plant-details .quant-icon {
+  font-size: 1rem;
+  margin-top: 0.3rem;
+  cursor: pointer;
+}
+
+.plant .plant-details .b {
+  padding: 0.6rem 3rem;
+  font-size: 1.2rem;
+  margin-top: 7%;
+  margin-bottom: 8%;
+  border: 0.1rem solid black;
+  border-radius: 0.2rem;
+}
+
+.plant .plant-details .butOne {
+  background-color: transparent;
+}
+
+.plant .plant-details .butTwo {
+  border: none;
+  background-color: #208854;
+  color: white;
+  margin-left: 8%;
+}
+
+.plant .plant-details .delivery h2 {
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+.plant .plant-details .delivery input {
+  background-color: transparent;
+  width: 12rem;
+  border-radius: 0.2rem;
+  padding: 0.1rem;
+}
+
+.plant .plant-details .delivery button {
+  border: none;
+  background-color: #208854;
+  color: white;
+  height: 2.2rem;
+  width: 4rem;
+  margin-left: 0.1rem;
+  border-radius: 0.2rem;
+}
+
+.plant .about {
+  text-align: center;
+  width: 70%;
+  margin: auto;
+  margin-top: 3%;
+  margin-bottom: 5%;
+}
+
+.plant .about h1 {
+  font-weight: 600;
+}
+
+.plant .about p {
+  font-size: 1rem;
+}
+
+.plant .about img {
+  margin-top: 2%;
+  margin-bottom: 1%;
+  height: 2rem;
+  width: 2rem;
+}
+
+.plant .about h3 {
+  font-weight: 600;
 }
