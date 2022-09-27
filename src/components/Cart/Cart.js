@@ -9,13 +9,13 @@ import {
   MinusCircleOutlined,
 } from "@ant-design/icons";
 import { Steps } from "antd";
+import './Cart.css'
 
 const { Step } = Steps;
 
 function Cart() {
   return (
     <>
-      <div className="bg-color"></div>
       <div className="cart">
         <div className="back">
           <button>

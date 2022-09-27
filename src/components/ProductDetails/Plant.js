@@ -4,11 +4,12 @@ import {
   MinusCircleOutlined,
 } from "@ant-design/icons";
 import React from "react";
+import './Plant.css';
+
 
 function Plant() {
   return (
     <div className="plant">
-      <div className="bg-color"></div>
       <div className="back">
         <button>
           <ArrowLeftOutlined /> Back

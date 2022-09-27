@@ -1,6 +1,7 @@
 import React from "react";
-import Heading from "../Common/Heading";
+import Heading from "../../Common/Heading";
 import { PushpinFilled, PhoneFilled, MailFilled } from "@ant-design/icons";
+import '../css/Contact.css'
 
 function Contact() {
   return (

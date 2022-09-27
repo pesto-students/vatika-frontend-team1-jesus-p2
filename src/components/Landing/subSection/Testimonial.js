@@ -1,6 +1,7 @@
 import React from "react";
-import Heading from "../Common/Heading";
+import Heading from "../../Common/Heading";
 import { Carousel } from "antd";
+import '../css/Testimonial.css'
 
 function Testimonial() {
   return (
@@ -14,7 +15,7 @@ function Testimonial() {
               " Very happy with the purchase. The plants were healthy and fresh
               and it were delivered timely. "
             </p>
-            <img src={require("../../assets/testmonial-2.png")} alt="logo" />
+            <img src={require("../../../assets/testmonial-2.png")} alt="logo" />
           </div>
           <div className="feedback">
             <h2>Rohan Singh</h2>
@@ -22,7 +23,7 @@ function Testimonial() {
               " Products are good and packing is also great, but one pot is
               different from 2 other pots. "
             </p>
-            <img src={require("../../assets/testmonial-1.png")} alt="logo" />
+            <img src={require("../../../assets/testmonial-1.png")} alt="logo" />
           </div>
           <div className="feedback">
             <h2>Marina Frank</h2>
@@ -30,7 +31,7 @@ function Testimonial() {
               " Everything was perfect. Great packaging, good condition, and quick
               shipping I ordered indoor plants and they seem to be doing great! "
             </p>
-            <img src={require("../../assets/testmonial-3.png")} alt="logo" />
+            <img src={require("../../../assets/testmonial-3.png")} alt="logo" />
           </div>
           <div className="feedback">
             <h2>Danny</h2>
@@ -38,7 +39,7 @@ function Testimonial() {
               " Very happy with the purchase. The plants were healthy and fresh
               and it were delivered timely. "
             </p>
-            <img src={require("../../assets/testmonial-1.png")} alt="logo" />
+            <img src={require("../../../assets/testmonial-1.png")} alt="logo" />
           </div>
         </Carousel>
       </div>

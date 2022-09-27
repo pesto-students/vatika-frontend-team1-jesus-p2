@@ -1,11 +1,12 @@
 import React from "react";
-import Heading from "../Common/Heading";
+import Heading from "../../Common/Heading";
+import '../css/MeetPlant.css'
 
 function MeetPlant() {
   return (
     <div className="meetPlant">
       <img
-        src={require("../../assets/meetus.png")}
+        src={require("../../../assets/meetus.png")}
         alt="logo"
         className="logo"
       />

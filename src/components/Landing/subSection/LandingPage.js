@@ -1,7 +1,7 @@
 import React from "react";
 import MainContent from "./MainContent";
-import Navbar from "../Common/Navbar";
-import Heading from "../Common/Heading";
+// import Navbar from "../../Common/Navbar";
+import Heading from "../../Common/Heading";
 import PlantCategory from "./PlantCategory";
 import MeetPlant from "./MeetPlant";
 import DealDay from "./DealDay";
@@ -11,21 +11,21 @@ import Testimonial from "./Testimonial";
 
 function LandingPage() {
   return (
-    <>
+    <div class='super'>
       <div className="main">
-      <Navbar/>
+        {/* <Navbar/> */}
         <MainContent />
       </div>
       <div className="category">
-        <Heading content={"Plant For Any Occasion"}/>
-        <PlantCategory/>
+        <Heading content={"Plant For Any Occasion"} />
+        <PlantCategory />
       </div>
-      <DealDay/>
-      <MeetPlant/>
-      <WhyUs/>
-      <Testimonial/>
-      <Contact/>
-    </>
+      <DealDay />
+      <MeetPlant />
+      <WhyUs />
+      <Testimonial />
+      <Contact />
+    </div>
   );
 }
 

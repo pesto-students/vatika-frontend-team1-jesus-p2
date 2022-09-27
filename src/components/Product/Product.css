@@ -1,0 +1,148 @@
+/* Products */
+.product .all-section {
+  display: flex;
+}
+
+.product .heading-product {
+  background-image: url("../../assets/Heading_Product.png");
+  height: 7rem;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: 40% 30%;
+}
+
+.product .main-filter {
+  font-family: "Rajdhani", sans-serif;
+  padding: 1rem;
+  box-shadow: 0px 2px 10px 2px rgba(0, 0, 0, 0.2);
+  margin-top: 2rem;
+  margin-left: 2rem;
+  width: 15rem;
+  border-radius: 1rem;
+  letter-spacing: 0.1rem;
+  background-color: #e6e5e5;
+  height: 32rem;
+}
+
+.product .main-filter h2 {
+  font-weight: 600;
+}
+
+.product .main-filter button {
+  border: 0.1rem solid #1b7a0d;
+  color: #1b7a0d;
+  background-color: transparent;
+  font-weight: 600;
+  border-radius: 0.5rem;
+  margin-top: 1rem;
+}
+
+.product .main-filter .ant-checkbox-wrapper {
+  margin-left: 0;
+}
+
+.product .filter {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+}
+
+.product .filter h3 {
+  font-weight: 600;
+}
+
+.product .search {
+  margin: 5%;
+  position: relative;
+}
+
+.product .search .ant-input-affix-wrapper {
+  border: 0.1rem solid #1b7a0d;
+  width: 20rem;
+  border-radius: 0.5rem;
+}
+
+.product .search .dropDown {
+  border: 0.1rem solid #1b7a0d;
+  border-radius: 0.2rem;
+  padding: 0.2rem;
+  color: #1b7a0d;
+  position: absolute;
+  right: -5rem;
+}
+
+.product section {
+  font-family: "Rajdhani", sans-serif;
+  letter-spacing: 0.1rem;
+  width: 60%;
+  margin: 5%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto;
+  grid-gap: 2rem 2rem;
+}
+
+.product section .cards {
+  box-shadow: 0px 1px 5px 1px rgba(0, 0, 0, 0.1);
+  width: 200px;
+}
+
+.product section .cards .image_box {
+  position: relative;
+}
+
+.product section .cards .imageHeart {
+  position: absolute;
+  top: 0.5rem;
+  right: 1.2rem;
+  font-size: 1rem;
+  color: red;
+}
+
+.product section .cards:hover {
+  box-shadow: 0px 2px 10px 2px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.product section .image_box img {
+  height: 10rem;
+  width: 12rem;
+  padding-left: 0.4rem;
+}
+
+.product section .details h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-top: 0.5rem;
+  margin-left: 0.5rem;
+  margin-bottom: 0;
+}
+
+.product section .details p {
+  font-weight: 600;
+  font-size: 1rem;
+  margin-left: 0.5rem;
+  margin-bottom: 0;
+}
+
+.product section .details del {
+  font-weight: 600;
+  font-size: 0.7rem;
+  margin-left: 0.5rem;
+  margin-bottom: 0;
+  color: #767676;
+}
+
+.product section .details button {
+  letter-spacing: 0.1rem;
+  font-size: 0.8rem;
+  margin-left: 2rem;
+  margin-bottom: 0.5rem;
+  color: white;
+  border: none;
+  background-color: #1b7a0d;
+  border-radius: 0.3rem;
+  height: auto;
+  padding: 0rem 0.5rem;
+}

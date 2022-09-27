@@ -1,5 +1,6 @@
 import React from "react";
-import Heading from "../Common/Heading";
+import Heading from "../../Common/Heading";
+import '../css/WhyUs.css';
 
 function WhyUs() {
   return (
@@ -8,7 +9,7 @@ function WhyUs() {
       <main>
         <div className="one">
           <img
-            src={require("../../assets/Delivery.png")}
+            src={require("../../../assets/Delivery.png")}
             alt="logo"
             className="circle"
           />
@@ -18,7 +19,7 @@ function WhyUs() {
 
         <div className="two">
           <img
-            src={require("../../assets/Grow.png")}
+            src={require("../../../assets/Grow.png")}
             alt="logo"
             className="circle"
           />
@@ -28,14 +29,14 @@ function WhyUs() {
 
         <div className="three">
           <img
-            src={require("../../assets/Why_Us.png")}
+            src={require("../../../assets/Why_Us.png")}
             alt="logo"
           />
         </div>
 
         <div className="four">
           <img
-            src={require("../../assets/Quality.png")}
+            src={require("../../../assets/Quality.png")}
             alt="logo"
             className="circle"
           />
@@ -45,7 +46,7 @@ function WhyUs() {
 
         <div className="five">
           <img
-            src={require("../../assets/Security.png")}
+            src={require("../../../assets/Security.png")}
             alt="logo"
             className="circle"
           />

@@ -1,9 +1,9 @@
 import React from 'react'
+import './Blog.css'
 
 function Blog() {
   return (
     <div className='blog'>
-    <div className='bg-color'></div>
     <div className="heading-blog"></div>
      Hello Blog Page !
     </div>

@@ -1,0 +1,51 @@
+/* Footer */
+footer {
+  font-family: "Rajdhani", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  color: white;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  padding: 3rem;
+  background-image: url("../../assets/footer.jpg");
+  height: 50vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  letter-spacing: 0.1rem;
+}
+
+footer .section-3 {
+  border: 0.01rem solid white;
+  height: 12rem;
+  margin-top: 1rem;
+}
+
+footer .section-4 h1 {
+  color: white;
+  margin-top: 1.5rem;
+  padding-left: 3rem;
+}
+
+footer .section-4 img {
+  height: 3rem;
+  width: 3rem;
+  margin: 0.8rem;
+  transition: transform 0.3s;
+}
+
+footer .section-4 img:hover {
+  transform: scale(1.1);
+}
+
+.copy-right {
+  font-family: "Rajdhani", sans-serif;
+  text-align: center;
+  letter-spacing: 0.1rem;
+  background-color: #eff0ef;
+  padding: 0.3rem;
+}
+
+.copy-right h4 {
+  margin: 0;
+}

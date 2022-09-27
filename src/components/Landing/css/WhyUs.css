@@ -1,0 +1,63 @@
+/* Why Us */
+.whyUs {
+  background-color: #eff0ef;
+}
+
+.whyUs main {
+  padding: 1rem 10rem;
+  display: grid;
+  grid-template-areas:
+    "oneG threeG fourG"
+    "twoG threeG fiveG";
+}
+
+.whyUs main div {
+  font-family: "Rajdhani", sans-serif;
+  text-align: center;
+  width: 14rem;
+}
+
+.whyUs .circle {
+  height: 7rem;
+  width: 7rem;
+}
+
+.whyUs main div h3 {
+  font-weight: 600;
+  color: #208854;
+  font-size: 1.2rem;
+}
+
+.whyUs main div p {
+  font-size: 1rem;
+}
+
+.whyUs .one {
+  grid-area: oneG;
+  justify-self: center;
+}
+.whyUs .two {
+  grid-area: twoG;
+  justify-self: center;
+}
+.whyUs .three {
+  grid-area: threeG;
+  align-self: center;
+}
+.whyUs .three {
+  grid-area: threeG;
+}
+
+.whyUs .three img {
+  height: 20rem;
+  width: 20rem;
+}
+
+.whyUs .four {
+  grid-area: fourG;
+  justify-self: center;
+}
+.whyUs .five {
+  grid-area: fiveG;
+  justify-self: center;
+}

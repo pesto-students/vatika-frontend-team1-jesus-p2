@@ -1,10 +1,11 @@
 import { Route, Routes } from "react-router-dom";
-import LandingPage from '../Landing/LandingPage'
-import Product from "../Product/Product";
-import Blog from "../Blog/Blog";
-import AboutUs from "../About Us/AboutUs";
-import Plant from "../ProductDetails/Plant";
-import Cart from "../Cart/Cart";
+import LandingPage from '../components/Landing/subSection/LandingPage'
+import Product from "../components/Product/Product";
+import Blog from "../components/Blog/Blog";
+import AboutUs from "../components/About Us/AboutUs";
+import Plant from "../components/ProductDetails/Plant";
+import Cart from "../components/Cart/Cart";
+import Confirmation from "../components/Confirmation/Confirmation";
 
 function Path() {
   return (
@@ -16,6 +17,7 @@ function Path() {
         <Route path="/aboutus" element={<AboutUs/>} />
         <Route path="/product/plant" element={<Plant/>} />
         <Route path="/cart" element={<Cart/>} />
+        <Route path="/confirmation" element={<Confirmation/>} />
 
       </Routes>
     </div>

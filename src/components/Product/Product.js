@@ -4,6 +4,8 @@ import Search from "antd/lib/transfer/search";
 import { DownOutlined } from "@ant-design/icons";
 import { Dropdown, Menu, Space } from "antd";
 import Card from "./Card";
+import './Product.css'
+
 
 const menu = (
   <Menu
@@ -41,7 +43,6 @@ const onSearch = (value) => console.log(value);
 function Product() {
   return (
     <div className="product">
-      <div className="bg-color"></div>
       <div className="heading-product"></div>
       <div className="all-section">
         <div className="main-filter">
