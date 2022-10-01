@@ -9,18 +9,42 @@ import {
   MinusCircleOutlined,
 } from "@ant-design/icons";
 import { Steps } from "antd";
-import './Cart.css'
+import "./Cart.css";
+import { useDispatch, useSelector } from "react-redux";
+import { useState } from "react";
+import { useEffect } from "react";
+import {
+  inccQuantity,
+  removeFromCart,
+  descQuantity,
+} from "../../redux/actions/productActions";
+import { Link } from "react-router-dom";
 
 const { Step } = Steps;
 
 function Cart() {
+  const cart = useSelector((state) => state.allProducts.cart);
+  const dispatch = useDispatch();
+
+  const [total, setTotal] = useState(0);
+
+  useEffect(() => {
+    setTotal(
+      cart.reduce((acc, curr) => acc + Number(curr.price) * curr.qty, 0)
+    );
+  }, [cart]);
+
+  console.log(cart);
+
   return (
     <>
       <div className="cart">
         <div className="back">
-          <button>
-            <ArrowLeftOutlined /> Back
-          </button>
+          <Link to="/product">
+            <button>
+              <ArrowLeftOutlined /> Back
+            </button>
+          </Link>
         </div>
         {/* process wait finish  */}
         <Steps className="steps">
@@ -36,144 +60,68 @@ function Cart() {
           <div>
             <div className="plants">
               <h1>Cart</h1>
-              <div className="item">
-                <div className="plant-image">
-                  <img
-                    src={require("../../assets/Deatiled-Image.png")}
-                    alt="DealPlant1"
-                  />
-                </div>
-                <div className="pot">
-                  <h2>Money Plant</h2>
-                  <p>Pot Color</p>
-                  <input
-                    type="radio"
-                    className="redRadio"
-                    id="red"
-                    name="radio-button"
-                  />
-                  <label htmlFor="red">Red</label>
-                  <input
-                    type="radio"
-                    className="blackRadio"
-                    id="black"
-                    name="radio-button"
-                  />
-                  <label htmlFor="black">Black</label>
-                  <input
-                    type="radio"
-                    className="greenRadio"
-                    id="white"
-                    name="radio-button"
-                  />
-                  <label htmlFor="green">Green</label>
-                </div>
-                <div className="quantity">
-                  <PlusCircleOutlined className="quant-icon" />
-                  <h2>1</h2>
-                  <MinusCircleOutlined className="quant-icon" />
-                </div>
-                <div className="rate">
-                  <h2>Rs 100</h2>
-                  <button>
-                    <DeleteOutlined /> Delete
-                  </button>
-                </div>
-              </div>
 
-              <div className="item">
-                <div className="plant-image">
-                  <img
-                    src={require("../../assets/Deatiled-Image.png")}
-                    alt="DealPlant1"
-                  />
+              {cart.map((plant) => (
+                <div className="item" key={plant._id}>
+                  <div className="plant-image">
+                    <img src={plant.image} alt={plant.name} />
+                  </div>
+                  <div className="pot">
+                    <h2>{plant.name}</h2>
+                    <p>Pot Color</p>
+                    <input
+                      type="radio"
+                      className="redRadio"
+                      id="red"
+                      name="radio-button"
+                    />
+                    <label htmlFor="red">Red</label>
+                    <input
+                      type="radio"
+                      className="blackRadio"
+                      id="black"
+                      name="radio-button"
+                    />
+                    <label htmlFor="black">Black</label>
+                    <input
+                      type="radio"
+                      className="greenRadio"
+                      id="white"
+                      name="radio-button"
+                    />
+                    <label htmlFor="green">Green</label>
+                  </div>
+                  <div className="quantity">
+                    <PlusCircleOutlined
+                      className="quant-icon"
+                      onClick={() => {
+                        dispatch(inccQuantity(plant));
+                      }}
+                    />
+                    <h2>{plant.qty}</h2>
+                    <MinusCircleOutlined
+                      className="quant-icon"
+                      onClick={() => {
+                        dispatch(descQuantity(plant));
+                      }}
+                    />
+                  </div>
+                  <div className="rate">
+                    <h2>Rs {plant.price * plant.qty}</h2>
+                    <button
+                      onClick={() => {
+                        dispatch(removeFromCart(plant));
+                      }}
+                    >
+                      <DeleteOutlined /> Delete
+                    </button>
+                  </div>
                 </div>
-                <div className="pot">
-                  <h2>Money Plant</h2>
-                  <p>Pot Color</p>
-                  <input
-                    type="radio"
-                    className="redRadio"
-                    id="red"
-                    name="radio-button"
-                  />
-                  <label htmlFor="red">Red</label>
-                  <input
-                    type="radio"
-                    className="blackRadio"
-                    id="black"
-                    name="radio-button"
-                  />
-                  <label htmlFor="black">Black</label>
-                  <input
-                    type="radio"
-                    className="greenRadio"
-                    id="white"
-                    name="radio-button"
-                  />
-                  <label htmlFor="green">Green</label>
-                </div>
-                <div className="quantity">
-                  <PlusCircleOutlined className="quant-icon" />
-                  <h2>1</h2>
-                  <MinusCircleOutlined className="quant-icon" />
-                </div>
-                <div className="rate">
-                  <h2>Rs 100</h2>
-                  <button>
-                    <DeleteOutlined /> Delete
-                  </button>
-                </div>
-              </div>
-
-              <div className="item">
-                <div className="plant-image">
-                  <img
-                    src={require("../../assets/Deatiled-Image.png")}
-                    alt="DealPlant1"
-                  />
-                </div>
-                <div className="pot">
-                  <h2>Money Plant</h2>
-                  <p>Pot Color</p>
-                  <input
-                    type="radio"
-                    className="redRadio"
-                    id="red"
-                    name="radio-button"
-                  />
-                  <label htmlFor="red">Red</label>
-                  <input
-                    type="radio"
-                    className="blackRadio"
-                    id="black"
-                    name="radio-button"
-                  />
-                  <label htmlFor="black">Black</label>
-                  <input
-                    type="radio"
-                    className="greenRadio"
-                    id="white"
-                    name="radio-button"
-                  />
-                  <label htmlFor="green">Green</label>
-                </div>
-                <div className="quantity">
-                  <PlusCircleOutlined className="quant-icon" />
-                  <h2>1</h2>
-                  <MinusCircleOutlined className="quant-icon" />
-                </div>
-                <div className="rate">
-                  <h2>Rs 100</h2>
-                  <button>
-                    <DeleteOutlined /> Delete
-                  </button>
-                </div>
-              </div>
+              ))}
 
               <div className="totalItem">
-              <div className="endLine"></div>
-                <h2>Total 7 Items</h2>
+                <div className="endLine"></div>
+                <h2>Total {cart.length} Items</h2>
               </div>
             </div>
           </div>
@@ -195,13 +143,13 @@ function Cart() {
             <div className="line"></div>
             <div className="total">
               <h3>
-                SubTotal <span>Rs 400</span>
+                SubTotal <span>Rs {total}</span>
               </h3>
               <h3>
                 Discount <span>Rs 50</span>
               </h3>
               <h3>
-                Delivery <span>Rs 60</span>
+                Delivery <span>Rs {cart.length === 0 ? "0" : "40"}</span>
               </h3>
 
               <div className="line"></div>
@@ -209,9 +157,16 @@ function Cart() {
                 Total <span>Rs 540</span>
               </h2>
             </div>
-
-            <button className="checkout">Process to Checkout</button>
-            <button className="shopping">Continue Shopping</button>
+            {cart.length === 0 ? (
+              <button className="shopping">Continue Shopping</button>
+            ) : (
+              <>
+                <button className="checkout">Process to Checkout</button>
+                <button className="shopping">Continue Shopping</button>
+              </>
+            )}
+            {/* <button className="checkout">Process to Checkout</button>
+            <button className="shopping">Continue Shopping</button> */}
           </div>
         </div>
       </div>

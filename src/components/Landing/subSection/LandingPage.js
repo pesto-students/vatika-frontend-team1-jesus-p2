@@ -1,6 +1,5 @@
 import React from "react";
 import MainContent from "./MainContent";
-// import Navbar from "../../Common/Navbar";
 import Heading from "../../Common/Heading";
 import PlantCategory from "./PlantCategory";
 import MeetPlant from "./MeetPlant";
@@ -8,10 +7,11 @@ import DealDay from "./DealDay";
 import WhyUs from "./WhyUs";
 import Contact from "./Contact";
 import Testimonial from "./Testimonial";
+// import Footer from './components/Common/Footer';
 
 function LandingPage() {
   return (
-    <div class='super'>
+    <div className="super">
       <div className="main">
         {/* <Navbar/> */}
         <MainContent />
@@ -25,6 +25,7 @@ function LandingPage() {
       <WhyUs />
       <Testimonial />
       <Contact />
+      {/* <Footer/> */}
     </div>
   );
 }

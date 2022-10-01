@@ -12,13 +12,13 @@ function Path() {
     <div>
         <Routes>
         <Route path="/" element={<LandingPage/>} />
-        <Route path="/product" element={<Product/>} />
         <Route path="/blog" element={<Blog/>} />
         <Route path="/aboutus" element={<AboutUs/>} />
-        <Route path="/product/plant" element={<Plant/>} />
+        <Route path="/product" element={<Product/>} />
+        <Route path="/product/:name" element={<Plant/>} />
         <Route path="/cart" element={<Cart/>} />
         <Route path="/confirmation" element={<Confirmation/>} />
-
+        <Route>404 Page Not Found!</Route>
       </Routes>
     </div>
   )

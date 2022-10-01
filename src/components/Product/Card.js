@@ -1,163 +1,81 @@
-import React from 'react'
+import React from "react";
 import { HeartOutlined } from "@ant-design/icons";
-
+import { useDispatch, useSelector } from "react-redux";
+import { Link } from "react-router-dom";
+import { addToCart, removeFromCart } from "../../redux/actions/productActions";
 
 function Card() {
-  return (
-    <section>
-            <div className="cards">
-              <div className="image_box">
-                <img
-                  src={require("../../assets/plant-1.png")}
-                  alt="DealPlant1"
-                />
-                <HeartOutlined className='imageHeart'/>
-              </div>
-              <div className="details">
-                <h3>Money Plant</h3>
-                <p>
-                  Rs 100<del>Rs200</del> <button>Add</button>
-                </p>
-              </div>
-            </div>
+  const { products, cart } = useSelector((state) => state.allProducts);
+  console.log("Cart:", cart);
+  const dispatch = useDispatch();
 
-            <div className="cards">
-              <div className="image_box">
-                <img
-                  src={require("../../assets/plant-1.png")}
-                  alt="DealPlant1"
-                />
-                <HeartOutlined className='imageHeart'/>
+  const filter = useSelector((state) => state.filter);
 
-              </div>
-              <div className="details">
-                <h3>Money Plant</h3>
-                <p>
-                  Rs 100<del>Rs200</del> <button>Add</button>
-                </p>
-              </div>
-            </div>
+  const transformProduct = () => {
+    let sortedProduct = products;
 
-            <div className="cards">
-              <div className="image_box">
-                <img
-                  src={require("../../assets/plant-1.png")}
-                  alt="DealPlant1"
-                />
-                <HeartOutlined className='imageHeart'/>
 
-              </div>
-              <div className="details">
-                <h3>Money Plant</h3>
-                <p>
-                  Rs 100<del>Rs200</del> <button>Add</button>
-                </p>
-              </div>
-            </div>
+    if (filter.sort) {
+        sortedProduct = sortedProduct.sort((a, b) =>
+          filter.sort === "lowToHigh" ? a.price - b.price :b.price - a.price
+        );
+    }
 
-            <div className="cards">
-              <div className="image_box">
-                <img
-                  src={require("../../assets/plant-1.png")}
-                  alt="DealPlant1"
-                />
-                <HeartOutlined className='imageHeart'/>
+    if (filter.category) {
+      sortedProduct = sortedProduct.filter(
+        (prod) => prod.category === filter.category
+      );
+    }
 
-              </div>
-              <div className="details">
-                <h3>Money Plant</h3>
-                <p>
-                  Rs 100<del>Rs200</del> <button>Add</button>
-                </p>
-              </div>
-            </div>
+    if (filter.searchQuery) {
+      sortedProduct = sortedProduct.filter((prod) =>
+        prod.name.toLowerCase().includes(filter.searchQuery)
+      );
+      
+    }
+    return sortedProduct;
+  };
 
-            <div className="cards">
-              <div className="image_box">
-                <img
-                  src={require("../../assets/plant-1.png")}
-                  alt="DealPlant1"
-                />
-                <HeartOutlined className='imageHeart'/>
+  const renderProducts = transformProduct().map((product) => {
+    return (
+      <div className="cards" key={product._id}>
+        <Link to={`/product/${product.name}`}>
+          <div className="image_box">
+            <img src={product.image} alt={product.name} />
+            <HeartOutlined className="imageHeart" />
+          </div>
+        </Link>
+        <div className="details">
+          <h3>{product.name}</h3>
+          <p>
+            Rs {product.price}
+            <del>Rs {product.price}</del>
+            {cart.some((p) => p.name === product.name) ? (
+              <button
+                className="removeButton"
+                onClick={() => {
+                  dispatch(removeFromCart(product));
+                }}
+              >
+                Remove
+              </button>
+            ) : (
+              <button
+                onClick={() => {
+                  dispatch(addToCart(product));
+                }}
+              >
+                Add
+              </button>
+            )}
+           
+          </p>
+        </div>
+      </div>
+    );
+  });
 
-              </div>
-              <div className="details">
-                <h3>Money Plant</h3>
-                <p>
-                  Rs 100<del>Rs200</del> <button>Add</button>
-                </p>
-              </div>
-            </div>
-
-            <div className="cards">
-              <div className="image_box">
-                <img
-                  src={require("../../assets/plant-1.png")}
-                  alt="DealPlant1"
-                />
-                <HeartOutlined className='imageHeart'/>
-
-              </div>
-              <div className="details">
-                <h3>Money Plant</h3>
-                <p>
-                  Rs 100<del>Rs200</del> <button>Add</button>
-                </p>
-              </div>
-            </div>
-
-            <div className="cards">
-              <div className="image_box">
-                <img
-                  src={require("../../assets/plant-1.png")}
-                  alt="DealPlant1"
-                />
-                <HeartOutlined className='imageHeart'/>
-
-              </div>
-              <div className="details">
-                <h3>Money Plant</h3>
-                <p>
-                  Rs 100<del>Rs200</del> <button>Add</button>
-                </p>
-              </div>
-            </div>
-
-            <div className="cards">
-              <div className="image_box">
-                <img
-                  src={require("../../assets/plant-1.png")}
-                  alt="DealPlant1"
-                />
-                <HeartOutlined className='imageHeart'/>
-
-              </div>
-              <div className="details">
-                <h3>Money Plant</h3>
-                <p>
-                  Rs 100<del>Rs200</del> <button>Add</button>
-                </p>
-              </div>
-            </div>
-
-            <div className="cards">
-              <div className="image_box">
-                <img
-                  src={require("../../assets/plant-1.png")}
-                  alt="DealPlant1"
-                />
-                <HeartOutlined className='imageHeart'/>
-
-              </div>
-              <div className="details">
-                <h3>Money Plant</h3>
-                <p>
-                  Rs 100<del>Rs200</del> <button>Add</button>
-                </p>
-              </div>
-            </div>
-          </section>
-  )
+  return <section>{renderProducts}</section>;
 }
 
-export default Card
+export default Card;

@@ -1,46 +1,76 @@
-import React from "react";
+import React, { useState } from "react";
 import { Checkbox } from "antd";
 import Search from "antd/lib/transfer/search";
 import { DownOutlined } from "@ant-design/icons";
 import { Dropdown, Menu, Space } from "antd";
 import Card from "./Card";
-import './Product.css'
-
-
-const menu = (
-  <Menu
-    items={[
-      {
-        label: (
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            href="https://www.antgroup.com"
-          >
-            Price Low to High
-          </a>
-        ),
-        key: "0",
-      },
-      {
-        label: (
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            href="https://www.aliyun.com"
-          >
-            Price High to Low
-          </a>
-        ),
-        key: "1",
-      },
-    ]}
-  />
-);
-
-const onSearch = (value) => console.log(value);
+import "./Product.css";
+import { useDispatch, useSelector } from "react-redux";
+import { useEffect } from "react";
+import axios from "axios";
+import {
+  setProducts,
+  filterBySearch,
+  sortByPrice,
+  clearFilter,
+  filterByGarden,
+  filterByInterior,
+  filterByOffice,
+  
+} from "../../redux/actions/productActions";
 
 function Product() {
+  const products = useSelector((state) => state.allProducts.products);
+  const dispatch = useDispatch();
+
+  const filter = useSelector((state) => state.filter);
+  console.log("Filter:", filter);
+
+  const menu = (
+    <Menu
+      items={[
+        {
+          label: (
+            <button
+              onClick={() => {
+                dispatch(sortByPrice("lowToHigh"));
+              }}
+            >
+              Price Low to High
+            </button>
+          ),
+          key: "0",
+        },
+        {
+          label: (
+            <button
+              onClick={() => {
+                dispatch(sortByPrice("highToLow"));
+              }}
+            >
+              Price High to low
+            </button>
+          ),
+          key: "1",
+        },
+      ]}
+    />
+  );
+
+  const fetchProducts = async () => {
+    const response = await axios
+      .get("http://localhost:5000/product")
+      .catch((err) => console.log("Error", err));
+    // console.log(response.data);
+    dispatch(setProducts(response.data));
+  };
+
+  useEffect(() => {
+    fetchProducts();
+  }, []);
+
+  console.log("Products:", products);
+
   return (
     <div className="product">
       <div className="heading-product"></div>
@@ -49,9 +79,36 @@ function Product() {
           <div className="filter">
             <h2>Filter</h2>
             <h3>Category</h3>
-            <Checkbox>For Garden</Checkbox>
-            <Checkbox>For Interior</Checkbox>
-            <Checkbox>For Office</Checkbox>
+            <Checkbox
+              onChange={() => {
+                filter.toggle
+                  ? dispatch(filterByGarden("garden"))
+                  : dispatch(clearFilter());
+              }}
+              checked={filter.byGarden}
+            >
+              For Garden
+            </Checkbox>
+            <Checkbox
+              onChange={() => {
+                filter.toggle
+                  ? dispatch(filterByInterior("interior"))
+                  : dispatch(clearFilter());
+              }}
+              checked={filter.byInterior}
+            >
+              For Interior
+            </Checkbox>
+            <Checkbox
+              onChange={() => {
+                filter.toggle
+                  ? dispatch(filterByOffice("office"))
+                  : dispatch(clearFilter());
+              }}
+              checked={filter.byOffice}
+            >
+              For Office
+            </Checkbox>
             <hr />
             <h3>Maintenance</h3>
             <Checkbox>Low</Checkbox>
@@ -63,7 +120,13 @@ function Product() {
             <Checkbox>Between Rs100 - Rs200</Checkbox>
             <Checkbox>More then Rs200</Checkbox>
             <hr />
-            <button>Clear All</button>
+            <button
+              onClick={() => {
+                dispatch(clearFilter());
+              }}
+            >
+              Clear All
+            </button>
           </div>
         </div>
         <div className="right-section">
@@ -71,20 +134,19 @@ function Product() {
             <Search
               className="searchInput"
               placeholder="Search"
-              onSearch={onSearch}
+              onChange={(e) => {
+                dispatch(filterBySearch(e.target.value));
+              }}
             />
+  
             <Dropdown className="dropDown" overlay={menu}>
-              <a onClick={(e) => e.preventDefault()} href="/">
-                <Space>
-                  Sort by
-                  <DownOutlined />
-                </Space>
-              </a>
+              <Space>
+                Sort by
+                <DownOutlined />
+              </Space>
             </Dropdown>
           </div>
-
-          <Card/>
-          
+          <Card />
         </div>
       </div>
     </div>

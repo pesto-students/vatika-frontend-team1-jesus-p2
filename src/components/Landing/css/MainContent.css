@@ -1,8 +1,8 @@
 /* Main Content Landing Page */
 .mainContent {
-    position: absolute;
+    /* position: absolute; */
     margin-left: 4rem;
-    top: 13rem;
+    padding-top: 6rem;
   }
   
   .mainContent p {
@@ -38,6 +38,7 @@
     text-align: center;
     letter-spacing: 0.1rem;
     transition: transform 0.3s;
+    cursor: pointer;
   }
   
   .mainContent button:hover {
