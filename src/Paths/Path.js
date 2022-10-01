@@ -6,6 +6,9 @@ import AboutUs from "../components/About Us/AboutUs";
 import Plant from "../components/ProductDetails/Plant";
 import Cart from "../components/Cart/Cart";
 import Confirmation from "../components/Confirmation/Confirmation";
+import Checkout from "../components/Checkout/Checkout";
+
+
 
 function Path() {
   return (
@@ -18,6 +21,7 @@ function Path() {
         <Route path="/product/:name" element={<Plant/>} />
         <Route path="/cart" element={<Cart/>} />
         <Route path="/confirmation" element={<Confirmation/>} />
+        <Route path="/payment" element={<Checkout/>}/>
         <Route>404 Page Not Found!</Route>
       </Routes>
     </div>

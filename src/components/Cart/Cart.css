@@ -127,6 +127,7 @@
 .cart .summary .line {
   margin-top: 5%;
   margin-bottom: 5%;
+  /* width: 14rem; */
   border: 0.01rem solid #767676;
 }
 
@@ -170,6 +171,8 @@
   margin-top: 10%;
   margin-bottom: 5%;
   font-size: 1.2rem;
+  width: 100%;
+  cursor: pointer;
 }
 
 .cart .summary .shopping {
@@ -180,4 +183,6 @@
   height: 2.5rem;
   margin-bottom: 5%;
   font-size: 1.2rem;
+  width: 100%;
+  cursor: pointer;
 }

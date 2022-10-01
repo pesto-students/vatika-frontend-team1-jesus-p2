@@ -6,6 +6,8 @@
 
 .plant .collection {
   display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .plant .bigImage {
@@ -13,15 +15,17 @@
   margin-left: 8%;
 }
 .plant .bigImage img {
-  height: 30rem;
-  width: 30rem;
+  height: 25rem;
+  width: 25rem;
+  box-shadow: 0px 2px 10px 2px rgba(0, 0, 0, 0.2);
+
 }
 
 .plant .plant-details {
   margin: 5%;
   margin-left: 2%;
   line-height: 1.8rem;
-  width: 25rem;
+  width: 30rem;
 }
 
 .plant .plant-details h1 {
@@ -43,7 +47,7 @@
 
 .plant .plant-details p {
   font-weight: 600;
-  color: #1b7a0d;
+  color: #208854;
   font-size: 1rem;
 }
 
@@ -69,21 +73,55 @@
 .plant .plant-details .b {
   padding: 0.6rem 3rem;
   font-size: 1.2rem;
-  margin-top: 7%;
-  margin-bottom: 8%;
+  margin-top: 4%;
+  margin-bottom: 4%;
   border: 0.1rem solid black;
   border-radius: 0.2rem;
+  cursor: pointer;
+  transition: 0.5s;
+  margin-right: 1%;
 }
 
 .plant .plant-details .butOne {
   background-color: transparent;
+  /* margin-left: 8%; */
+
+}
+
+.plant .plant-details .butROne {
+  background-color: rgb(252, 49, 49);
+  border: 0.1rem solid white;
+  color: white;
+  border: 0.2rem solid rgb(250, 19, 19);
+
+  /* margin-left: 8%; */
+
+
+}
+
+.plant .plant-details .butROne:hover {
+  background-color: rgb(250, 19, 19);
+  border: 0.1rem solid white;
+  color: white;
+  border: 0.2rem solid rgb(250, 19, 19);
+
+}
+
+.plant .plant-details .butOne:hover {
+  background-color: gray;
+  color: white;
 }
 
 .plant .plant-details .butTwo {
   border: none;
+  border: 0.2rem solid #208854;
   background-color: #208854;
   color: white;
-  margin-left: 8%;
+}
+.plant .plant-details .butTwo:hover {
+  background-color: gray;
+  color: white;
+  /* margin-left: 8%; */
 }
 
 .plant .plant-details .delivery h2 {

@@ -3,6 +3,8 @@ import { HeartOutlined } from "@ant-design/icons";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { addToCart, removeFromCart } from "../../redux/actions/productActions";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function Card() {
   const { products, cart } = useSelector((state) => state.allProducts);
@@ -14,11 +16,10 @@ function Card() {
   const transformProduct = () => {
     let sortedProduct = products;
 
-
     if (filter.sort) {
-        sortedProduct = sortedProduct.sort((a, b) =>
-          filter.sort === "lowToHigh" ? a.price - b.price :b.price - a.price
-        );
+      sortedProduct = sortedProduct.sort((a, b) =>
+        filter.sort === "lowToHigh" ? a.price - b.price : b.price - a.price
+      );
     }
 
     if (filter.category) {
@@ -31,7 +32,6 @@ function Card() {
       sortedProduct = sortedProduct.filter((prod) =>
         prod.name.toLowerCase().includes(filter.searchQuery)
       );
-      
     }
     return sortedProduct;
   };
@@ -54,6 +54,7 @@ function Card() {
               <button
                 className="removeButton"
                 onClick={() => {
+                  removed();
                   dispatch(removeFromCart(product));
                 }}
               >
@@ -62,20 +63,41 @@ function Card() {
             ) : (
               <button
                 onClick={() => {
+                  added();
                   dispatch(addToCart(product));
                 }}
               >
                 Add
               </button>
             )}
-           
           </p>
         </div>
       </div>
     );
   });
 
-  return <section>{renderProducts}</section>;
+  const added = () => {
+    toast.success("Item Added Successfully", {
+      position: toast.POSITION.TOP_CENTER,
+      autoClose: 1500,
+    });
+  };
+
+  const removed = () => {
+    toast.error("Item Removed From Cart", {
+      position: toast.POSITION.TOP_CENTER,
+      autoClose: 1500,
+    });
+  };
+
+  return (
+    <>
+      <div>
+        <ToastContainer />
+      </div>
+      <section>{renderProducts}</section>;
+    </>
+  );
 }
 
 export default Card;

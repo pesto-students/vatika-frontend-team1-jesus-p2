@@ -48,7 +48,7 @@ function Product() {
                 dispatch(sortByPrice("highToLow"));
               }}
             >
-              Price High to low
+              Price High to Low
             </button>
           ),
           key: "1",

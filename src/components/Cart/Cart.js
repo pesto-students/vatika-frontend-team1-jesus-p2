@@ -19,6 +19,8 @@ import {
   descQuantity,
 } from "../../redux/actions/productActions";
 import { Link } from "react-router-dom";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const { Step } = Steps;
 
@@ -35,6 +37,13 @@ function Cart() {
   }, [cart]);
 
   console.log(cart);
+
+  const deleteItem = () => {
+    toast.error("Item Deleted", {
+      position: toast.POSITION.TOP_CENTER,
+      autoClose: 1500,
+    });
+  };
 
   return (
     <>
@@ -110,6 +119,7 @@ function Cart() {
                     <h2>Rs {plant.price * plant.qty}</h2>
                     <button
                       onClick={() => {
+                        deleteItem();
                         dispatch(removeFromCart(plant));
                       }}
                     >
@@ -143,31 +153,38 @@ function Cart() {
             <div className="line"></div>
             <div className="total">
               <h3>
-                SubTotal <span>Rs {total}</span>
+                Subtotal <span>Rs {total}</span>
               </h3>
               <h3>
-                Discount <span>Rs 50</span>
+                Discount <span>Rs {cart.length === 0 ? "0" : "10"}</span>
               </h3>
               <h3>
-                Delivery <span>Rs {cart.length === 0 ? "0" : "40"}</span>
+                Delivery <span> Rs {cart.length === 0 ? "0" : "40"}</span>
               </h3>
 
               <div className="line"></div>
               <h2>
-                Total <span>Rs 540</span>
+                Total <span>Rs {cart.length === 0 ? "0" : total + 30}</span>
               </h2>
             </div>
             {cart.length === 0 ? (
               <button className="shopping">Continue Shopping</button>
             ) : (
               <>
-                <button className="checkout">Process to Checkout</button>
-                <button className="shopping">Continue Shopping</button>
+                <Link to="/payment">
+                  <button className="checkout">Process to Checkout</button>
+                </Link>
+                <Link to="/product">
+                  <button className="shopping">Continue Shopping</button>
+                </Link>
               </>
             )}
             {/* <button className="checkout">Process to Checkout</button>
             <button className="shopping">Continue Shopping</button> */}
           </div>
+        </div>
+        <div>
+          <ToastContainer />
         </div>
       </div>
     </>

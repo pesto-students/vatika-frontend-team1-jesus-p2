@@ -53,7 +53,7 @@
 .mid ul li .navlink::after {
   content: "";
   position: absolute;
-  background-color: #1b7a0d;
+  background-color: #208854;
   height: 2px;
   width: 0%;
   left: 30px;
@@ -62,7 +62,7 @@
 }
 
 .mid ul li .navlink:hover {
-  color: #1b7a0d;
+  color: #208854;
   font-weight: 600;
 }
 
@@ -99,7 +99,7 @@
 }
 
 .right button {
-  border: 2px solid #1b7a0d;
+  border: 2px solid #208854;
   color: black;
   font-family: "Rajdhani", sans-serif;
   background-color: transparent;
@@ -120,14 +120,14 @@
 }
 
 .right .login {
-  background-color: #1b7a0d;
+  background-color: #208854;
   color: white;
 }
 
 .right .signup {
   margin-right: 1rem;
-  border: 0.1rem solid #1b7a0d;
-  color: #1b7a0d;
+  border: 0.1rem solid #208854;
+  color: #208854;
 }
 
 .right .login:hover {
