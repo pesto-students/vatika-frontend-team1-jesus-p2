@@ -88,3 +88,18 @@ export const filterByOffice = (value) => {
     payload: value,
   };
 };
+
+
+export const setAddress = (address) => {
+  return {
+    type: ActionTypes.SET_ADDRESS,
+    payload: address,
+  };
+};
+
+export const cartTotal = (total) => {
+  return {
+    type: ActionTypes.CART_TOTAL,
+    payload: total,
+  };
+};

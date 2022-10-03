@@ -152,14 +152,20 @@
   border-radius: 0.5rem;
 }
 
-.cart .summary .total span {
-  margin-left: 40%;
-}
+
 
 .cart .summary .total h2 {
   font-size: 1.5rem;
   font-weight: 600;
   color: #208854;
+}
+
+.cart .summary .total span {
+  margin-left: 35%;
+}
+
+.cart .summary .total .discount{
+  color: red;
 }
 
 .cart .summary .checkout {

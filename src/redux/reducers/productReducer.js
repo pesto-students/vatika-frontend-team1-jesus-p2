@@ -5,7 +5,11 @@ const initialState = {
   cart: [],
 };
 
-const filterState = {
+const initialAddress={
+  allAddress:[],
+}
+
+const initialFilter = {
   searchQuery: "",
   toggle: true,
   byGarden: false,
@@ -13,8 +17,22 @@ const filterState = {
   byOffice: false,
 };
 
+// const initialTotal={
+//   total:0
+// }
+
+export const totalCartReducer = (state = {}, { type, payload }) => {
+  switch (type) {
+    case ActionTypes.CART_TOTAL:
+      return { ...state, ...payload };
+    
+    default:
+      return state;
+  }
+};
+
 export const filterProductReducer = (
-  state = filterState,
+  state = initialFilter,
   { type, payload }
 ) => {
   switch (type) {
@@ -58,7 +76,6 @@ export const filterProductReducer = (
         byOffice: false,
       };
     }
-
     default:
       return state;
   }
@@ -100,6 +117,23 @@ export const selectProductReducer = (state = {}, { type, payload }) => {
       return { ...state, ...payload };
     case ActionTypes.REMOVE_SELECTED_PRODUCT:
       return {};
+    default:
+      return state;
+  }
+};
+
+
+export const addressReducer = (state = initialAddress, { type, payload }) => {
+  switch (type) {
+    case ActionTypes.SET_ADDRESS:
+      return { ...state, allAddress :payload };
+   
+    // case ActionTypes.REMOVE_FROM_CART:
+    //   return {
+    //     ...state,
+    //     cart: state.cart.filter((c) => c.name !== payload.name),
+    //   };
+  
     default:
       return state;
   }

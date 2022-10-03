@@ -17,6 +17,7 @@ import {
   inccQuantity,
   removeFromCart,
   descQuantity,
+  cartTotal,
 } from "../../redux/actions/productActions";
 import { Link } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
@@ -26,6 +27,9 @@ const { Step } = Steps;
 
 function Cart() {
   const cart = useSelector((state) => state.allProducts.cart);
+  const grandTotal = useSelector((state) => state.cartTotal);
+
+  // console.log(grandTotal)
   const dispatch = useDispatch();
 
   const [total, setTotal] = useState(0);
@@ -34,8 +38,10 @@ function Cart() {
     setTotal(
       cart.reduce((acc, curr) => acc + Number(curr.price) * curr.qty, 0)
     );
-  }, [cart]);
+    dispatch(cartTotal({ total: total}));
+  }, [cart, total]);
 
+  console.log(grandTotal.total);
   console.log(cart);
 
   const deleteItem = () => {
@@ -153,18 +159,21 @@ function Cart() {
             <div className="line"></div>
             <div className="total">
               <h3>
-                Subtotal <span>Rs {total}</span>
+                Subtotal<span>Rs {total}</span>
               </h3>
               <h3>
-                Discount <span>Rs {cart.length === 0 ? "0" : "10"}</span>
+                Discount<span className="discount">{cart.length === 0 ? "Rs 0" : "Rs 10(-)"}</span>
               </h3>
               <h3>
-                Delivery <span> Rs {cart.length === 0 ? "0" : "40"}</span>
+                Delivery<span> Rs {cart.length === 0 ? "0" : "40"}</span>
               </h3>
 
               <div className="line"></div>
               <h2>
-                Total <span>Rs {cart.length === 0 ? "0" : total + 30}</span>
+                Total
+                <span>
+                  Rs {cart.length === 0 ? "0" : grandTotal.total + 30}
+                </span>
               </h2>
             </div>
             {cart.length === 0 ? (
@@ -179,8 +188,6 @@ function Cart() {
                 </Link>
               </>
             )}
-            {/* <button className="checkout">Process to Checkout</button>
-            <button className="shopping">Continue Shopping</button> */}
           </div>
         </div>
         <div>
