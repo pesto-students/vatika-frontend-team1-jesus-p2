@@ -1,5 +1,5 @@
 import { Route, Routes } from "react-router-dom";
-import LandingPage from '../components/Landing/subSection/LandingPage'
+import LandingPage from "../components/Landing/subSection/LandingPage";
 import Product from "../components/Product/Product";
 import Blog from "../components/Blog/Blog";
 import AboutUs from "../components/About Us/AboutUs";
@@ -8,24 +8,22 @@ import Cart from "../components/Cart/Cart";
 import Confirmation from "../components/Confirmation/Confirmation";
 import Checkout from "../components/Checkout/Checkout";
 
-
-
 function Path() {
   return (
     <div>
-        <Routes>
-        <Route path="/" element={<LandingPage/>} />
-        <Route path="/blog" element={<Blog/>} />
-        <Route path="/aboutus" element={<AboutUs/>} />
-        <Route path="/product" element={<Product/>} />
-        <Route path="/product/:name" element={<Plant/>} />
-        <Route path="/cart" element={<Cart/>} />
-        <Route path="/confirmation" element={<Confirmation/>} />
-        <Route path="/payment" element={<Checkout/>}/>
+      <Routes>
+        <Route path="/" element={<LandingPage />} />
+        <Route path="/blog" element={<Blog />} />
+        <Route path="/aboutus" element={<AboutUs />} />
+        <Route path="/product" element={<Product />} />
+        <Route path="/product/:name" element={<Plant />} />
+        <Route path="/cart" element={<Cart />} />
+        <Route path="/confirmation" element={<Confirmation />} />
+        <Route path="/payment" element={<Checkout />} />
         <Route>404 Page Not Found!</Route>
       </Routes>
     </div>
-  )
+  );
 }
 
-export default Path
+export default Path;

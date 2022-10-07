@@ -1,10 +1,8 @@
 import React from "react";
-import '../css/PlantCategory.css'
-
+import "../css/PlantCategory.css";
 
 function PlantCategory() {
   return (
-    
     <div className="plantCategory">
       <div className="category-1 allCategory">
         <img src={require("../../../assets/Interior_Plant.png")} alt="logo" />

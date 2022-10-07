@@ -1,12 +1,10 @@
-import React from "react";
-import { Checkbox } from "antd";
+import React, { useEffect } from "react";
 import Search from "antd/lib/transfer/search";
 import { DownOutlined } from "@ant-design/icons";
-import { Dropdown, Menu, Space } from "antd";
+import { Dropdown, Menu, Space, Checkbox } from "antd";
 import Card from "./Card";
 import "./Product.css";
 import { useDispatch, useSelector } from "react-redux";
-import { useEffect } from "react";
 import axios from "axios";
 import {
   setProducts,

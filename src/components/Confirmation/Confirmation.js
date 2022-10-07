@@ -6,9 +6,8 @@ import {
   AlipayCircleOutlined,
   CheckCircleOutlined,
 } from "@ant-design/icons";
-import { Steps } from "antd";
+import { Steps, Space } from "antd";
 import { CheckCircleTwoTone } from "@ant-design/icons";
-import { Space } from "antd";
 
 const { Step } = Steps;
 
@@ -34,7 +33,7 @@ function Confirmation() {
       <h1>
         <Space>
           <CheckCircleTwoTone twoToneColor="#52c41a" />
-        </Space>{" "}
+        </Space>
         Order Placed Successfully
       </h1>
 

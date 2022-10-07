@@ -3,8 +3,7 @@ import { HeartOutlined } from "@ant-design/icons";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { addToCart, removeFromCart } from "../../redux/actions/productActions";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+import { notification } from "antd";
 
 function Card() {
   const { products, cart } = useSelector((state) => state.allProducts);
@@ -77,24 +76,23 @@ function Card() {
   });
 
   const added = () => {
-    toast.success("Item Added Successfully", {
-      position: toast.POSITION.TOP_CENTER,
-      autoClose: 1500,
+    notification.success({
+      message: "Item Added Successfully",
+      placement: "top",
+      duration: 1.5,
     });
   };
 
   const removed = () => {
-    toast.error("Item Removed From Cart", {
-      position: toast.POSITION.TOP_CENTER,
-      autoClose: 1500,
+    notification.error({
+      message: "Item Removed From Cart",
+      placement: "top",
+      duration: 1.5,
     });
   };
 
   return (
     <>
-      <div>
-        <ToastContainer />
-      </div>
       <section>{renderProducts}</section>;
     </>
   );

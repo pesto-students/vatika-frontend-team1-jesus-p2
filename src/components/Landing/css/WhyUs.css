@@ -62,34 +62,34 @@
   justify-self: center;
 }
 
-.whyUs .one img{
+.whyUs .one img {
   transition: 0.5s;
 }
 
-.whyUs .one img:hover{
+.whyUs .one img:hover {
   scale: 107%;
 }
 
-.whyUs .two img{
+.whyUs .two img {
   transition: 0.5s;
 }
 
-.whyUs .two img:hover{
+.whyUs .two img:hover {
   scale: 107%;
 }
 
-.whyUs .four img{
+.whyUs .four img {
   transition: 0.5s;
 }
 
-.whyUs .four img:hover{
+.whyUs .four img:hover {
   scale: 107%;
 }
 
-.whyUs .five img{
+.whyUs .five img {
   transition: 0.5s;
 }
 
-.whyUs .five img:hover{
+.whyUs .five img:hover {
   scale: 107%;
 }

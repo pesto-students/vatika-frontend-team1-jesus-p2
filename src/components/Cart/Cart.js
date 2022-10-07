@@ -1,4 +1,3 @@
-import React from "react";
 import {
   ArrowLeftOutlined,
   ShoppingCartOutlined,
@@ -8,11 +7,10 @@ import {
   PlusCircleOutlined,
   MinusCircleOutlined,
 } from "@ant-design/icons";
-import { Steps } from "antd";
+import { Steps, notification } from "antd";
 import "./Cart.css";
 import { useDispatch, useSelector } from "react-redux";
-import { useState } from "react";
-import { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import {
   inccQuantity,
   removeFromCart,
@@ -20,8 +18,6 @@ import {
   cartTotal,
 } from "../../redux/actions/productActions";
 import { Link } from "react-router-dom";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
 
 const { Step } = Steps;
 
@@ -31,23 +27,23 @@ function Cart() {
 
   // console.log(grandTotal)
   const dispatch = useDispatch();
-
   const [total, setTotal] = useState(0);
 
   useEffect(() => {
     setTotal(
       cart.reduce((acc, curr) => acc + Number(curr.price) * curr.qty, 0)
     );
-    dispatch(cartTotal({ total: total}));
+    dispatch(cartTotal({ total: total }));
   }, [cart, total]);
 
   console.log(grandTotal.total);
   console.log(cart);
 
   const deleteItem = () => {
-    toast.error("Item Deleted", {
-      position: toast.POSITION.TOP_CENTER,
-      autoClose: 1500,
+    notification.error({
+      message: "Item Deleted",
+      placement: "top",
+      duration: 1.5,
     });
   };
 
@@ -162,7 +158,10 @@ function Cart() {
                 Subtotal<span>Rs {total}</span>
               </h3>
               <h3>
-                Discount<span className="discount">{cart.length === 0 ? "Rs 0" : "Rs 10(-)"}</span>
+                Discount
+                <span className="discount">
+                  {cart.length === 0 ? "Rs 0" : "Rs 10(-)"}
+                </span>
               </h3>
               <h3>
                 Delivery<span> Rs {cart.length === 0 ? "0" : "40"}</span>
@@ -189,9 +188,6 @@ function Cart() {
               </>
             )}
           </div>
-        </div>
-        <div>
-          <ToastContainer />
         </div>
       </div>
     </>

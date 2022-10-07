@@ -3,11 +3,10 @@ import { Badge } from "antd";
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
-import {  useSelector } from "react-redux";
-
+import { useSelector } from "react-redux";
 
 function Navbar() {
-  const {cart} = useSelector((state) => state.allProducts);
+  const { cart } = useSelector((state) => state.allProducts);
 
   return (
     <>
@@ -59,12 +58,6 @@ function Navbar() {
           <button className="signup">Signup</button>
           <button className="login">Login</button>
         </div>
-
-        {/* <a href="#" className="toggle-button">
-          <span className="bar"></span>
-          <span className="bar"></span>
-          <span className="bar"></span>
-        </a> */}
       </nav>
     </>
   );

@@ -17,7 +17,6 @@
 }
 
 .flexFilter .locationCard {
-  /* margin-left: 5%; */
   border-top: 0.1rem solid gray;
   padding-top: 5%;
   width: 45rem;
@@ -32,7 +31,6 @@
 
 .addressCard .locationCard {
   display: flex;
-  /* justify-content:flex-start; */
 }
 
 .addressCard .locationCard .noAddress {
@@ -50,16 +48,15 @@
   border-radius: 1rem;
   margin-right: 2rem;
   transition: 0.5s;
-
 }
 
 .newCard {
-  background-color:green;
+  background-color: green;
   color: white;
   transition: 0.5s;
 }
 
-.newCard h2{
+.newCard h2 {
   color: white;
 }
 
@@ -77,18 +74,12 @@
   transition: 0.5s;
 }
 
-.savedCard .selected{
+.savedCard .selected {
   background-color: white;
   color: green;
   border: 0.1rem solid white;
   transition: 0.5s;
 }
-
-/* .savedCard button:hover {
-  background-color: white;
-  color: green;
-  border: 0.1rem solid green;
-} */
 
 .savedCard .deleteIcon {
   position: absolute;

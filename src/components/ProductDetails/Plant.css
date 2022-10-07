@@ -18,7 +18,6 @@
   height: 25rem;
   width: 25rem;
   box-shadow: 0px 2px 10px 2px rgba(0, 0, 0, 0.2);
-
 }
 
 .plant .plant-details {
@@ -84,8 +83,6 @@
 
 .plant .plant-details .butOne {
   background-color: transparent;
-  /* margin-left: 8%; */
-
 }
 
 .plant .plant-details .butROne {
@@ -93,10 +90,6 @@
   border: 0.1rem solid white;
   color: white;
   border: 0.2rem solid rgb(250, 19, 19);
-
-  /* margin-left: 8%; */
-
-
 }
 
 .plant .plant-details .butROne:hover {
@@ -104,7 +97,6 @@
   border: 0.1rem solid white;
   color: white;
   border: 0.2rem solid rgb(250, 19, 19);
-
 }
 
 .plant .plant-details .butOne:hover {
@@ -121,7 +113,6 @@
 .plant .plant-details .butTwo:hover {
   background-color: gray;
   color: white;
-  /* margin-left: 8%; */
 }
 
 .plant .plant-details .delivery h2 {

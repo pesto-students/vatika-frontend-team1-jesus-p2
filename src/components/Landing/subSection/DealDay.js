@@ -1,8 +1,7 @@
 import React from "react";
 import Heading from "../../Common/Heading";
 import { Rate } from "antd";
-import '../css/DealDay.css'
-
+import "../css/DealDay.css";
 
 function DealDay() {
   return (

@@ -36,8 +36,8 @@ function Blog() {
             <img src={require("../../assets/Blog-2.png")} alt="Blog-1" />
             <h2>AI app that detects diseases in plants </h2>
             <p>
-              The spread of transboundary plant pests and diseases has increased
-              dramatically in recent years.
+              The spread of trans boundary plant pests and diseases has
+              increased dramatically in recent years.
             </p>
             <button>Read More</button>
           </div>

@@ -1,6 +1,6 @@
 import React from "react";
 import Heading from "../../Common/Heading";
-import '../css/WhyUs.css';
+import "../css/WhyUs.css";
 
 function WhyUs() {
   return (
@@ -28,10 +28,7 @@ function WhyUs() {
         </div>
 
         <div className="three">
-          <img
-            src={require("../../../assets/Why_Us.png")}
-            alt="logo"
-          />
+          <img src={require("../../../assets/Why_Us.png")} alt="logo" />
         </div>
 
         <div className="four">

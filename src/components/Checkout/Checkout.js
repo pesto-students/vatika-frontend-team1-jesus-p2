@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect,useState } from "react";
 import {
   ArrowLeftOutlined,
   ShoppingCartOutlined,
@@ -7,21 +7,12 @@ import {
   DeleteOutlined,
   LockOutlined,
 } from "@ant-design/icons";
-import { Steps } from "antd";
 import "./checkout.css";
-import { Checkbox, Form, Input } from "antd";
-import coins from "../../assets/coin-icon.png";
-import right from "../../assets/right-tick-icon.png";
-import upi from "../../assets/upi.png";
-import card from "../../assets/creditcard.png";
-import cash from "../../assets/cashIcon.png";
+import { Checkbox, Form, Input,notification,Steps } from "antd";
 import { Link } from "react-router-dom";
 import axios from "axios";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
 import { useDispatch, useSelector } from "react-redux";
 import { setAddress } from "../../redux/actions/productActions";
-import { useState } from "react";
 
 const { Step } = Steps;
 
@@ -47,23 +38,26 @@ const Checkout = () => {
 
   const addedAddress = (data) => {
     if (data === "Address Already Saved") {
-      toast.error(`${data}`, {
-        position: toast.POSITION.BOTTOM_CENTER,
-        autoClose: 1500,
+      notification.error({
+        message: `${data}`,
+        placement: "bottom",
+        duration: 1.5,
       });
     } else {
-      toast.success(`${data}`, {
-        position: toast.POSITION.BOTTOM_CENTER,
-        autoClose: 1500,
+      notification.success({
+        message: `${data}`,
+        placement: "bottom",
+        duration: 1.5,
       });
       form.resetFields();
     }
   };
 
   const moreThenThreeAddress = () => {
-    toast.error("List Full , Delete Few Address", {
-      position: toast.POSITION.BOTTOM_CENTER,
-      autoClose: 2000,
+    notification.error({
+      message:"List Full , Delete Few Address !",
+      placement:'bottom',
+      duration:1.5,
     });
   };
 
@@ -155,7 +149,7 @@ const Checkout = () => {
         color: "green",
       },
       redirect: true,
-      callback_url:"http://localhost:3000/confirmation",
+      callback_url: "http://localhost:3000/confirmation",
     };
     const rzp1 = new window.Razorpay(options);
     rzp1.open();
@@ -425,10 +419,10 @@ const Checkout = () => {
           <div className="sidePanel">
             <h1>Payment</h1>
             <div className="balanceText">
-              <img src={coins} alt="Coin" className="coin-image" />
+              <img src={require("../../assets/coin-icon.png")} alt="Coin" className="coin-image" />
               Super Coin Balance:
               <span className="amount">
-                Rs {coin} <img src={right} className="right-tick" alt="one" />
+                Rs {coin} <img src={require("../../assets/right-tick-icon.png")} className="right-tick" alt="one" />
               </span>
             </div>
 
@@ -439,7 +433,7 @@ const Checkout = () => {
                 <input type="radio" className="radioButton" name="radioB" />
                 <label className="labelText">
                   UPI Payment
-                  <img src={upi} className="radioUPIIcons" alt="UPI" />
+                  <img src={require("../../assets/upi.png")} className="radioUPIIcons" alt="UPI" />
                 </label>
               </div>
 
@@ -447,7 +441,7 @@ const Checkout = () => {
                 <input type="radio" className="radioButton" name="radioB" />
                 <label className="labelText">
                   Debit/Credit Card
-                  <img src={card} className="radioIcons" alt="Card" />
+                  <img src={require("../../assets/CreditCard.png")} className="radioIcons" alt="Card" />
                 </label>
               </div>
 
@@ -460,7 +454,7 @@ const Checkout = () => {
                 />
                 <label className="labelText">
                   Cash On Delivery
-                  <img src={cash} className="radioIcons" alt="Cash" />
+                  <img src={require("../../assets/cashIcon.png")} className="radioIcons" alt="Cash" />
                 </label>
               </div>
             </div>
@@ -484,9 +478,6 @@ const Checkout = () => {
               be private
             </p>
           </div>
-        </div>
-        <div>
-          <ToastContainer />
         </div>
       </div>
     </>

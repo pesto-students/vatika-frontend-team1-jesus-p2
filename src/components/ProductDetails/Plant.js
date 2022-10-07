@@ -1,7 +1,6 @@
 import { ArrowLeftOutlined } from "@ant-design/icons";
 import axios from "axios";
-import React from "react";
-import { useEffect } from "react";
+import React, { useEffect } from "react";
 import "./Plant.css";
 import { Link, useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
@@ -12,8 +11,7 @@ import {
   addToCart,
 } from "../../redux/actions/productActions";
 import Loading from "../Loading/Loading";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+import { notification } from "antd";
 
 function Plant() {
   const product = useSelector((state) => state.product);
@@ -34,7 +32,6 @@ function Plant() {
 
   useEffect(() => {
     if (name && name !== "") fetchProductDetails();
-
     return () => {
       dispatch(removeSelectedProduct());
     };
@@ -46,28 +43,19 @@ function Plant() {
     }
   }
 
-  // const CustomToast=({closeToast})=>{
-  //   return (
-  //     <div>
-  //       Something Went Wrong!
-  //     </div>
-  //   )
-  // }
-  // toast.warn(<CustomToast/>,{
-  //   position:toast.POSITION.BOTTOM_CENTER,
-  // })
-
   const added = () => {
-    toast.success("Item Added Successfully", {
-      position: toast.POSITION.TOP_CENTER,
-      autoClose: 1500,
+    notification.success({
+      message: "Item Added Successfully",
+      placement: "top",
+      duration: 1.5,
     });
   };
 
   const removed = () => {
-    toast.error("Item Removed From Cart", {
-      position: toast.POSITION.TOP_CENTER,
-      autoClose: 1500,
+    notification.error({
+      message: "Item Removed From Cart",
+      placement: "top",
+      duration: 1.5,
     });
   };
 
@@ -97,12 +85,6 @@ function Plant() {
                 <del>Rs{product.price}</del>
               </h2>
               <p>Inclusive of all taxes</p>
-              {/* <h3>Quantity</h3>
-              <div className="quantity">
-                <PlusCircleOutlined className="quant-icon" />
-                <h2>1</h2>
-                <MinusCircleOutlined className="quant-icon" />
-              </div> */}
               <Link to="/cart">
                 <button className="butTwo b" onClick={() => buyNow()}>
                   Buy Now
@@ -151,9 +133,6 @@ function Plant() {
 
             <img src={require("../../assets/sun.png")} alt="sun" />
             <h3>Sunlight Required {product.sunlight} Hours per day</h3>
-          </div>
-          <div>
-            <ToastContainer/>
           </div>
         </>
       )}

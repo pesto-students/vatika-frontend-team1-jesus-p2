@@ -2,18 +2,15 @@ import React from "react";
 import Heading from "../../Common/Heading";
 import { PushpinFilled, PhoneFilled, MailFilled } from "@ant-design/icons";
 import "../css/Contact.css";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
-
-
+import { notification } from "antd";
 
 function Contact() {
   const saveMessage = () => {
-    toast.success("Sent, Team will Connect 🔔", {
-      position: toast.POSITION.BOTTOM_CENTER,
-      autoClose: 3000,
+    notification.success({
+      message: "Sent, Team will Connect 🔔",
+      placement: "top",
+      duration: 2,
     });
-
     var form = document.getElementById("useForm");
     form.reset();
   };
@@ -38,10 +35,14 @@ function Contact() {
 
       <div className="right-part">
         <h2>Leave us Message</h2>
-        <form method="post" id="useForm" onSubmit={(e)=>{
-          e.preventDefault()
-          saveMessage();
-          }}>
+        <form
+          method="post"
+          id="useForm"
+          onSubmit={(e) => {
+            e.preventDefault();
+            saveMessage();
+          }}
+        >
           <input type="text" placeholder="Name" required />
           <br />
           <input type="email" placeholder="Email" required />
@@ -54,13 +55,9 @@ function Contact() {
             placeholder="Message"
             required
           />
-          {/* <input type="textarea" placeholder="Message"/> */}
           <br />
           <button>Send</button>
         </form>
-      </div>
-      <div>
-      <ToastContainer/>
       </div>
     </div>
   );

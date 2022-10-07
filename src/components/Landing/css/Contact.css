@@ -39,7 +39,6 @@
 .contactUs .right-part input {
   margin-bottom: 1rem;
   border-radius: 0.3rem;
-  /* background-color: gray; */
   color: black;
   border: none;
   width: 100%;
@@ -76,5 +75,4 @@
 .contactUs .right-part button:hover {
   background-color: #135509;
   border: 0.1rem solid #1b7a0d;
-  /* color:#1b7a0d ; */
 }

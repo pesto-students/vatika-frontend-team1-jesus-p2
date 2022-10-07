@@ -7,13 +7,11 @@ import DealDay from "./DealDay";
 import WhyUs from "./WhyUs";
 import Contact from "./Contact";
 import Testimonial from "./Testimonial";
-// import Footer from './components/Common/Footer';
 
 function LandingPage() {
   return (
     <div className="super">
       <div className="main">
-        {/* <Navbar/> */}
         <MainContent />
       </div>
       <div className="category">
@@ -25,7 +23,6 @@ function LandingPage() {
       <WhyUs />
       <Testimonial />
       <Contact />
-      {/* <Footer/> */}
     </div>
   );
 }

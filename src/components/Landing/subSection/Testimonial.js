@@ -1,7 +1,7 @@
 import React from "react";
 import Heading from "../../Common/Heading";
 import { Carousel } from "antd";
-import '../css/Testimonial.css'
+import "../css/Testimonial.css";
 
 function Testimonial() {
   return (
@@ -28,8 +28,9 @@ function Testimonial() {
           <div className="feedback">
             <h2>Marina Frank</h2>
             <p>
-              " Everything was perfect. Great packaging, good condition, and quick
-              shipping I ordered indoor plants and they seem to be doing great! "
+              " Everything was perfect. Great packaging, good condition, and
+              quick shipping I ordered indoor plants and they seem to be doing
+              great! "
             </p>
             <img src={require("../../../assets/testmonial-3.png")} alt="logo" />
           </div>

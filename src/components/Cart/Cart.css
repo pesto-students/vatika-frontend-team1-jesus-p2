@@ -127,7 +127,6 @@
 .cart .summary .line {
   margin-top: 5%;
   margin-bottom: 5%;
-  /* width: 14rem; */
   border: 0.01rem solid #767676;
 }
 
@@ -152,8 +151,6 @@
   border-radius: 0.5rem;
 }
 
-
-
 .cart .summary .total h2 {
   font-size: 1.5rem;
   font-weight: 600;
@@ -164,7 +161,7 @@
   margin-left: 35%;
 }
 
-.cart .summary .total .discount{
+.cart .summary .total .discount {
   color: red;
 }
 

@@ -62,8 +62,6 @@ export const sortByPrice = (value) => {
   };
 };
 
-
-
 export const clearFilter = () => {
   return {
     type: ActionTypes.CLEAR_FILTER,
@@ -76,19 +74,20 @@ export const filterByGarden = (value) => {
     payload: value,
   };
 };
+
 export const filterByInterior = (value) => {
   return {
     type: ActionTypes.FILTER_BY_INTERIOR,
     payload: value,
   };
 };
+
 export const filterByOffice = (value) => {
   return {
     type: ActionTypes.FILTER_BY_OFFICE,
     payload: value,
   };
 };
-
 
 export const setAddress = (address) => {
   return {

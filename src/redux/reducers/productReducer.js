@@ -5,9 +5,9 @@ const initialState = {
   cart: [],
 };
 
-const initialAddress={
-  allAddress:[],
-}
+const initialAddress = {
+  allAddress: [],
+};
 
 const initialFilter = {
   searchQuery: "",
@@ -17,15 +17,42 @@ const initialFilter = {
   byOffice: false,
 };
 
-// const initialTotal={
-//   total:0
-// }
-
-export const totalCartReducer = (state = {}, { type, payload }) => {
+export const productReducer = (state = initialState, { type, payload }) => {
   switch (type) {
-    case ActionTypes.CART_TOTAL:
+    case ActionTypes.SET_PRODUCTS:
+      return { ...state, products: payload };
+    case ActionTypes.ADD_TO_CART:
+      return { ...state, cart: [...state.cart, { ...payload, qty: 1 }] };
+    case ActionTypes.REMOVE_FROM_CART:
+      return {
+        ...state,
+        cart: state.cart.filter((c) => c.name !== payload.name),
+      };
+    case ActionTypes.INCC_QUANTITY:
+      return {
+        ...state,
+        cart: state.cart.filter((c) =>
+          c.name === payload.name ? (c.qty = c.qty + 1) : c.qty
+        ),
+      };
+    case ActionTypes.DESC_QUANTITY:
+      return {
+        ...state,
+        cart: state.cart.filter((c) =>
+          c.name === payload.name ? (c.qty = c.qty - 1) : c.qty
+        ),
+      };
+    default:
+      return state;
+  }
+};
+
+export const selectProductReducer = (state = {}, { type, payload }) => {
+  switch (type) {
+    case ActionTypes.SELECTED_PRODUCT:
       return { ...state, ...payload };
-    
+    case ActionTypes.REMOVE_SELECTED_PRODUCT:
+      return {};
     default:
       return state;
   }
@@ -81,59 +108,20 @@ export const filterProductReducer = (
   }
 };
 
-export const productReducer = (state = initialState, { type, payload }) => {
+export const totalCartReducer = (state = {}, { type, payload }) => {
   switch (type) {
-    case ActionTypes.SET_PRODUCTS:
-      return { ...state, products: payload };
-    case ActionTypes.ADD_TO_CART:
-      return { ...state, cart: [...state.cart, { ...payload, qty: 1 }] };
-    case ActionTypes.REMOVE_FROM_CART:
-      return {
-        ...state,
-        cart: state.cart.filter((c) => c.name !== payload.name),
-      };
-    case ActionTypes.INCC_QUANTITY:
-      return {
-        ...state,
-        cart: state.cart.filter((c) =>
-          c.name === payload.name ? (c.qty = c.qty + 1) : c.qty
-        ),
-      };
-    case ActionTypes.DESC_QUANTITY:
-      return {
-        ...state,
-        cart: state.cart.filter((c) =>
-          c.name === payload.name ? (c.qty = c.qty - 1) : c.qty
-        ),
-      };
-    default:
-      return state;
-  }
-};
-
-export const selectProductReducer = (state = {}, { type, payload }) => {
-  switch (type) {
-    case ActionTypes.SELECTED_PRODUCT:
+    case ActionTypes.CART_TOTAL:
       return { ...state, ...payload };
-    case ActionTypes.REMOVE_SELECTED_PRODUCT:
-      return {};
+
     default:
       return state;
   }
 };
-
 
 export const addressReducer = (state = initialAddress, { type, payload }) => {
   switch (type) {
     case ActionTypes.SET_ADDRESS:
-      return { ...state, allAddress :payload };
-   
-    // case ActionTypes.REMOVE_FROM_CART:
-    //   return {
-    //     ...state,
-    //     cart: state.cart.filter((c) => c.name !== payload.name),
-    //   };
-  
+      return { ...state, allAddress: payload };
     default:
       return state;
   }
