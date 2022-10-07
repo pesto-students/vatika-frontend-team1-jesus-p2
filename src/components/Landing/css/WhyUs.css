@@ -49,8 +49,8 @@
 }
 
 .whyUs .three img {
-  height: 20rem;
-  width: 20rem;
+  height: 17rem;
+  width: 17rem;
 }
 
 .whyUs .four {
@@ -60,4 +60,36 @@
 .whyUs .five {
   grid-area: fiveG;
   justify-self: center;
+}
+
+.whyUs .one img{
+  transition: 0.5s;
+}
+
+.whyUs .one img:hover{
+  scale: 107%;
+}
+
+.whyUs .two img{
+  transition: 0.5s;
+}
+
+.whyUs .two img:hover{
+  scale: 107%;
+}
+
+.whyUs .four img{
+  transition: 0.5s;
+}
+
+.whyUs .four img:hover{
+  scale: 107%;
+}
+
+.whyUs .five img{
+  transition: 0.5s;
+}
+
+.whyUs .five img:hover{
+  scale: 107%;
 }

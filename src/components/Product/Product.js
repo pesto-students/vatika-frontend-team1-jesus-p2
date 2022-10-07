@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Checkbox } from "antd";
 import Search from "antd/lib/transfer/search";
 import { DownOutlined } from "@ant-design/icons";
@@ -16,7 +16,6 @@ import {
   filterByGarden,
   filterByInterior,
   filterByOffice,
-  
 } from "../../redux/actions/productActions";
 
 function Product() {
@@ -138,7 +137,7 @@ function Product() {
                 dispatch(filterBySearch(e.target.value));
               }}
             />
-  
+
             <Dropdown className="dropDown" overlay={menu}>
               <Space>
                 Sort by

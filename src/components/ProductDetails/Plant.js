@@ -27,7 +27,7 @@ function Plant() {
     const response = await axios
       .get(`http://localhost:5000/product/${name}`)
       .catch((err) => console.log(err));
-    dispatch(selectedProduct(response.data[0]));
+    dispatch(selectedProduct(response.data));
   };
 
   console.log(product);
