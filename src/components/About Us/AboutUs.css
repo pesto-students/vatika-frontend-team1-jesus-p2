@@ -1,0 +1,8 @@
+/* AboutUs */
+.aboutus .heading-aboutus {
+  background-image: url("../../assets/Heading_AboutUs.png");
+  height: 7rem;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: 40% 30%;
+}

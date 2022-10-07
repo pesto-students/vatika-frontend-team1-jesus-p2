@@ -1,0 +1,73 @@
+/* Blog */
+.blog {
+  letter-spacing: 0.1rem;
+  font-family: "Rajdhani", sans-serif;
+  background-color: rgb(190, 190, 190);
+}
+
+.blog .heading-blog {
+  background-image: url("../../assets/Heading_Blog.png");
+  height: 7rem;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: 40% 30%;
+}
+
+.main-blog {
+  display: flex;
+  justify-content: center;
+  font-weight: 600;
+}
+
+.main-blog p {
+  margin-top: 1%;
+  padding: 1rem;
+  padding-top: 2.5rem;
+  width: 30rem;
+  font-size: 1rem;
+  background-color: rgb(204, 204, 204);
+  border-radius: 1rem;
+  box-shadow: 0px 2px 10px 2px rgba(0, 0, 0, 0.2);
+}
+
+.main-blog img {
+  height: 20rem;
+  width: 20rem;
+}
+
+.all-blogs {
+  display: flex;
+  flex: 1 1 1;
+  justify-content: space-around;
+  margin: 5%;
+  margin-bottom: 0;
+  padding-bottom: 5%;
+  flex-wrap: wrap;
+  row-gap: 1.5rem;
+}
+
+.all-blogs .each-blog {
+  width: 18rem;
+  text-align: center;
+  padding: 2%;
+  background-color: rgb(204, 204, 204);
+  border-radius: 0.5rem;
+  box-shadow: 0px 2px 10px 2px rgba(0, 0, 0, 0.2);
+}
+
+.all-blogs .each-blog img {
+  width: 15rem;
+}
+
+.all-blogs .each-blog h2 {
+  margin-top: 2%;
+  font-weight: 600;
+}
+
+.all-blogs .each-blog button {
+  color: white;
+  background-color: green;
+  border: none;
+  padding: 0.3rem;
+  border-radius: 0.2rem;
+}

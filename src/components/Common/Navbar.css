@@ -1,0 +1,139 @@
+/* Navbar  */
+.navbar {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90vw;
+  min-height: 12vh;
+  left: 3rem;
+  right: 3rem;
+  top: 0rem;
+  z-index: 2;
+}
+
+.left img {
+  height: 4rem;
+  width: 3rem;
+}
+
+.left p {
+  position: absolute;
+  font-size: 1.2rem;
+  font-family: "Patrick Hand SC", cursive;
+  font-weight: 400;
+  color: #1b7a0d;
+  letter-spacing: 0.06rem;
+  top: 3.5rem;
+}
+
+.mid ul {
+  list-style: none;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  margin-top: 0.5rem;
+}
+
+.mid ul li .navlink {
+  display: block;
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  letter-spacing: 0.06rem;
+  font-family: "Rajdhani", sans-serif;
+  font-weight: 400;
+  text-decoration: none;
+  color: black;
+  position: relative;
+  transition: 0.5s;
+}
+
+.mid ul li .navlink::after {
+  content: "";
+  position: absolute;
+  background-color: #208854;
+  height: 2px;
+  width: 0%;
+  left: 30px;
+  bottom: 10px;
+  transition: 0.4s;
+}
+
+.mid ul li .navlink:hover {
+  color: #208854;
+  font-weight: 600;
+}
+
+.mid ul li .navlink:hover::after {
+  width: 50%;
+}
+
+.right {
+  max-width: 30vw;
+  position: relative;
+}
+
+.right .heart,
+.right .cart {
+  font-size: 1.5rem;
+  transition: 0.2s;
+}
+
+.right .heart {
+  margin-right: 2rem;
+}
+
+.right .cart {
+  margin-right: 1.5rem;
+  color: black;
+}
+
+.right .heart:hover {
+  color: red;
+}
+
+.right .cart:hover {
+  color: goldenrod;
+}
+
+.right button {
+  border: 2px solid #208854;
+  color: black;
+  font-family: "Rajdhani", sans-serif;
+  background-color: transparent;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  padding: 0.1rem 0.4rem;
+  letter-spacing: 0.1rem;
+  font-weight: 600;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.right .badge {
+  position: absolute;
+  top: -0.5rem;
+  left: 4.5rem;
+}
+
+.right .login {
+  background-color: #208854;
+  color: white;
+}
+
+.right .signup {
+  margin-right: 1rem;
+  border: 0.1rem solid #208854;
+  color: #208854;
+}
+
+.right .login:hover {
+  background-color: gray;
+}
+
+.right .signup:hover {
+  background-color: gray;
+  color: white;
+}
+

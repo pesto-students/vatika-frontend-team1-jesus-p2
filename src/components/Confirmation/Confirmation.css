@@ -1,0 +1,105 @@
+.confirm {
+  font-family: "Rajdhani", sans-serif;
+  letter-spacing: 0.1rem;
+}
+
+.confirm .ant-steps {
+  width: 30rem;
+  margin: 1% auto;
+}
+
+.confirm h1 {
+  font-family: "Patrick Hand SC", cursive;
+  font-weight: 600;
+  font-size: 2rem;
+  margin: 2%;
+}
+
+.confirm .confirmation {
+  border: 0.1rem solid rgb(76, 76, 76);
+  border-radius: 0.2rem;
+  margin: 4%;
+  padding: 3%;
+}
+
+.confirm .confirmation .f-confirmation {
+  display: flex;
+  justify-content: space-between;
+}
+
+.confirm .confirmation h2 {
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.confirm .confirmation .coin {
+  margin-right: 10%;
+  text-align: center;
+}
+
+.confirm .confirmation .coin {
+  margin-right: 10%;
+  text-align: center;
+  font-family: "Patrick Hand SC", cursive;
+}
+
+.confirm .confirmation .coin img {
+  border-radius: 1rem;
+  box-shadow: 0px 2px 10px 2px rgba(0, 0, 0, 0.2);
+}
+
+.confirm .confirmation .coin h3 {
+  color: #f3b300;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0;
+}
+
+.confirm .confirmation .coin p {
+  color: #f3b300;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.confirm .confirmation .join {
+  margin-top: 2%;
+  font-family: "Patrick Hand SC", cursive;
+  text-align: center;
+  color: green;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.confirm .confirmation .join button {
+  font-family: "Rajdhani", sans-serif;
+  color: gray;
+  border: 0.1rem solid gray;
+  background-color: transparent;
+  font-size: 1rem;
+  border-radius: 1rem;
+  font-weight: 600;
+}
+
+.confirm .two-button {
+  text-align: center;
+  margin-bottom: 5%;
+  height: 2.5rem;
+  font-size: 1rem;
+}
+
+.confirm .two-button .contShopping {
+  color: white;
+  border: none;
+  background-color: #208854;
+  border-radius: 0.2rem;
+  margin-right: 1%;
+  padding: 0.5%;
+}
+
+.confirm .two-button .orderHistory {
+  color: white;
+  border: none;
+  background-color: #767676;
+  border-radius: 0.2rem;
+  padding: 0.5%;
+}

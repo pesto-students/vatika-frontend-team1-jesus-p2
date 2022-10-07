@@ -1,0 +1,45 @@
+/* Main Content Landing Page */
+.mainContent {
+  margin-left: 4rem;
+  padding-top: 6rem;
+}
+
+.mainContent p {
+  width: 30rem;
+  font-size: 3rem;
+  font-family: "Bad Script", cursive;
+  letter-spacing: 0.1rem;
+  font-weight: 500;
+  margin-bottom: 0.8rem;
+}
+
+.mainContent p span {
+  color: #208854;
+}
+
+.mainContent h1 {
+  font-family: "Rajdhani";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.5rem;
+}
+
+.mainContent button {
+  margin-top: 1rem;
+  font-family: "Patrick Hand SC", cursive;
+  background: #208854;
+  border-radius: 10px 20px;
+  width: 9rem;
+  font-size: 1rem;
+  border: none;
+  color: white;
+  height: 2rem;
+  text-align: center;
+  letter-spacing: 0.1rem;
+  transition: transform 0.3s;
+  cursor: pointer;
+}
+
+.mainContent button:hover {
+  transform: scale(1.1);
+}
