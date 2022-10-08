@@ -1,18 +1,17 @@
 import { combineReducers } from "redux";
-import {
-  productReducer,
-  selectProductReducer,
-  filterProductReducer,
-  addressReducer,
-  totalCartReducer,
-} from "./productReducer";
+import { allProductReducer, selectProductReducer } from "./productsReducer";
+import { cartReducer } from "./cartReducer";
+import { filterProductReducer } from "./filterReducer";
+import { addressReducer } from "./addressReducer";
+import { cartTotalReducer } from "./cartTotalReducer";
 
 export const reducers = combineReducers({
-  allProducts: productReducer,
+  allProducts: allProductReducer,
   product: selectProductReducer,
+  cart: cartReducer,
   filter: filterProductReducer,
   address: addressReducer,
-  cartTotal: totalCartReducer,
+  cartTotal: cartTotalReducer,
 });
 
 export default reducers;

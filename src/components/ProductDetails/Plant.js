@@ -15,7 +15,9 @@ import { notification } from "antd";
 
 function Plant() {
   const product = useSelector((state) => state.product);
-  const { products, cart } = useSelector((state) => state.allProducts);
+  // const { products, cart } = useSelector((state) => state.allProducts);
+  const {cart}=useSelector((state)=>state.cart);
+
 
   const { name } = useParams();
   const dispatch = useDispatch();

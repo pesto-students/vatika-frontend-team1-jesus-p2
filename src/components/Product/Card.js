@@ -6,9 +6,11 @@ import { addToCart, removeFromCart } from "../../redux/actions/productActions";
 import { notification } from "antd";
 
 function Card() {
-  const { products, cart } = useSelector((state) => state.allProducts);
-  console.log("Cart:", cart);
+  const { products} = useSelector((state) => state.allProducts);
+  const {cart}=useSelector((state)=>state.cart);
   const dispatch = useDispatch();
+  
+  console.log("Cart:", cart);
 
   const filter = useSelector((state) => state.filter);
 

@@ -6,7 +6,8 @@ import "./Navbar.css";
 import { useSelector } from "react-redux";
 
 function Navbar() {
-  const { cart } = useSelector((state) => state.allProducts);
+  // const { cart } = useSelector((state) => state.allProducts);
+  const {cart}=useSelector((state)=>state.cart);
 
   return (
     <>

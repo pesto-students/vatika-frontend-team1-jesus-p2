@@ -22,8 +22,9 @@ import { Link } from "react-router-dom";
 const { Step } = Steps;
 
 function Cart() {
-  const cart = useSelector((state) => state.allProducts.cart);
+  // const cart = useSelector((state) => state.allProducts.cart);
   const grandTotal = useSelector((state) => state.cartTotal);
+  const {cart}=useSelector((state)=>state.cart);
 
   // console.log(grandTotal)
   const dispatch = useDispatch();

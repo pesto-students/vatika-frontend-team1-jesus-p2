@@ -17,11 +17,25 @@ import {
 } from "../../redux/actions/productActions";
 
 function Product() {
-  const products = useSelector((state) => state.allProducts.products);
+  const products = useSelector((state) => state.allProducts);
   const dispatch = useDispatch();
 
   const filter = useSelector((state) => state.filter);
   console.log("Filter:", filter);
+
+  const fetchProducts = async () => {
+    const response = await axios
+      .get("http://localhost:5000/product")
+      .catch((err) => console.log("Error", err));
+    // console.log(response.data);
+    dispatch(setProducts(response.data));
+  };
+
+  useEffect(() => {
+    fetchProducts();
+  }, []);
+
+  console.log("Products:", products);
 
   const menu = (
     <Menu
@@ -53,20 +67,6 @@ function Product() {
       ]}
     />
   );
-
-  const fetchProducts = async () => {
-    const response = await axios
-      .get("http://localhost:5000/product")
-      .catch((err) => console.log("Error", err));
-    // console.log(response.data);
-    dispatch(setProducts(response.data));
-  };
-
-  useEffect(() => {
-    fetchProducts();
-  }, []);
-
-  console.log("Products:", products);
 
   return (
     <div className="product">
