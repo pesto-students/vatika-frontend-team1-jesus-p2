@@ -1,5 +1,11 @@
 import { ActionTypes } from "../constants/ActionTypes";
 
+export const userLoggedIn=()=>{
+  return {
+    type:ActionTypes.USER_LOGIN,
+  }
+}
+
 export const setProducts = (products) => {
   return {
     type: ActionTypes.SET_PRODUCTS,

@@ -137,3 +137,20 @@
   color: white;
 }
 
+.right .userIcon{
+  margin-left: 1rem;
+  font-size: 1.5rem;
+  color: green;
+}
+
+.right .downArrow{
+  color: green;
+}
+
+.ant-modal-close-x {
+  right: -150px;
+  position: absolute;
+  top: -50px;
+  background-color: white;
+  border-radius: 1rem;
+}
