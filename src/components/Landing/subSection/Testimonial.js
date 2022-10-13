@@ -1,5 +1,5 @@
 import React from "react";
-import Heading from "../../Common/Heading";
+import Heading from "../../Common/Heading/Heading";
 import { Carousel } from "antd";
 import "../css/Testimonial.css";
 

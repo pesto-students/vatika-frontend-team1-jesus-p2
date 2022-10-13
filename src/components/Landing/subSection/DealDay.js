@@ -1,5 +1,5 @@
 import React from "react";
-import Heading from "../../Common/Heading";
+import Heading from "../../Common/Heading/Heading";
 import { Rate } from "antd";
 import "../css/DealDay.css";
 
@@ -11,6 +11,7 @@ function DealDay() {
         <div className="left-plant">
           <h2>Limited Stock HurryUp!</h2>
         </div>
+        
         <div className="right-plant r-1">
           <img src={require("../../../assets/plant-1.png")} alt="DealPlant1" />
           <h3>Money Plant</h3>

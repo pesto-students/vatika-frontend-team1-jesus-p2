@@ -1,5 +1,5 @@
 import React from "react";
-import Heading from "../../Common/Heading";
+import Heading from "../../Common/Heading/Heading";
 import { PushpinFilled, PhoneFilled, MailFilled } from "@ant-design/icons";
 import "../css/Contact.css";
 import { notification } from "antd";
@@ -14,7 +14,6 @@ function Contact() {
     var form = document.getElementById("useForm");
     form.reset();
   };
-
   return (
     <div className="contactUs">
       <Heading content={"Contact Us"} />

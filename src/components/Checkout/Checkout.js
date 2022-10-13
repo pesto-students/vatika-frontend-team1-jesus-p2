@@ -18,6 +18,7 @@ const { Step } = Steps;
 
 const Checkout = () => {
   const [form] = Form.useForm();
+  
   const [oneAddress, setOneAddress] = useState({});
   const [toggleButton, setToggleButton] = useState(false);
   const [coin, setCoin] = useState(0);
@@ -83,7 +84,6 @@ const Checkout = () => {
         },
       })
       .catch((err) => console.log("Error", err));
-    // console.log(response.data);
     dispatch(setAddress(response.data));
   };
 

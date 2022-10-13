@@ -17,6 +17,12 @@
     "redux": "^4.2.0",
     "web-vitals": "^2.1.4"
   },
+  "devDependencies": {
+    "prettier": "^2.7.1"
+  },
+  "engines": {
+    "react": ">=14.0.0 <18.2.0"
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",

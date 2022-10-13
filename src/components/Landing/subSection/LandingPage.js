@@ -1,6 +1,6 @@
 import React from "react";
 import MainContent from "./MainContent";
-import Heading from "../../Common/Heading";
+import Heading from "../../Common/Heading/Heading";
 import PlantCategory from "./PlantCategory";
 import MeetPlant from "./MeetPlant";
 import DealDay from "./DealDay";

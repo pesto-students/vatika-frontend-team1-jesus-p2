@@ -4,10 +4,11 @@ import { Button, Form, Input } from "antd";
 import { LockOutlined, MailOutlined } from "@ant-design/icons";
 import { useDispatch, useSelector } from "react-redux";
 import { userLoggedIn } from "../../redux/actions/productActions";
-import './Login.css';
+import "./Login.css";
 
 const Login = ({ handleLoginCancel, showSignUpModal }) => {
   const [message, setMessage] = useState("");
+  const [loading, setLoading] = useState(false);
 
   const login = useSelector((state) => state.login);
   const dispatch = useDispatch();
@@ -18,15 +19,15 @@ const Login = ({ handleLoginCancel, showSignUpModal }) => {
       const url = "http://localhost:5000/api/login";
       const response = await axios.post(url, values);
       localStorage.setItem("token", response.data.token);
+      setLoading(false);
       setMessage(response.data.message);
-      console.log(response.data.message);
 
       if (response.status === 200) {
         handleLoginCancel();
         dispatch(userLoggedIn());
       }
     } catch (error) {
-      console.log(error.response.data.message);
+      setLoading(false);
       setMessage(error.response.data.message);
     }
   };
@@ -51,6 +52,7 @@ const Login = ({ handleLoginCancel, showSignUpModal }) => {
                 }}
                 onFinish={(values) => {
                   handleSubmit(values);
+                  setLoading(true);
                 }}
                 autoComplete="off"
               >
@@ -115,6 +117,8 @@ const Login = ({ handleLoginCancel, showSignUpModal }) => {
                     htmlType="submit"
                     className="green_btn"
                     style={{ backgroundColor: "#208854" }}
+                    disabled={loading ? true : false}
+                    loading={loading ? true : false}
                   >
                     Login
                   </Button>

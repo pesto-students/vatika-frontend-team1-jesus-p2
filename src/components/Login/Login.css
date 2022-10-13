@@ -106,12 +106,9 @@
   margin: 10px;
 }
 
-/* .loginComp {
-  width: 100px;
-  height: 100px;
-  position: absolute;
-  top: 10px;
-  background-color: #3bb19b;
-} */
+.ant-form-item-feedback-icon-success{
+  color: #208854;
+} 
+
 
 

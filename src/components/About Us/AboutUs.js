@@ -1,17 +1,3 @@
-// import React from "react";
-// import "./AboutUs.css";
-
-// function AboutUs() {
-//   return (
-//     <div className="aboutus">
-//       <div className="heading-aboutus"></div>
-//       Hello About Us !
-//     </div>
-//   );
-// }
-
-// export default AboutUs;
-
 import React from "react";
 import "./AboutUs.css";
 import aboutus1 from "../../assets/aboutus1.png";
@@ -43,7 +29,7 @@ function AboutUs() {
             favorable factors.
           </p>
         </div>
-       
+
         <div className="part-three">
           A one-stop-shop for all gardening related requirements, Vatika has
           more than 100 products available online for delivery across India
@@ -60,4 +46,6 @@ function AboutUs() {
   );
 }
 
-export default AboutUs;
+const MemoizedAboutUs = React.memo(AboutUs);
+
+export default MemoizedAboutUs;

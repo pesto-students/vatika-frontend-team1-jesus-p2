@@ -5,7 +5,7 @@ function Heading({ content }) {
   return (
     <div className="heading">
       <h1>
-        <img src={require("../../assets/Heading_Leaf.png")} alt="facebook" />
+        <img src={require("../../../assets/Heading_Leaf.png")} alt="facebook" />
         {content}
       </h1>
     </div>

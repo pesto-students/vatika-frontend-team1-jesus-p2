@@ -2,27 +2,27 @@ import { useState } from "react";
 import axios from "axios";
 import { Button, Form, Input } from "antd";
 import { UserOutlined, LockOutlined, MailOutlined } from "@ant-design/icons";
-import './Signup.css';
+import "./Signup.css";
 
 const Signup = ({ handleSignUpCancel, showLoginModal }) => {
   const [form] = Form.useForm();
 
-  const [error, setError] = useState("");
-  const [success, setSuccess] = useState("");
+  const [responseMessage, setResponseMessage] = useState("");
+  const [loading, setLoading] = useState(false);
 
   const handleSubmit = async (values) => {
     try {
       const url = "http://localhost:5000/api/signup";
       const response = await axios.post(url, values);
-      console.log(response.data.message);
-      setSuccess(response.data.message);
+      setLoading(false);
+      setResponseMessage(response.data.message);
 
       if (response.status === 201) {
         form.resetFields();
       }
     } catch (err) {
-      console.log(err.response.data.message);
-      setError(err.response.data.message);
+      setLoading(false);
+      setResponseMessage(err.response.data.message);
     }
   };
 
@@ -59,6 +59,7 @@ const Signup = ({ handleSignUpCancel, showLoginModal }) => {
               }}
               onFinish={(values) => {
                 handleSubmit(values);
+                setLoading(true);
               }}
               autoComplete="off"
               form={form}
@@ -134,13 +135,16 @@ const Signup = ({ handleSignUpCancel, showLoginModal }) => {
               </Form.Item>
 
               <Form.Item>
-                {success && <div className="success_msg">{success}</div>}
-                {error && <div className="error_msg">{error}</div>}
+                {responseMessage && (
+                  <div className="error_msg">{responseMessage}</div>
+                )}
                 <Button
                   type="primary"
                   htmlType="submit"
                   className="green_btn"
                   style={{ backgroundColor: "#208854" }}
+                  disabled={loading ? true : false}
+                  loading={loading ? true : false}
                 >
                   Signup
                 </Button>

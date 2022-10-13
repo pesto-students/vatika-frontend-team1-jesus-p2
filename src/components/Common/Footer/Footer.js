@@ -24,9 +24,9 @@ function Footer() {
 
         <div className="section-4">
           <h1>Follow Us</h1>
-          <img src={require("../../assets/facebook.png")} alt="facebook" />
-          <img src={require("../../assets/youtube.png")} alt="youtube" />
-          <img src={require("../../assets/twitter.png")} alt="twitter" />
+          <img src={require("../../../assets/facebook.png")} alt="facebook" />
+          <img src={require("../../../assets/youtube.png")} alt="youtube" />
+          <img src={require("../../../assets/twitter.png")} alt="twitter" />
         </div>
       </footer>
       <div className="copy-right">
