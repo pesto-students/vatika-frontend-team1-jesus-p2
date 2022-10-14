@@ -1,4 +1,4 @@
-import React, { useEffect,useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   ArrowLeftOutlined,
   ShoppingCartOutlined,
@@ -8,7 +8,7 @@ import {
   LockOutlined,
 } from "@ant-design/icons";
 import "./checkout.css";
-import { Checkbox, Form, Input,notification,Steps } from "antd";
+import { Checkbox, Form, Input, notification, Steps } from "antd";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import { useDispatch, useSelector } from "react-redux";
@@ -18,7 +18,7 @@ const { Step } = Steps;
 
 const Checkout = () => {
   const [form] = Form.useForm();
-  
+
   const [oneAddress, setOneAddress] = useState({});
   const [toggleButton, setToggleButton] = useState(false);
   const [coin, setCoin] = useState(0);
@@ -56,18 +56,17 @@ const Checkout = () => {
 
   const moreThenThreeAddress = () => {
     notification.error({
-      message:"List Full , Delete Few Address !",
-      placement:'bottom',
-      duration:1.5,
+      message: "List Full , Delete Few Address !",
+      placement: "bottom",
+      duration: 1.5,
     });
   };
 
   const onAddressSaveAPI = async (values) => {
     const value = { ...values, email: "kavishgarg15@gmail.com" };
     const response = await axios
-      .post("http://localhost:5000/address", value)
+      .post(process.env.REACT_APP_ADDRESSES, value)
       .catch((err) => console.log("Error", err));
-    // console.log(response.data);
     if (response.data.length !== 0) {
       setOneAddress((previousState) => {
         return { ...previousState, length: response.data.length };
@@ -78,7 +77,7 @@ const Checkout = () => {
 
   const getAllAddressAPI = async () => {
     const response = await axios
-      .get("http://localhost:5000/address", {
+      .get(process.env.REACT_APP_ADDRESSES, {
         params: {
           email: "kavishgarg15@gmail.com",
         },
@@ -89,13 +88,12 @@ const Checkout = () => {
 
   const deleteOneAddressAPI = async (id) => {
     const response = await axios
-      .delete("http://localhost:5000/address", {
+      .delete(process.env.REACT_APP_ADDRESSES, {
         params: {
           id: id,
         },
       })
       .catch((err) => console.log("Error", err));
-    // console.log(response.data);
     setOneAddress((previousState) => {
       return { ...previousState, count: response.data.deletedCount };
     });
@@ -103,7 +101,7 @@ const Checkout = () => {
 
   const superCoinAPI = async () => {
     const response = await axios
-      .get("http://localhost:5000/supercoin", {
+      .get(process.env.REACT_APP_SUPERCOIN, {
         params: {
           email: "kavishgarg15@gmail.com",
         },
@@ -116,7 +114,7 @@ const Checkout = () => {
 
   const handlePayment = async () => {
     try {
-      const response = await axios.post("http://localhost:5000/orders", {
+      const response = await axios.post(process.env.REACT_APP_ORDERS, {
         amount: grandTotal.total + 30 - coin,
       });
       console.log(response.data);
@@ -137,7 +135,7 @@ const Checkout = () => {
       handler: async (response) => {
         try {
           const { data } = await axios.post(
-            "http://localhost:5000/verify",
+            process.env.REACT_APP_VERIFY,
             response
           );
           console.log(data);
@@ -149,7 +147,7 @@ const Checkout = () => {
         color: "green",
       },
       redirect: true,
-      callback_url: "http://localhost:3000/confirmation",
+      callback_url: process.env.REACT_APP_CONFIRMATION,
     };
     const rzp1 = new window.Razorpay(options);
     rzp1.open();
@@ -419,10 +417,19 @@ const Checkout = () => {
           <div className="sidePanel">
             <h1>Payment</h1>
             <div className="balanceText">
-              <img src={require("../../assets/coin-icon.png")} alt="Coin" className="coin-image" />
+              <img
+                src={require("../../assets/coin-icon.png")}
+                alt="Coin"
+                className="coin-image"
+              />
               Super Coin Balance:
               <span className="amount">
-                Rs {coin} <img src={require("../../assets/right-tick-icon.png")} className="right-tick" alt="one" />
+                Rs {coin}{" "}
+                <img
+                  src={require("../../assets/right-tick-icon.png")}
+                  className="right-tick"
+                  alt="one"
+                />
               </span>
             </div>
 
@@ -433,7 +440,11 @@ const Checkout = () => {
                 <input type="radio" className="radioButton" name="radioB" />
                 <label className="labelText">
                   UPI Payment
-                  <img src={require("../../assets/upi.png")} className="radioUPIIcons" alt="UPI" />
+                  <img
+                    src={require("../../assets/upi.png")}
+                    className="radioUPIIcons"
+                    alt="UPI"
+                  />
                 </label>
               </div>
 
@@ -441,7 +452,11 @@ const Checkout = () => {
                 <input type="radio" className="radioButton" name="radioB" />
                 <label className="labelText">
                   Debit/Credit Card
-                  <img src={require("../../assets/CreditCard.png")} className="radioIcons" alt="Card" />
+                  <img
+                    src={require("../../assets/CreditCard.png")}
+                    className="radioIcons"
+                    alt="Card"
+                  />
                 </label>
               </div>
 
@@ -454,7 +469,11 @@ const Checkout = () => {
                 />
                 <label className="labelText">
                   Cash On Delivery
-                  <img src={require("../../assets/cashIcon.png")} className="radioIcons" alt="Cash" />
+                  <img
+                    src={require("../../assets/cashIcon.png")}
+                    className="radioIcons"
+                    alt="Cash"
+                  />
                 </label>
               </div>
             </div>
@@ -468,11 +487,9 @@ const Checkout = () => {
             <hr />
             <p className="finalAmount">Rs. {grandTotal.total + 30 - coin}</p>
             <hr />
-            {/* <Link to="/confirmation"> */}
             <button className="proceedButton" onClick={handlePayment}>
               Proceed
             </button>
-            {/* </Link> */}
             <p className="protectedText">
               <LockOutlined /> Your data will be protected and everything will
               be private

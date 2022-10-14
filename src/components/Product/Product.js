@@ -17,25 +17,22 @@ import {
 } from "../../redux/actions/productActions";
 
 function Product() {
-  const products = useSelector((state) => state.allProducts);
+  // const products = useSelector((state) => state.allProducts);
   const dispatch = useDispatch();
 
   const filter = useSelector((state) => state.filter);
-  console.log("Filter:", filter);
+  // console.log("Filter:", filter);
 
   const fetchProducts = async () => {
     const response = await axios
-      .get("http://localhost:5000/product")
+      .get(process.env.REACT_APP_PRODUCTS)
       .catch((err) => console.log("Error", err));
-    // console.log(response.data);
     dispatch(setProducts(response.data));
   };
 
   useEffect(() => {
     fetchProducts();
   }, []);
-
-  console.log("Products:", products);
 
   const menu = (
     <Menu

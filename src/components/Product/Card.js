@@ -3,41 +3,16 @@ import { HeartOutlined } from "@ant-design/icons";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { addToCart, removeFromCart } from "../../redux/actions/productActions";
-import { notification } from "antd";
+import { transformProduct, added, removed } from "./CardFunctions";
 
 function Card() {
-  const { products} = useSelector((state) => state.allProducts);
-  const {cart}=useSelector((state)=>state.cart);
-  const dispatch = useDispatch();
-  
-  console.log("Cart:", cart);
-
+  const { cart } = useSelector((state) => state.cart);
+  const { products } = useSelector((state) => state.allProducts);
   const filter = useSelector((state) => state.filter);
 
-  const transformProduct = () => {
-    let sortedProduct = products;
+  const dispatch = useDispatch();
 
-    if (filter.sort) {
-      sortedProduct = sortedProduct.sort((a, b) =>
-        filter.sort === "lowToHigh" ? a.price - b.price : b.price - a.price
-      );
-    }
-
-    if (filter.category) {
-      sortedProduct = sortedProduct.filter(
-        (prod) => prod.category === filter.category
-      );
-    }
-
-    if (filter.searchQuery) {
-      sortedProduct = sortedProduct.filter((prod) =>
-        prod.name.toLowerCase().includes(filter.searchQuery)
-      );
-    }
-    return sortedProduct;
-  };
-
-  const renderProducts = transformProduct().map((product) => {
+  const renderProducts = transformProduct(filter, products).map((product) => {
     return (
       <div className="cards" key={product._id}>
         <Link to={`/product/${product.name}`}>
@@ -76,22 +51,6 @@ function Card() {
       </div>
     );
   });
-
-  const added = () => {
-    notification.success({
-      message: "Item Added Successfully",
-      placement: "top",
-      duration: 1.5,
-    });
-  };
-
-  const removed = () => {
-    notification.error({
-      message: "Item Removed From Cart",
-      placement: "top",
-      duration: 1.5,
-    });
-  };
 
   return (
     <>

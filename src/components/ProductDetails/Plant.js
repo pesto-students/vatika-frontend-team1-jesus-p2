@@ -15,17 +15,14 @@ import { notification } from "antd";
 
 function Plant() {
   const product = useSelector((state) => state.product);
-  // const { products, cart } = useSelector((state) => state.allProducts);
-  const {cart}=useSelector((state)=>state.cart);
-
+  const { cart } = useSelector((state) => state.cart);
 
   const { name } = useParams();
   const dispatch = useDispatch();
-  // console.log(name);
 
   const fetchProductDetails = async () => {
     const response = await axios
-      .get(`http://localhost:5000/product/${name}`)
+      .get(`${process.env.REACT_APP_PRODUCT}/${name}`)
       .catch((err) => console.log(err));
     dispatch(selectedProduct(response.data));
   };

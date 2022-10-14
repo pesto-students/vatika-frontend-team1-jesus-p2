@@ -19,7 +19,6 @@ function Confirmation() {
           <ArrowLeftOutlined /> Back
         </button>
       </div>
-      {/* process wait finish  */}
       <Steps className="steps">
         <Step status="finish" title="Cart" icon={<ShoppingCartOutlined />} />
         <Step status="finish" title="Payment" icon={<AlipayCircleOutlined />} />
