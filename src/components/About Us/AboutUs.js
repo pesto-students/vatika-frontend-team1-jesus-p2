@@ -47,5 +47,4 @@ function AboutUs() {
 }
 
 const MemoizedAboutUs = React.memo(AboutUs);
-
 export default MemoizedAboutUs;

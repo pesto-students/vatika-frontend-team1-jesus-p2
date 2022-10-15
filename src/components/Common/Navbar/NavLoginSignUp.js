@@ -1,4 +1,4 @@
-import React,{useState} from "react";
+import React, { useState } from "react";
 import { Modal } from "antd";
 
 import Signup from "../../Signup/Signup";
@@ -24,41 +24,39 @@ function NavLoginSignUp() {
     setIsLoginModalOpen(false);
   };
   return (
-    
-      <>
-        <button className="signup" onClick={showSignUpModal}>
-          Signup
-        </button>
-        <Modal
-          open={isSignUpModalOpen}
-          footer={null}
-          bodyStyle={{ height: 0, width: 0 }}
-          onCancel={handleSignUpCancel}
-        >
-          <div className="wrapper">
-            <Signup
-              handleSignUpCancel={handleSignUpCancel}
-              showLoginModal={showLoginModal}
-            />
-          </div>
-        </Modal>
-
-        <button className="login" onClick={showLoginModal}>
-          Login
-        </button>
-        <Modal
-          open={isLoginUpModalOpen}
-          footer={null}
-          bodyStyle={{ height: 0, width: 0 }}
-          onCancel={handleLoginCancel}
-        >
-          <Login
-            handleLoginCancel={handleLoginCancel}
-            showSignUpModal={showSignUpModal}
+    <>
+      <button className="signup" onClick={showSignUpModal}>
+        Signup
+      </button>
+      <Modal
+        open={isSignUpModalOpen}
+        footer={null}
+        bodyStyle={{ height: 0, width: 0 }}
+        onCancel={handleSignUpCancel}
+      >
+        <div className="wrapper">
+          <Signup
+            handleSignUpCancel={handleSignUpCancel}
+            showLoginModal={showLoginModal}
           />
-        </Modal>
-      </>
-    
+        </div>
+      </Modal>
+
+      <button className="login" onClick={showLoginModal}>
+        Login
+      </button>
+      <Modal
+        open={isLoginUpModalOpen}
+        footer={null}
+        bodyStyle={{ height: 0, width: 0 }}
+        onCancel={handleLoginCancel}
+      >
+        <Login
+          handleLoginCancel={handleLoginCancel}
+          showSignUpModal={showSignUpModal}
+        />
+      </Modal>
+    </>
   );
 }
 

@@ -56,7 +56,7 @@ const Login = ({ handleLoginCancel, showSignUpModal }) => {
                 showSignUpModal();
               }}
             >
-              Sing Up
+              Sign Up
             </button>
           </div>
         </div>

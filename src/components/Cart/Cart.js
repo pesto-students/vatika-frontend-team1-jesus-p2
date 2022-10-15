@@ -1,3 +1,4 @@
+import React, { useState, useEffect } from "react";
 import {
   ArrowLeftOutlined,
   ShoppingCartOutlined,
@@ -7,7 +8,6 @@ import {
 import { Steps } from "antd";
 import "./Cart.css";
 import { useDispatch, useSelector } from "react-redux";
-import React, { useState, useEffect } from "react";
 import { cartTotal } from "../../redux/actions/productActions";
 import { Link } from "react-router-dom";
 import CartItem from "./CartItem";

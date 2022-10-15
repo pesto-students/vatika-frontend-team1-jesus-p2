@@ -1,8 +1,8 @@
 import { useState } from "react";
 import axios from "axios";
-import { Button, Form, Input } from "antd";
-import { UserOutlined, LockOutlined, MailOutlined } from "@ant-design/icons";
+import { Form } from "antd";
 import "./Signup.css";
+import SignupForm from "./SignupForm";
 
 const Signup = ({ handleSignUpCancel, showLoginModal }) => {
   const [form] = Form.useForm();
@@ -47,110 +47,13 @@ const Signup = ({ handleSignUpCancel, showLoginModal }) => {
           </div>
 
           <div className="right-signUp">
-            <Form
-              name="basic"
-              labelCol={{
-                span: 8,
-              }}
-              wrapperCol={{
-                span: 16,
-              }}
-              initialValues={{
-                remember: true,
-              }}
-              onFinish={(values) => {
-                handleSubmit(values);
-                setLoading(true);
-              }}
-              autoComplete="off"
+            <SignupForm
+              handleSubmit={handleSubmit}
               form={form}
-            >
-              <h1 style={{ fontSize: "35px" }}>Create Your Account</h1>
-              <Form.Item
-                name="userName"
-                rules={[
-                  { required: true, message: "Please input your username" },
-                  {
-                    min: 5,
-                    message: "Username should be at least 5 characters long",
-                  },
-                  { whitespace: true, message: "Username cannot be empty" },
-                ]}
-                hasFeedback
-              >
-                <Input
-                  prefix={
-                    <UserOutlined
-                      style={{ color: "#208854", fontSize: "18px" }}
-                    />
-                  }
-                  placeholder="Enter your Username"
-                  className="input"
-                />
-              </Form.Item>
-              <Form.Item
-                name="email"
-                rules={[
-                  { required: true, message: "Please input your email" },
-                  { type: "email", message: "Please enter a valid email" },
-                  { whitespace: true, message: "Email cannot be empty" },
-                ]}
-                hasFeedback
-              >
-                <Input
-                  prefix={
-                    <MailOutlined
-                      style={{ color: "#208854", fontSize: "18px" }}
-                    />
-                  }
-                  placeholder="Enter your email"
-                  className="input"
-                />
-              </Form.Item>
-
-              <Form.Item
-                name="password"
-                rules={[
-                  { required: true, message: "Please input your password" },
-                  {
-                    whitespace: true,
-                    message: "Password cannot be empty",
-                    type: "password",
-                  },
-                  {
-                    min: 9,
-                    message: "Password must be at least 8 characters long",
-                  },
-                ]}
-                hasFeedback
-              >
-                <Input.Password
-                  prefix={
-                    <LockOutlined
-                      style={{ color: "#208854", fontSize: "18px" }}
-                    />
-                  }
-                  placeholder="Enter your password"
-                  className="input"
-                />
-              </Form.Item>
-
-              <Form.Item>
-                {responseMessage && (
-                  <div className="error_msg">{responseMessage}</div>
-                )}
-                <Button
-                  type="primary"
-                  htmlType="submit"
-                  className="green_btn"
-                  style={{ backgroundColor: "#208854" }}
-                  disabled={loading ? true : false}
-                  loading={loading ? true : false}
-                >
-                  Signup
-                </Button>
-              </Form.Item>
-            </Form>
+              loading={loading}
+              setLoading={setLoading}
+              responseMessage={responseMessage}
+            />
           </div>
         </div>
       </div>

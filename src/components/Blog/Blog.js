@@ -27,4 +27,5 @@ function Blog() {
   );
 }
 
-export default Blog;
+const MemoizedBlog = React.memo(Blog);
+export default MemoizedBlog;

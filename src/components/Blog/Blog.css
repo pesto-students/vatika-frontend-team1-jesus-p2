@@ -5,7 +5,6 @@
   color: gray;
 }
 
-
 .heading-blog {
   background-image: url("../../assets/Heading_Blog.png");
   height: 6rem;
@@ -42,7 +41,6 @@
   padding-bottom: 5%;
   flex-wrap: wrap;
   row-gap: 2rem;
-  /* flex: 1 1 33%; */
   margin-left: 5rem;
   margin-right: 5rem;
 }

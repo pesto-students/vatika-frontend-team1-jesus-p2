@@ -45,6 +45,7 @@ function LoginForm({ handleSubmit, message, loading, setLoading }) {
           type="primary"
           htmlType="submit"
           className="green_btn"
+          style={{ backgroundColor: "#208854" }}
           disabled={loading ? true : false}
           loading={loading ? true : false}
         >
