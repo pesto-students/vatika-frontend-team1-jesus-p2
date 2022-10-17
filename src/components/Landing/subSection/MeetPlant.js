@@ -6,8 +6,8 @@ function MeetPlant() {
   return (
     <div className="meetPlant">
       <img
-        src={require("../../../assets/meetus.png")}
-        alt="logo"
+        src="https://res.cloudinary.com/ds4gbbc6g/image/upload/v1665863255/Vatika/React%20FrontEnd/meetus_vfiehz.png"
+        alt="MeetUs"
         className="logo"
       />
       <div className="information">

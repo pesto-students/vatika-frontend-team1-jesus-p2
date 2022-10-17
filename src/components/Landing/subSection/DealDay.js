@@ -13,7 +13,7 @@ function DealDay() {
         </div>
 
         <div className="right-plant r-1">
-          <img src={require("../../../assets/plant-1.png")} alt="DealPlant1" />
+          <img src="https://res.cloudinary.com/ds4gbbc6g/image/upload/v1665863256/Vatika/React%20FrontEnd/plant-1_akbp5s.png" alt="DealPlant1" />
           <h3>Money Plant</h3>
           <Rate
             defaultValue="4"
@@ -26,7 +26,7 @@ function DealDay() {
           </p>
         </div>
         <div className="right-plant r-2">
-          <img src={require("../../../assets/plant-1.png")} alt="DealPlant1" />
+          <img src="https://res.cloudinary.com/ds4gbbc6g/image/upload/v1665863256/Vatika/React%20FrontEnd/plant-1_akbp5s.png" alt="DealPlant1" />
           <h3>Money Plant</h3>
           <Rate
             defaultValue="4"
@@ -39,7 +39,7 @@ function DealDay() {
           </p>
         </div>
         <div className="right-plant r-3">
-          <img src={require("../../../assets/plant-1.png")} alt="DealPlant1" />
+          <img src="https://res.cloudinary.com/ds4gbbc6g/image/upload/v1665863256/Vatika/React%20FrontEnd/plant-1_akbp5s.png" alt="DealPlant1" />
           <h3>Money Plant</h3>
           <Rate
             defaultValue="4"
@@ -53,7 +53,7 @@ function DealDay() {
           </p>
         </div>
         <div className="right-plant r-4">
-          <img src={require("../../../assets/plant-1.png")} alt="DealPlant1" />
+          <img src="https://res.cloudinary.com/ds4gbbc6g/image/upload/v1665863256/Vatika/React%20FrontEnd/plant-1_akbp5s.png" alt="DealPlant1" />
           <h3>Money Plant</h3>
           <Rate
             defaultValue="4"
@@ -67,7 +67,7 @@ function DealDay() {
           </p>
         </div>
         <div className="right-plant r-5">
-          <img src={require("../../../assets/plant-1.png")} alt="DealPlant1" />
+          <img src="https://res.cloudinary.com/ds4gbbc6g/image/upload/v1665863256/Vatika/React%20FrontEnd/plant-1_akbp5s.png" alt="DealPlant1" />
           <h3>Money Plant</h3>
           <Rate
             defaultValue="4"
@@ -81,7 +81,7 @@ function DealDay() {
           </p>
         </div>
         <div className="right-plant r-6">
-          <img src={require("../../../assets/plant-1.png")} alt="DealPlant1" />
+          <img src="https://res.cloudinary.com/ds4gbbc6g/image/upload/v1665863256/Vatika/React%20FrontEnd/plant-1_akbp5s.png" alt="DealPlant1" />
           <h3>Money Plant</h3>
           <Rate
             defaultValue="4"

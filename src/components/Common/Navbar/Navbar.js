@@ -18,7 +18,7 @@ function Navbar() {
           label: (
             <span
               onClick={() => {
-                dispatch(userLoggedIn());
+                dispatch(userLoggedIn(false));
                 localStorage.removeItem("token");
               }}
             >
@@ -37,7 +37,7 @@ function Navbar() {
         <div className="left">
           <Link to="/">
             <img
-              src={require("../../../assets/logo.png")}
+              src="https://res.cloudinary.com/ds4gbbc6g/image/upload/v1665863257/Vatika/React%20FrontEnd/logo_lcxupl.png"
               alt="logo"
               className="logo"
             />

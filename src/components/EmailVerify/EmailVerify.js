@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
-import success from "../../assets/success.png";
 import "./EmailVerify.css";
 
 const EmailVerify = () => {
@@ -11,7 +10,7 @@ const EmailVerify = () => {
   useEffect(() => {
     const verifyEmailUrl = async () => {
       try {
-        const url = `http://localhost:5000/api/signup/${param.id}/verify/${param.token}`;
+        const url = `${process.env.REACT_APP_SIGNUP}/${param.id}/verify/${param.token}`;
         const { data } = await axios.get(url);
         console.log(data);
         setValidUrl(true);
@@ -32,7 +31,11 @@ const EmailVerify = () => {
     <>
       {validUrl ? (
         <div className="container">
-          <img src={success} alt="success_img" className="success_img" />
+          <img
+            src="https://res.cloudinary.com/ds4gbbc6g/image/upload/v1665863256/Vatika/React%20FrontEnd/success_r8bp8d.png"
+            alt="success_img"
+            className="success_img"
+          />
           <h1>Email verified successfully</h1>
           <button className="green_btn" onClick={closeTab}>
             Close

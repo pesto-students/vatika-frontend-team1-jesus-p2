@@ -15,6 +15,8 @@ function NavbarEndSection({ menu }) {
   const { cart } = useSelector((state) => state.cart);
   const login = useSelector((state) => state.login);
 
+  console.log(login.isLogin);
+
   return (
     <div>
       <div className="right">
@@ -24,7 +26,7 @@ function NavbarEndSection({ menu }) {
           <Badge className="badge" count={cart.length} />
         </Link>
 
-        {login.isLogin ? (
+        {login.isLogin? (
           <Dropdown overlay={menu}>
             <Space>
               <Avatar

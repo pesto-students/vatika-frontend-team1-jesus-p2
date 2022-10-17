@@ -31,9 +31,9 @@
 
 .plantCategory button {
   font-weight: 400;
-  border: 1px solid #1b7a0d;
+  border: 1px solid #208854;
   background-color: transparent;
-  color: #1b7a0d;
+  color: #208854;
   border-radius: 0.5rem;
   padding-left: 1rem;
   padding-right: 1rem;
@@ -46,5 +46,5 @@
 
 .plantCategory button:hover {
   color: white;
-  background-color: #1b7a0d;
+  background-color: #208854;
 }

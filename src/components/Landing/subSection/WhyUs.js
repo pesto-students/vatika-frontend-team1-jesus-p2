@@ -9,8 +9,8 @@ function WhyUs() {
       <main>
         <div className="one">
           <img
-            src={require("../../../assets/Delivery.png")}
-            alt="logo"
+            src="https://res.cloudinary.com/ds4gbbc6g/image/upload/v1665863255/Vatika/React%20FrontEnd/Delivery_vcriha.png"
+            alt="Delivery"
             className="circle"
           />
           <h3>Fast Delivery</h3>
@@ -19,8 +19,8 @@ function WhyUs() {
 
         <div className="two">
           <img
-            src={require("../../../assets/Grow.png")}
-            alt="logo"
+            src="https://res.cloudinary.com/ds4gbbc6g/image/upload/v1665863254/Vatika/React%20FrontEnd/Grow_pvngmr.png"
+            alt="Grow"
             className="circle"
           />
           <h3>Grow with Us</h3>
@@ -28,13 +28,16 @@ function WhyUs() {
         </div>
 
         <div className="three">
-          <img src={require("../../../assets/Why_Us.png")} alt="logo" />
+          <img
+            src="https://res.cloudinary.com/ds4gbbc6g/image/upload/v1665863259/Vatika/React%20FrontEnd/Why_Us_xn82c9.png"
+            alt="Why-Us"
+          />
         </div>
 
         <div className="four">
           <img
-            src={require("../../../assets/Quality.png")}
-            alt="logo"
+            src="https://res.cloudinary.com/ds4gbbc6g/image/upload/v1665863255/Vatika/React%20FrontEnd/Quality_wvtapp.png"
+            alt="Quality"
             className="circle"
           />
           <h3>Unbeatable Quality</h3>
@@ -43,8 +46,8 @@ function WhyUs() {
 
         <div className="five">
           <img
-            src={require("../../../assets/Security.png")}
-            alt="logo"
+            src="https://res.cloudinary.com/ds4gbbc6g/image/upload/v1665863256/Vatika/React%20FrontEnd/Security_gktcdw.png"
+            alt="Security"
             className="circle"
           />
           <h3>Security</h3>

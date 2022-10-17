@@ -1,8 +1,9 @@
 import { ActionTypes } from "../constants/ActionTypes";
 
-export const userLoggedIn=()=>{
+export const userLoggedIn=(val)=>{
   return {
     type:ActionTypes.USER_LOGIN,
+    payload:val,
   }
 }
 

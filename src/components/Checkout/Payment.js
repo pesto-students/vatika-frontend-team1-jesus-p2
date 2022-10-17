@@ -11,7 +11,7 @@ function Payment({ coin }) {
       const response = await axios.post(process.env.REACT_APP_ORDERS, {
         amount: grandTotal.total + 30 - coin,
       });
-      console.log(response.data);
+      console.log("hello kavish",response.data.data);
       initPayment(response.data.data);
     } catch (error) {
       console.log(error);
@@ -19,6 +19,7 @@ function Payment({ coin }) {
   };
 
   const initPayment = (data) => {
+    console.log("Init Payment");
     const options = {
       key: "rzp_test_AXxW6a7PbNR2VF",
       amount: data.amount,
@@ -33,7 +34,9 @@ function Payment({ coin }) {
             response
           );
           console.log(data);
+          console.log("Init Payment 2");
         } catch (error) {
+          console.log("hi error");
           console.log(error);
         }
       },
@@ -52,7 +55,7 @@ function Payment({ coin }) {
       <h1>Payment</h1>
       <div className="balanceText">
         <img
-          src={require("../../assets/coin-icon.png")}
+          src="https://res.cloudinary.com/ds4gbbc6g/image/upload/v1665863254/Vatika/React%20FrontEnd/coin-icon_lvykpa.png"
           alt="Coin"
           className="coin-image"
         />
@@ -60,7 +63,7 @@ function Payment({ coin }) {
         <span className="amount">
           Rs {coin}
           <img
-            src={require("../../assets/right-tick-icon.png")}
+            src="https://res.cloudinary.com/ds4gbbc6g/image/upload/v1665863256/Vatika/React%20FrontEnd/right-tick-icon_tqdgfr.png"
             className="right-tick"
             alt="one"
           />
@@ -75,7 +78,7 @@ function Payment({ coin }) {
           <label className="labelText">
             UPI Payment
             <img
-              src={require("../../assets/upi.png")}
+              src="https://res.cloudinary.com/ds4gbbc6g/image/upload/v1665863255/Vatika/React%20FrontEnd/upi_hll2fw.png"
               className="radioUPIIcons"
               alt="UPI"
             />
@@ -87,7 +90,7 @@ function Payment({ coin }) {
           <label className="labelText">
             Debit/Credit Card
             <img
-              src={require("../../assets/CreditCard.png")}
+              src="https://res.cloudinary.com/ds4gbbc6g/image/upload/v1665863254/Vatika/React%20FrontEnd/CreditCard_gr5l7x.png"
               className="radioIcons"
               alt="Card"
             />
@@ -104,7 +107,7 @@ function Payment({ coin }) {
           <label className="labelText">
             Cash On Delivery
             <img
-              src={require("../../assets/cashIcon.png")}
+              src="https://res.cloudinary.com/ds4gbbc6g/image/upload/v1665863254/Vatika/React%20FrontEnd/cashIcon_dgdyjm.png"
               className="radioIcons"
               alt="Cash"
             />

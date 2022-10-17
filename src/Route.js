@@ -1,5 +1,7 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
+import Footer from "./components/Common/Footer/Footer";
+import Navbar from "./components/Common/Navbar/Navbar";
 import LandingPage from "./components/Landing/subSection/LandingPage";
 import Plant from "./components/ProductDetails/Plant";
 import Cart from "./components/Cart/Cart";
@@ -16,50 +18,56 @@ const LazyBlog = React.lazy(() => import("./components/Blog/Blog"));
 const LazyProduct = React.lazy(() => import("./components/Product/Product"));
 
 function Path() {
+  const path = window.location.pathname.slice(0, 6);
   return (
     <div>
-      <Routes>
-        <Route path="/" element={<LandingPage />} />
+      {path === "/users" ? (
+        <Routes>
+          <Route path="/users/:id/verify/:token" element={<EmailVerify />} />
+        </Routes>
+      ) : (
+        <>
+          <Navbar />
+          <Routes>
+            <Route path="/" element={<LandingPage />} />
+            <Route
+              path="/product"
+              element={
+                <React.Suspense fallback={<Loading />}>
+                  <LazyProduct />
+                </React.Suspense>
+              }
+            />
+            <Route
+              path="/blog"
+              element={
+                <React.Suspense fallback={<Loading />}>
+                  <LazyBlog />
+                </React.Suspense>
+              }
+            />
+            <Route
+              path="/aboutus"
+              element={
+                <React.Suspense fallback={<Loading />}>
+                  <LazyAbout />
+                </React.Suspense>
+              }
+            />
+            <Route path="/product/:name" element={<Plant />} />
+            <Route path="/cart" element={<Cart />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/signup" element={<Signup />} />
 
-        <Route
-          path="/product"
-          element={
-            <React.Suspense fallback={<Loading />}>
-              <LazyProduct />
-            </React.Suspense>
-          }
-        />
-
-        <Route
-          path="/blog"
-          element={
-            <React.Suspense fallback={<Loading />}>
-              <LazyBlog />
-            </React.Suspense>
-          }
-        />
-
-        <Route
-          path="/aboutus"
-          element={
-            <React.Suspense fallback={<Loading />}>
-              <LazyAbout />
-            </React.Suspense>
-          }
-        />
-        <Route path="/product/:name" element={<Plant />} />
-        <Route path="/cart" element={<Cart />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/signup" element={<Signup />} />
-        <Route path="/users/:id/verify/:token" element={<EmailVerify />} />
-
-        <Route element={<PrivateRoutes />}>
-          <Route path="/confirmation" element={<Confirmation />} />
-          <Route path="/payment" element={<Checkout />} />
-        </Route>
-
-        <Route>404 Page Not Found!</Route>
-      </Routes>
+            <Route element={<PrivateRoutes />}>
+              <Route path="/confirmation" element={<Confirmation />} />
+              <Route path="/payment" element={<Checkout />} />
+            </Route>
+            <Route>404 Page Not Found!</Route>
+          </Routes>
+          <Footer />
+        </>
+      )}
     </div>
   );
 }

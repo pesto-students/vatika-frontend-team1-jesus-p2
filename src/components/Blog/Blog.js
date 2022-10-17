@@ -19,7 +19,10 @@ function Blog() {
             you’re new to gardening, start reading out what other garden lovers
             has to say.
           </p>
-          <img src={require("../../assets/Main-Blog.png")} alt="Cactus" />
+          <img
+            src="https://res.cloudinary.com/ds4gbbc6g/image/upload/v1665863255/Vatika/React%20FrontEnd/Main-Blog_jwc0l6.png"
+            alt="Cactus"
+          />
         </div>
         <IndividualBlog />
       </div>

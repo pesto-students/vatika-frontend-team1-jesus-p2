@@ -51,7 +51,10 @@ function Confirmation() {
           </div>
 
           <div className="coin">
-            <img src={require("../../assets/SuperCoin.png")} alt="SuperCoin" />
+            <img
+              src="https://res.cloudinary.com/ds4gbbc6g/image/upload/v1665863259/Vatika/React%20FrontEnd/SuperCoin_bngaj0.png"
+              alt="SuperCoin"
+            />
             <h3>Congratulation!</h3>
             <p>You Earned 20 Super Coins </p>
           </div>

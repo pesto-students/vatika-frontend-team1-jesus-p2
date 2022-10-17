@@ -16,12 +16,13 @@ const Login = ({ handleLoginCancel, showSignUpModal }) => {
       const url = process.env.REACT_APP_LOGIN;
       const response = await axios.post(url, values);
       localStorage.setItem("token", response.data.token);
+      // console.log(response.data);
       setLoading(false);
       setMessage(response.data.message);
 
       if (response.status === 200) {
         handleLoginCancel();
-        dispatch(userLoggedIn());
+        dispatch(userLoggedIn(true));
       }
     } catch (error) {
       setLoading(false);

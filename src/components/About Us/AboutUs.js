@@ -1,8 +1,5 @@
 import React from "react";
 import "./AboutUs.css";
-import aboutus1 from "../../assets/aboutus1.png";
-import aboutus2 from "../../assets/aboutus2.png";
-import aboutus3 from "../../assets/aboutus3.png";
 
 function AboutUs() {
   return (
@@ -19,9 +16,17 @@ function AboutUs() {
           customers pick the right pots and plants and give them all the
           knowledge and information they need to get a garden going.
         </div>
-        <img src={aboutus1} className="part-one-img" alt="plant" />
+        <img
+          src="https://res.cloudinary.com/ds4gbbc6g/image/upload/v1665863256/Vatika/React%20FrontEnd/aboutus1_uu5rv4.png"
+          className="part-one-img"
+          alt="plant"
+        />
 
-        <img src={aboutus2} className="part-two-img" alt="plant" />
+        <img
+          src="https://res.cloudinary.com/ds4gbbc6g/image/upload/v1665863259/Vatika/React%20FrontEnd/aboutus2_c3nmpv.png"
+          className="part-two-img"
+          alt="plant"
+        />
         <div className="part-two">
           <h3>Happiness is growing your own plant</h3>
           <p>
@@ -40,7 +45,11 @@ function AboutUs() {
           million happy plant parents, we can assure you that once you order a
           plant from us, you will emerge with your own home-grown veggies.
         </div>
-        <img src={aboutus3} className="part-three-img" alt="plant" />
+        <img
+          src="https://res.cloudinary.com/ds4gbbc6g/image/upload/v1665863259/Vatika/React%20FrontEnd/aboutus3_zw1nb8.png"
+          className="part-three-img"
+          alt="plant"
+        />
       </div>
     </>
   );

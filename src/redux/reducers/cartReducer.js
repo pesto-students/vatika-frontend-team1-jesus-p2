@@ -1,8 +1,9 @@
 import { ActionTypes } from "../constants/ActionTypes";
 
 const initialCart = {
-  cart: [],
+  cart:JSON.parse(localStorage.getItem("cart"))|| [],
 };
+
 
 export const cartReducer = (state = initialCart, { type, payload }) => {
   switch (type) {

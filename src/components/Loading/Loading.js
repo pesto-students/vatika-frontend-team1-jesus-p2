@@ -16,8 +16,10 @@ function Loading() {
 
   return (
     <div className="loading">
-      <span>Loading</span>
-      <Spin indicator={antIcon} />
+      <h1>
+        Loading
+        <Spin className="spin" indicator={antIcon} />
+      </h1>
     </div>
   );
 }

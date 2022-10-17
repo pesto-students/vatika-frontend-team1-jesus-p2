@@ -18,7 +18,6 @@ const { Step } = Steps;
 
 function Cart() {
   const { cart } = useSelector((state) => state.cart);
-
   const dispatch = useDispatch();
   const [total, setTotal] = useState(0);
 
@@ -31,6 +30,7 @@ function Cart() {
 
   useEffect(() => {
     setAndDispatchTotal();
+    localStorage.setItem("cart", JSON.stringify(cart));
   }, [cart, total]);
 
   return (

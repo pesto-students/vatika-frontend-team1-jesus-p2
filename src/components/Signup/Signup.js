@@ -14,7 +14,6 @@ const Signup = ({ handleSignUpCancel, showLoginModal }) => {
     try {
       const url = process.env.REACT_APP_SIGNUP;
       const response = await axios.post(url, values);
-      console.log(response);
       setLoading(false);
       setResponseMessage(response.data.message);
 

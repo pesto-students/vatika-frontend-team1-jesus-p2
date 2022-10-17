@@ -24,9 +24,18 @@ function Footer() {
 
         <div className="section-4">
           <h1>Follow Us</h1>
-          <img src={require("../../../assets/facebook.png")} alt="facebook" />
-          <img src={require("../../../assets/youtube.png")} alt="youtube" />
-          <img src={require("../../../assets/twitter.png")} alt="twitter" />
+          <img
+            src="https://res.cloudinary.com/ds4gbbc6g/image/upload/v1665863255/Vatika/React%20FrontEnd/facebook_qfzfva.png"
+            alt="facebook"
+          />
+          <img
+            src="https://res.cloudinary.com/ds4gbbc6g/image/upload/v1665863256/Vatika/React%20FrontEnd/youtube_iwb28b.png"
+            alt="youtube"
+          />
+          <img
+            src="https://res.cloudinary.com/ds4gbbc6g/image/upload/v1665863257/Vatika/React%20FrontEnd/twitter_g6kp9u.png"
+            alt="twitter"
+          />
         </div>
       </footer>
       <div className="copy-right">

@@ -4,7 +4,10 @@ function IndividualBlog() {
   return (
     <div className="all-blogs">
       <div className="each-blog">
-        <img src={require("../../assets/Blog-1.png")} alt="Blog-1" />
+        <img
+          src="https://res.cloudinary.com/ds4gbbc6g/image/upload/v1665863257/Vatika/React%20FrontEnd/Blog-1_cyoqkk.png"
+          alt="Blog-1"
+        />
         <h3>A Plant-based Challenge</h3>
         <p>
           I’ve eaten a plant-based diet since I was 16 for various moral, health
@@ -14,7 +17,10 @@ function IndividualBlog() {
       </div>
 
       <div className="each-blog">
-        <img src={require("../../assets/Blog-2.png")} alt="Blog-1" />
+        <img
+          src="https://res.cloudinary.com/ds4gbbc6g/image/upload/v1665863255/Vatika/React%20FrontEnd/Blog-2_vmpiz7.png"
+          alt="Blog-2"
+        />
         <h3>AI app that detects diseases in plants </h3>
         <p>
           The spread of trans boundary plant pests and diseases has increased
@@ -24,7 +30,10 @@ function IndividualBlog() {
       </div>
 
       <div className="each-blog">
-        <img src={require("../../assets/Blog-3.png")} alt="Blog-1" />
+        <img
+          src="https://res.cloudinary.com/ds4gbbc6g/image/upload/v1665863256/Vatika/React%20FrontEnd/Blog-3_zucfow.png"
+          alt="Blog-3"
+        />
         <h3>World’s Largest CO₂ sucking Plant</h3>
         <p>
           The plant has the capacity to suck 4,000 tonnes of Carbon dioxide
@@ -34,7 +43,10 @@ function IndividualBlog() {
       </div>
 
       <div className="each-blog">
-        <img src={require("../../assets/Blog-4.png")} alt="Blog-1" />
+        <img
+          src="https://res.cloudinary.com/ds4gbbc6g/image/upload/v1665863255/Vatika/React%20FrontEnd/Blog-4_hyfuzp.png"
+          alt="Blog-4"
+        />
         <h3>Watering Plants</h3>
         <p>
           Problem Statement: You want to water n plants in your garden with a
@@ -44,7 +56,10 @@ function IndividualBlog() {
       </div>
 
       <div className="each-blog">
-        <img src={require("../../assets/Blog-5.png")} alt="Blog-1" />
+        <img
+          src="https://res.cloudinary.com/ds4gbbc6g/image/upload/v1665863256/Vatika/React%20FrontEnd/Blog-5_pqqwlr.png"
+          alt="Blog-5"
+        />
         <h3>Do Plants Feel Pain?</h3>
         <p>
           Plants can communicate with one another, sense their environment, and
@@ -55,7 +70,10 @@ function IndividualBlog() {
       </div>
 
       <div className="each-blog">
-        <img src={require("../../assets/Blog-6.png")} alt="Blog-1" />
+        <img
+          src="https://res.cloudinary.com/ds4gbbc6g/image/upload/v1665863258/Vatika/React%20FrontEnd/Blog-6_tjz3xr.png"
+          alt="Blog-6"
+        />
         <h3>The Plant That Could Save The World</h3>
         <p>
           Climate change is the biggest threat to mankind. It’s a looming

@@ -28,10 +28,16 @@ function PlantSection({ product }) {
         <h1>About Plant</h1>
         <p>{product.description}</p>
 
-        <img src={require("../../assets/drop.png")} alt="water" />
+        <img
+          src="https://res.cloudinary.com/ds4gbbc6g/image/upload/v1665863258/Vatika/React%20FrontEnd/drop_xcb1u2.png"
+          alt="water"
+        />
         <h3>Water Required {product.water} Day per Week</h3>
 
-        <img src={require("../../assets/sun.png")} alt="sun" />
+        <img
+          src="https://res.cloudinary.com/ds4gbbc6g/image/upload/v1665863257/Vatika/React%20FrontEnd/sun_dqxpus.png"
+          alt="sun"
+        />
         <h3>Sunlight Required {product.sunlight} Hours per day</h3>
       </div>
     </>

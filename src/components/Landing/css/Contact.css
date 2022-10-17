@@ -2,7 +2,7 @@
 .contactUs {
   font-family: "Rajdhani", sans-serif;
   display: flex;
-  background-image: url("../../../assets/Contact.png");
+  background-image: url("https://res.cloudinary.com/ds4gbbc6g/image/upload/v1665863254/Vatika/React%20FrontEnd/Contact_vsxswm.png");
   height: 70vh;
   background-repeat: no-repeat;
   background-size: cover;

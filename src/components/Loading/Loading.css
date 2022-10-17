@@ -4,7 +4,7 @@
   position: relative;
 }
 
-.loading span{
+.loading h1{
   position: absolute;
   font-family: "Bad Script", cursive;
   font-size: 2rem;
@@ -13,3 +13,7 @@
   left: 35rem;
   font-weight: 600;
 }
+
+/* .loading .spin{
+  margin-left: 2rem;
+} */
