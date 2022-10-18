@@ -4,6 +4,7 @@ import { useDispatch } from "react-redux";
 import { userLoggedIn } from "../../redux/actions/productActions";
 import "./Login.css";
 import LoginForm from "./LoginForm";
+import { userID } from "../../redux/actions/productActions";
 
 const Login = ({ handleLoginCancel, showSignUpModal }) => {
   const [message, setMessage] = useState("");
@@ -16,12 +17,13 @@ const Login = ({ handleLoginCancel, showSignUpModal }) => {
       const url = process.env.REACT_APP_LOGIN;
       const response = await axios.post(url, values);
       localStorage.setItem("token", response.data.token);
-      // console.log(response.data);
+      localStorage.setItem("userId", response.data.userId);
       setLoading(false);
       setMessage(response.data.message);
 
       if (response.status === 200) {
         handleLoginCancel();
+        dispatch(userID(response.data.userId));
         dispatch(userLoggedIn(true));
       }
     } catch (error) {

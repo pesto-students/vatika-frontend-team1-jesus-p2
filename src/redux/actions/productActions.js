@@ -1,11 +1,11 @@
 import { ActionTypes } from "../constants/ActionTypes";
 
-export const userLoggedIn=(val)=>{
+export const userLoggedIn = (val) => {
   return {
-    type:ActionTypes.USER_LOGIN,
-    payload:val,
-  }
-}
+    type: ActionTypes.USER_LOGIN,
+    payload: val,
+  };
+};
 
 export const setProducts = (products) => {
   return {
@@ -107,5 +107,19 @@ export const cartTotal = (total) => {
   return {
     type: ActionTypes.CART_TOTAL,
     payload: total,
+  };
+};
+
+export const userAddress = (val) => {
+  return {
+    type: ActionTypes.USER_ADDRESS,
+    payload: val,
+  };
+};
+
+export const userID = (val) => {
+  return {
+    type: ActionTypes.USER_ID,
+    payload: val,
   };
 };

@@ -20,6 +20,7 @@ function Navbar() {
               onClick={() => {
                 dispatch(userLoggedIn(false));
                 localStorage.removeItem("token");
+                localStorage.removeItem("userId");
               }}
             >
               Logout

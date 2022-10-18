@@ -5,6 +5,7 @@ import { filterProductReducer } from "./filterReducer";
 import { addressReducer } from "./addressReducer";
 import { cartTotalReducer } from "./cartTotalReducer";
 import {loginReducer} from "./loginReducer";
+import {userDetailsReducer} from "./userDetailsReducer"
 
 export const reducers = combineReducers({
   login:loginReducer,
@@ -14,6 +15,7 @@ export const reducers = combineReducers({
   filter: filterProductReducer,
   address: addressReducer,
   cartTotal: cartTotalReducer,
+  userState:userDetailsReducer,
 });
 
 export default reducers;

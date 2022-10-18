@@ -2,16 +2,17 @@ import React from "react";
 import { LockOutlined } from "@ant-design/icons";
 import axios from "axios";
 import { useSelector } from "react-redux";
+import { notification } from "antd";
 
 function Payment({ coin }) {
   const grandTotal = useSelector((state) => state.cartTotal);
+  const appState = useSelector((state) => state.userState.userAddress);
 
   const handlePayment = async () => {
     try {
       const response = await axios.post(process.env.REACT_APP_ORDERS, {
         amount: grandTotal.total + 30 - coin,
       });
-      console.log("hello kavish",response.data.data);
       initPayment(response.data.data);
     } catch (error) {
       console.log(error);
@@ -34,9 +35,7 @@ function Payment({ coin }) {
             response
           );
           console.log(data);
-          console.log("Init Payment 2");
         } catch (error) {
-          console.log("hi error");
           console.log(error);
         }
       },
@@ -48,6 +47,19 @@ function Payment({ coin }) {
     };
     const rzp1 = new window.Razorpay(options);
     rzp1.open();
+  };
+
+  const handleAddressAndPayment = () => {
+    if (typeof appState === "object") return selectAddressError();
+    if (typeof appState === "number") return handlePayment();
+  };
+
+  const selectAddressError = () => {
+    notification.error({
+      message: "Select Address",
+      placement: "top",
+      duration: 1.5,
+    });
   };
 
   return (
@@ -124,7 +136,7 @@ function Payment({ coin }) {
       <hr />
       <p className="finalAmount">Rs. {grandTotal.total + 30 - coin}</p>
       <hr />
-      <button className="proceedButton" onClick={handlePayment}>
+      <button className="proceedButton" onClick={handleAddressAndPayment}>
         Proceed
       </button>
       <p className="protectedText">

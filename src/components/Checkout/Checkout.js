@@ -25,10 +25,11 @@ const Checkout = () => {
   const [coin, setCoin] = useState(0);
 
   const allAddress = useSelector((state) => state.address.allAddress);
+  const appState = useSelector((state) => state.userState.userId);
   const dispatch = useDispatch();
 
   const onAddressSaveAPI = async (values) => {
-    const value = { ...values, email: "kavishgarg15@gmail.com" };
+    const value = { ...values, userId: appState };
     const response = await axios
       .post(process.env.REACT_APP_ADDRESSES, value)
       .catch((err) => console.log("Error", err));
@@ -44,7 +45,7 @@ const Checkout = () => {
     const response = await axios
       .get(process.env.REACT_APP_ADDRESSES, {
         params: {
-          email: "kavishgarg15@gmail.com",
+          userId: appState,
         },
       })
       .catch((err) => console.log("Error", err));
@@ -72,7 +73,6 @@ const Checkout = () => {
         },
       })
       .catch((err) => console.log("Error", err));
-    console.log(response.data[0].supercoin);
     setCoin(response.data[0].supercoin);
   };
 
