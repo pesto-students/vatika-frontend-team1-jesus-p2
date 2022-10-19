@@ -3,6 +3,21 @@
   letter-spacing: 0.1rem;
   background-color: #eff0ef;
   font-family: "Rajdhani", sans-serif;
+  position: relative;
+}
+
+.dealDay .countdown{
+  position: absolute;
+  right: 14rem;
+  top: 2rem;
+  border: 2px solid #208854;
+  padding: 0.1rem 0.5rem;
+  border-radius: 0.5rem;
+}
+
+.ant-statistic-content-value{
+  color: #208854;
+
 }
 
 .dealDay .deal {
