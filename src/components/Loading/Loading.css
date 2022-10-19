@@ -8,12 +8,10 @@
   position: absolute;
   font-family: "Bad Script", cursive;
   font-size: 2rem;
-  color: green;
+  color: #208854;
   top: 10rem;
   left: 35rem;
   font-weight: 600;
 }
 
-/* .loading .spin{
-  margin-left: 2rem;
-} */
+

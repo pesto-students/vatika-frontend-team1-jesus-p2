@@ -29,6 +29,12 @@ function PlantSection({ product }) {
         <p>{product.description}</p>
 
         <img
+          src="https://res.cloudinary.com/ds4gbbc6g/image/upload/v1666199593/Vatika/React%20FrontEnd/crown_dwxzwa.png"
+          alt="king"
+        />
+        <h3>Plant Kingdom ,{product.kingdom}</h3>
+
+        <img
           src="https://res.cloudinary.com/ds4gbbc6g/image/upload/v1665863258/Vatika/React%20FrontEnd/drop_xcb1u2.png"
           alt="water"
         />

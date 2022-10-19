@@ -24,7 +24,7 @@ function LoginForm({ handleSubmit, message, loading, setLoading }) {
     >
       <Form.Item name="email" rules={emailRules} hasFeedback>
         <Input
-          prefix={<MailOutlined />}
+          prefix={<MailOutlined style={{ color: "#208854", fontSize: "18px" }} />}
           placeholder="Enter your email"
           className="input"
         />
@@ -32,7 +32,7 @@ function LoginForm({ handleSubmit, message, loading, setLoading }) {
 
       <Form.Item name="password" rules={passwordRules} hasFeedback>
         <Input.Password
-          prefix={<LockOutlined />}
+          prefix={<LockOutlined style={{ color: "#208854", fontSize: "18px" }} />}
           placeholder="Enter your password"
           className="input"
         />

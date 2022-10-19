@@ -22,7 +22,7 @@
   font-size: 1.2rem;
   font-family: "Patrick Hand SC", cursive;
   font-weight: 400;
-  color: #1b7a0d;
+  color: #208854;
   letter-spacing: 0.06rem;
   top: 3.5rem;
 }
@@ -141,11 +141,11 @@
   margin-top: -0.5rem;
   margin-left: 1rem;
   font-size: 1.5rem;
-  color: green;
+  color: #208854;
 }
 
 .right .downArrow {
-  color: green;
+  color: #208854;
 }
 
 .ant-modal-close-x {

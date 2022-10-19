@@ -14,6 +14,7 @@ import {
 import ProductFilter from "./ProductFilter";
 
 function Product() {
+
   const dispatch = useDispatch();
 
   const fetchProducts = async () => {
@@ -26,6 +27,8 @@ function Product() {
   useEffect(() => {
     fetchProducts();
   }, []);
+
+  
 
   const menu = (
     <Menu

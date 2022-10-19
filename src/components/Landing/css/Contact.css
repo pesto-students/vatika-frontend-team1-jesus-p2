@@ -60,7 +60,7 @@
 }
 
 .contactUs .right-part button {
-  background-color: #1b7a0d;
+  background-color: #208854;
   border: none;
   border-radius: 0.2rem;
   width: 100%;
@@ -68,11 +68,11 @@
   color: white;
   margin-top: 5%;
   cursor: pointer;
-  border: 0.1rem solid #1b7a0d;
+  border: 0.1rem solid #208854;
   transition: 0.5s;
 }
 
 .contactUs .right-part button:hover {
-  background-color: #135509;
-  border: 0.1rem solid #1b7a0d;
+  background-color: #17663f;
+  border: 0.1rem solid #208854;
 }

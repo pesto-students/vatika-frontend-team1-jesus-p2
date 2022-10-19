@@ -32,6 +32,10 @@
   font-size: 2rem;
 }
 
+.plant .plant-details .rating{
+  margin-bottom: 1rem;
+}
+
 .plant .plant-details h2 {
   font-weight: 600;
   font-size: 1.5rem;
@@ -82,21 +86,23 @@
 }
 
 .plant .plant-details .butOne {
+  border: 0.1rem solid #208854;
   background-color: transparent;
+  color: #208854;
 }
 
 .plant .plant-details .butROne {
   background-color: rgb(252, 49, 49);
   border: 0.1rem solid white;
   color: white;
-  border: 0.2rem solid rgb(250, 19, 19);
+  border: 0.1rem solid rgb(250, 19, 19);
 }
 
 .plant .plant-details .butROne:hover {
   background-color: rgb(250, 19, 19);
   border: 0.1rem solid white;
   color: white;
-  border: 0.2rem solid rgb(250, 19, 19);
+  border: 0.1rem solid rgb(250, 19, 19);
 }
 
 .plant .plant-details .butOne:hover {
@@ -106,7 +112,7 @@
 
 .plant .plant-details .butTwo {
   border: none;
-  border: 0.2rem solid #208854;
+  border: 0.1rem solid #208854;
   background-color: #208854;
   color: white;
 }

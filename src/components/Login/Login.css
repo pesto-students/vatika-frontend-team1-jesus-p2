@@ -4,8 +4,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: "Patrick Hand SC", cursive;
   letter-spacing: 2px;
+  font-family: "Rajdhani";
 }
 
 .login_form_container {
@@ -37,7 +37,8 @@
   align-items: center;
 }
 
-.form_container h1 {
+.loginComp h1 {
+  font-family: "Patrick Hand SC", cursive;
   font-size: 50px;
   margin-top: 0;
 }
@@ -79,6 +80,7 @@
 }
 
 .right-login h1 {
+  font-family: "Patrick Hand SC", cursive;
   margin-top: 0;
   color: white;
   font-size: 40px;
@@ -91,8 +93,4 @@
   margin: 10px;
 }
 
-MailOutlined,
-LockOutlined {
-  color: #208854;
-  font-size: 18px;
-}
+

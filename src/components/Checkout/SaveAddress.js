@@ -40,10 +40,7 @@ function SaveAddress({ onAddressSaveAPI, allAddress, form }) {
           <Input placeholder=" Address" className="addressFld"></Input>
         </Form.Item>
         <Form.Item name="apartmentNo" rules={apartmentRule} hasFeedback>
-          <Input
-            placeholder=" Apartment / Suite Number"
-            className="addressFld"
-          ></Input>
+          <Input placeholder="Landmark" className="addressFld"></Input>
         </Form.Item>
 
         <div className="city">

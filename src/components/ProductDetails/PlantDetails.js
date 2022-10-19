@@ -3,6 +3,7 @@ import { added, removed } from "../Product/CardFunctions";
 import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { removeFromCart, addToCart } from "../../redux/actions/productActions";
+import { Rate } from "antd";
 
 function PlantDetails({ product, cart }) {
   const dispatch = useDispatch();
@@ -15,9 +16,10 @@ function PlantDetails({ product, cart }) {
   return (
     <div className="plant-details">
       <h1>{product.name}</h1>
+      <Rate defaultValue={product.rating} disabled="false" count="5" className="rating" />
       <h2>
         Rs {product.price}
-        <del>Rs{product.price}</del>
+        <del>Rs{product.price+20}</del>
       </h2>
       <p>Inclusive of all taxes</p>
       <Link to="/cart">
