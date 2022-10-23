@@ -56,7 +56,7 @@
 
 .part-two p {
   font-size: 1.3rem;
-  color: #000000;
+  color: #000;
 }
 
 .part-three {
@@ -71,4 +71,37 @@
   width: 20rem;
   margin-bottom: 2rem;
   margin-right: 4rem;
+}
+
+/* Responsive */
+@media only screen and (max-width: 390px) {
+  .heading-aboutus {
+    position: relative;
+    top: -9px;
+  }
+  .part-one {
+    position: relative;
+    top: -100px;
+  }
+  .part-one-img {
+    position: relative;
+    top: -120px;
+  }
+  .part-two-img {
+    position: relative;
+    left: -150px;
+    width: 370px;
+  }
+  .part-two {
+    height: auto;
+  }
+  .part-three {
+    position: relative;
+    top: -30px;
+  }
+  .part-three-img {
+    position: relative;
+    left: 25px;
+    top: -30px;
+  }
 }

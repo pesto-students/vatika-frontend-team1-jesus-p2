@@ -3,7 +3,7 @@ footer {
   font-family: "Rajdhani", sans-serif;
   font-size: 1rem;
   font-weight: 500;
-  color: white;
+  color: #fff;
   display: flex;
   justify-content: space-evenly;
   align-items: flex-start;
@@ -16,13 +16,13 @@ footer {
 }
 
 footer .section-3 {
-  border: 0.01rem solid white;
+  border: 0.01rem solid #fff;
   height: 12rem;
   margin-top: 1rem;
 }
 
 footer .section-4 h1 {
-  color: white;
+  color: #fff;
   margin-top: 1.5rem;
   padding-left: 3rem;
 }
@@ -48,4 +48,48 @@ footer .section-4 img:hover {
 
 .copy-right h4 {
   margin: 0;
+}
+
+/* Responsive */
+@media only screen and (max-width: 390px) {
+  footer {
+    width: 390px;
+  }
+
+  .section-1 {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    left: -10px;
+  }
+
+  .section-2 {
+    position: relative;
+    left: 10px;
+  }
+
+  .section-3 {
+    position: relative;
+    left: 38px;
+  }
+  .section-4 {
+    position: relative;
+    left: 15px;
+    font-size: large;
+  }
+
+  .section-4 h1 {
+    align-items: center;
+    justify-content: center;
+  }
+
+  .section-4 img {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    left: 55px;
+  }
+  .bg-color {
+    height: 100px;
+  }
 }

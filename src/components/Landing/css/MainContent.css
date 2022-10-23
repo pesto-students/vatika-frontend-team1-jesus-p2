@@ -1,4 +1,4 @@
-/* Main Content Landing Page */
+/* Main Content */
 .mainContent {
   margin-left: 4rem;
   padding-top: 6rem;
@@ -32,7 +32,7 @@
   width: 9rem;
   font-size: 1rem;
   border: none;
-  color: white;
+  color: #fff;
   height: 2rem;
   text-align: center;
   letter-spacing: 0.1rem;
@@ -42,4 +42,48 @@
 
 .mainContent button:hover {
   transform: scale(1.1);
+}
+
+/* Responsive */
+@media only screen and (max-width: 390px) {
+  .mainContent p {
+    position: relative;
+    left: -45px;
+    font-size: 2.5rem;
+    width: 387px;
+    font-weight: 600;
+  }
+  .mainContent h1 {
+    position: relative;
+    left: -45px;
+    font-size: 1.5rem;
+    width: 307px;
+    font-weight: 500;
+  }
+  .mainContent button {
+    position: relative;
+    left: -45px;
+  }
+}
+
+/* Responsive */
+@media only screen and (max-width: 390px) {
+  .mainContent p {
+    position: relative;
+    left: -45px;
+    font-size: 2.5rem;
+    width: 387px;
+    font-weight: 600;
+  }
+  .mainContent h1 {
+    position: relative;
+    left: -45px;
+    font-size: 1.5rem;
+    width: 307px;
+    font-weight: 500;
+  }
+  .mainContent button {
+    position: relative;
+    left: -45px;
+  }
 }

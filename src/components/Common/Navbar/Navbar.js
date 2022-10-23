@@ -6,6 +6,7 @@ import { userLoggedIn } from "../../../redux/actions/productActions";
 import "./Navbar.css";
 import NavbarMidSection from "./NavbarMidSection";
 import NavbarEndSection from "./NavbarEndSection";
+import { MenuOutlined } from "@ant-design/icons";
 
 function Navbar() {
   const dispatch = useDispatch();
@@ -48,6 +49,7 @@ function Navbar() {
 
         <NavbarMidSection />
         <NavbarEndSection menu={menu} />
+        <MenuOutlined className="HamIcon" />
       </nav>
     </>
   );

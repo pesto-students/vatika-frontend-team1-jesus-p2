@@ -6,7 +6,7 @@
   position: relative;
 }
 
-.dealDay .countdown{
+.dealDay .countdown {
   position: absolute;
   right: 14rem;
   top: 2rem;
@@ -15,9 +15,8 @@
   border-radius: 0.5rem;
 }
 
-.ant-statistic-content-value{
+.ant-statistic-content-value {
   color: #208854;
-
 }
 
 .dealDay .deal {
@@ -121,10 +120,34 @@
   font-size: 0.8rem;
   margin-left: 1rem;
   margin-bottom: 0.5rem;
-  color: white;
+  color: #fff;
   border: none;
   background-color: #208854;
   border-radius: 0.3rem;
   height: auto;
   padding: 0rem 0.5rem;
+}
+
+/* Responsive */
+@media only screen and (max-width: 390px) {
+  .dealDay {
+    width: 380px;
+    position: relative;
+    left: 5px;
+    background-color: #fff;
+    flex-direction: column;
+    width: 380px;
+  }
+
+  .left-plant {
+    display: none;
+  }
+
+  .dealDay .deal .r-3 {
+    display: none;
+  }
+
+  .dealDay .deal .r-6 {
+    display: none;
+  }
 }

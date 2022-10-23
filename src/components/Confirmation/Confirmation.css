@@ -88,7 +88,7 @@
 }
 
 .confirm .two-button .contShopping {
-  color: white;
+  color: #fff;
   border: none;
   background-color: #208854;
   border-radius: 0.2rem;
@@ -97,9 +97,15 @@
 }
 
 .confirm .two-button .orderHistory {
-  color: white;
+  color: #fff;
   border: none;
   background-color: #767676;
   border-radius: 0.2rem;
   padding: 0.5%;
+}
+
+@media only screen and (max-width: 390px) {
+  .confirm .confirmation .f-confirmation {
+    flex-wrap: wrap;
+  }
 }

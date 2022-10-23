@@ -93,3 +93,39 @@
 .whyUs .five img:hover {
   scale: 107%;
 }
+
+/* Responsive */
+@media only screen and (max-width: 390px) {
+  .whyUs {
+    position: relative;
+    left: -165px;
+    width: 390px;
+    background-color: #fff;
+  }
+
+  .whyUs h1 {
+    position: relative;
+    left: 150px;
+  }
+
+  .three {
+    display: none;
+  }
+
+  .whyUs p {
+    font-size: small;
+    width: 140px;
+    position: relative;
+    left: 12px;
+  }
+
+  .whyUs h3 {
+    position: relative;
+    left: -30px;
+  }
+
+  .whyUs img {
+    position: relative;
+    left: -25px;
+  }
+}

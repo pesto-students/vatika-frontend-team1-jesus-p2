@@ -52,12 +52,12 @@
 
 .newCard {
   background-color: #208854;
-  color: white;
+  color: #fff;
   transition: 0.5s;
 }
 
 .newCard h2 {
-  color: white;
+  color: #fff;
 }
 
 .savedCard h2 {
@@ -67,15 +67,15 @@
 /* selected */
 .savedCard button {
   background-color: #208854;
-  color: white;
+  color: #fff;
   border-radius: 0.5rem;
-  border: 0.1rem solid white;
+  border: 0.1rem solid #fff;
   cursor: pointer;
   transition: 0.5s;
 }
 
 .savedCard .selected {
-  background-color: white;
+  background-color: #fff;
   color: #208854;
   border: 0.1rem solid #208854;
   transition: 0.5s;
@@ -148,7 +148,7 @@
   letter-spacing: 0.2rem;
   border-radius: 0.5rem;
   font-weight: 600;
-  color: white;
+  color: #fff;
   cursor: pointer;
   transition: 0.5s;
   border: 0.2rem solid gray;
@@ -261,7 +261,7 @@
 
 .sidePanel .proceedButton {
   background-color: #208854;
-  color: white;
+  color: #fff;
   width: 100%;
   padding: 0.5rem;
   border: none;
@@ -275,4 +275,26 @@
 .sidePanel .protectedText {
   margin-top: 5%;
   font-size: 18px;
+}
+
+@media only screen and (max-width: 390px) {
+  .flexFilter {
+    flex-wrap: wrap;
+    width: 375px;
+  }
+  .right-tick {
+    display: none;
+  }
+  .leadDetails .firstName  {
+    width: 180px
+  }
+  .leadDetails .lastName  {
+    width: 180px
+  }
+  .leadDetails .addressFld {
+    width: 375px;
+  }
+  .leadDetails .cityFld {
+    width: 114px;
+  }
 }

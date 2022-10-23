@@ -64,9 +64,43 @@
 }
 
 .all-blogs .each-blog button {
-  color: white;
+  color: #fff;
   background-color: #208854;
   border: none;
   padding: 0.3rem;
   border-radius: 0.2rem;
+}
+
+/* Responsive */
+@media only screen and (max-width: 390px) {
+  .heading-blog {
+    position: relative;
+    top: -9px;
+  }
+  .main-blog h1 {
+    position: relative;
+    top: -20px;
+  }
+
+  .main-blog p {
+    position: relative;
+    top: 280px;
+    left: 7px;
+  }
+
+  .main-blog img {
+    position: relative;
+    top: -450px;
+    z-index: +1;
+  }
+
+  .main-blog {
+    width: auto;
+    flex-wrap: wrap;
+  }
+
+  .blog {
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
 }

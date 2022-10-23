@@ -4,15 +4,15 @@ function PromoCode() {
   return (
     <div>
       <div>
-        <input type="text" placeholder="Promocode" />
-        <button className="apply">Apply</button>
+        <input type="text" placeholder="LUCKYUSER" />
+        <button className="apply">Applied</button>
       </div>
       <div>
-        <input type="radio" name="promo" id="first" />
+        <input type="radio" name="promo" id="first" checked />
         <label htmlFor="first">LUCKYUSER</label>
       </div>
       <div>
-        <input type="radio" name="promo" id="first" />
+        <input type="radio" name="promo" id="first" disabled/>
         <label htmlFor="first">FIRST50</label>
       </div>
     </div>

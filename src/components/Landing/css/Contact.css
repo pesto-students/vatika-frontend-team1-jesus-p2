@@ -31,7 +31,7 @@
 }
 
 .contactUs .right-part h2 {
-  color: white;
+  color: #fff;
   margin-bottom: 1rem;
   font-weight: 600;
 }
@@ -65,7 +65,7 @@
   border-radius: 0.2rem;
   width: 100%;
   height: 2rem;
-  color: white;
+  color: #fff;
   margin-top: 5%;
   cursor: pointer;
   border: 0.1rem solid #208854;
@@ -75,4 +75,36 @@
 .contactUs .right-part button:hover {
   background-color: #17663f;
   border: 0.1rem solid #208854;
+}
+
+/* Responsive */
+@media only screen and (max-width: 390px) {
+  .contactUs {
+    background-image: none;
+    position: relative;
+    left: -3px;
+    height: 700px;
+    flex-wrap: wrap;
+  }
+
+  .left-part {
+    position: relative;
+    padding-bottom: -20px;
+  }
+
+  .contactUs span {
+    position: relative;
+    top: -120px;
+  }
+
+  .contactUs h1 {
+    position: relative;
+  }
+
+  .contactUs .right-part {
+    flex-wrap: wrap;
+    position: relative;
+    left: -30px;
+    top: -135px;
+  }
 }

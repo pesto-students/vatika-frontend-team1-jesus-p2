@@ -44,7 +44,7 @@
   font-family: "Rajdhani", sans-serif;
   font-weight: 400;
   text-decoration: none;
-  color: black;
+  color: #000;
   position: relative;
   transition: 0.5s;
 }
@@ -86,7 +86,7 @@
 
 .right .cart {
   margin-right: 1.5rem;
-  color: black;
+  color: #000;
 }
 
 .right .heart:hover {
@@ -99,7 +99,7 @@
 
 .right button {
   border: 2px solid #208854;
-  color: black;
+  color: #000;
   font-family: "Rajdhani", sans-serif;
   background-color: transparent;
   border-radius: 0.5rem;
@@ -119,7 +119,7 @@
 
 .right .login {
   background-color: #208854;
-  color: white;
+  color: #fff;
 }
 
 .right .signup {
@@ -134,7 +134,7 @@
 
 .right .signup:hover {
   background-color: gray;
-  color: white;
+  color: #fff;
 }
 
 .right .userIcon {
@@ -152,6 +152,63 @@
   right: -150px;
   position: absolute;
   top: -50px;
-  background-color: white;
+  background-color: #fff;
   border-radius: 1rem;
+}
+
+/* Responsive */
+@media only screen and (max-width: 390px) {
+  .navLinks {
+    position: relative;
+    top: 0px;
+    left: 0px;
+  }
+
+  .left p {
+    display: none;
+  }
+
+  .mid ul {
+    visibility: hidden;
+  }
+  .left img {
+    position: relative;
+    top: -97px;
+    left: -30px;
+    z-index: -1;
+    visibility: visible;
+  }
+
+  .logo {
+    position: fixed;
+    width: 200px;
+    height: 200px;
+  }
+
+  .HamIcon {
+    visibility: visible;
+    position: relative;
+    font-size: 25px;
+    left: -30px;
+    top: -102px;
+    cursor: pointer;
+  }
+
+  .right button {
+    display: none;
+  }
+
+  .right .heart {
+    position: relative;
+    font-size: 27px;
+    left: -20px;
+    top: -85px;
+  }
+
+  .right .cart {
+    position: relative;
+    font-size: 27px;
+    left: -70px;
+    top: -115px;
+  }
 }

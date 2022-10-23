@@ -100,7 +100,7 @@
 
 .cart .plants .item button {
   background-color: red;
-  color: white;
+  color: #fff;
   border: none;
   margin-top: 4rem;
   border-radius: 0.2rem;
@@ -144,7 +144,7 @@
 
 .cart .summary .apply {
   background-color: #767676;
-  color: white;
+  color: #fff;
   width: 4rem;
   height: 2rem;
   border: none;
@@ -166,7 +166,7 @@
 }
 
 .cart .summary .checkout {
-  color: white;
+  color: #fff;
   border: none;
   background-color: #208854;
   border-radius: 0.2rem;
@@ -179,7 +179,7 @@
 }
 
 .cart .summary .shopping {
-  color: white;
+  color: #fff;
   border: none;
   background-color: #767676;
   border-radius: 0.2rem;
@@ -188,4 +188,30 @@
   font-size: 1.2rem;
   width: 100%;
   cursor: pointer;
+}
+
+/* Responsive */
+@media only screen and (max-width: 390px) {
+  .cart .side-by-side {
+    flex-wrap: wrap;
+    position: relative;
+    top: -10px;
+    left: 10px;
+  }
+  .cart .plants .item {
+    flex-direction: column;
+  }
+  .cart .plants .item .quantity {
+    position: relative;
+    left: -27px;
+  }
+  .cart .plants .item .rate {
+    position: relative;
+    left: -170px;
+    top: 20px;
+  }
+  .cart .plants .item button {
+    position: relative;
+    top: -20px;
+  }
 }

@@ -41,7 +41,7 @@
 
 .product .main-filter button:hover {
   border: 0.1rem solid #17663f;
-  color: white;
+  color: #fff;
   background-color: #17663f;
 }
 
@@ -163,7 +163,7 @@
   letter-spacing: 0.1rem;
   font-size: 0.8rem;
   margin-bottom: 0.5rem;
-  color: white;
+  color: #fff;
   border: none;
   margin-left: 2rem;
   background-color: #208854;
@@ -177,4 +177,47 @@
 .product section .details .removeButton {
   margin-left: 1rem;
   background-color: #1890ff;
+}
+
+/* Responsive */
+@media only screen and (max-width: 390px) {
+  .main-filter {
+    display: none;
+  }
+  .bg-color {
+    width: 390px;
+  }
+  .product .heading-product {
+    position: relative;
+    top: -14px;
+  }
+  .product .right-section .search {
+    position: relative;
+    top: -40px;
+    left: 15px;
+  }
+  .product .search .dropDown {
+    position: absolute;
+    margin-top: 50px;
+    margin-right: 825px;
+    z-index: +1;
+  }
+  .product .search .filterMob {
+    position: absolute;
+    margin-top: 50px;
+    margin-right: 590px;
+    border: 0.1rem solid #208854;
+    border-radius: 0.2rem;
+    padding: 0.25rem;
+    color: #208854;
+    font-family: "Rajdhani";
+    letter-spacing: 0.1rem;
+    font-weight: 550;
+  }
+  .product section {
+    grid-template-columns: repeat(1, 1fr);
+    width: auto;
+    margin: 25%;
+    grid-gap: 1rem 1rem;
+  }
 }

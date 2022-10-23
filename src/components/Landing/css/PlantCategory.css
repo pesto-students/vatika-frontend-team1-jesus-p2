@@ -45,6 +45,16 @@
 }
 
 .plantCategory button:hover {
-  color: white;
+  color: #fff;
   background-color: #208854;
+}
+
+/* Responsive */
+@media only screen and (max-width: 390px) {
+  .plantCategory {
+    flex-wrap: wrap;
+  }
+  .plantCategory .allCategory {
+    margin-bottom: 25px;
+  }
 }

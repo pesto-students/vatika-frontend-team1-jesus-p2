@@ -27,3 +27,25 @@
   font-family: "Rajdhani", sans-serif;
   font-size: 1rem;
 }
+
+/* Responsive */
+@media only screen and (max-width: 390px) {
+  .information {
+    width: 389px;
+  }
+
+  .meetPlant h1 {
+    position: relative;
+    left: -20px;
+  }
+  .information h3 {
+    position: relative;
+    left: -20px;
+    width: 330px;
+  }
+  .information p {
+    position: relative;
+    left: -20px;
+    width: 330px;
+  }
+}
