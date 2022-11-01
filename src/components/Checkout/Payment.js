@@ -38,15 +38,18 @@ function Payment({ coin }) {
         } catch (error) {
           console.log(error);
         }
+        console.log("hello world");
+        window.location.href = '/confirmation'
       },
       theme: {
         color: "green",
       },
       redirect: true,
-      callback_url: process.env.REACT_APP_CONFIRMATION,
+      // callback_url: process.env.REACT_APP_CONFIRMATION,
     };
     const rzp1 = new window.Razorpay(options);
     rzp1.open();
+    console.log("Hello Payment method!");
   };
 
   const handleAddressAndPayment = () => {

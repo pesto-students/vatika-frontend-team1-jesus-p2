@@ -156,6 +156,10 @@
   border-radius: 1rem;
 }
 
+.HamIcon{
+  display: none;
+}
+
 /* Responsive */
 @media only screen and (max-width: 390px) {
   .navLinks {

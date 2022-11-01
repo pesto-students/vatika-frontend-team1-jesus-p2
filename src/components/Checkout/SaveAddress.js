@@ -18,7 +18,7 @@ function SaveAddress({ onAddressSaveAPI, allAddress, form }) {
       <Form
         autoComplete="off"
         onFinish={(values) => {
-          if (allAddress.length === 3) {
+          if (allAddress.length === 1) {
             moreThenThreeAddress();
           } else {
             onAddressSaveAPI(values);

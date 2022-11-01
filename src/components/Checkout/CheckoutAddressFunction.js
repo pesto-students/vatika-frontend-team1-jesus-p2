@@ -1,7 +1,7 @@
 import { notification } from "antd";
 
 export const addedAddress = (statusCode, form) => {
-  if (statusCode === 200) {
+  if (statusCode === 201) {
     notification.error({
       message: "Address Already Saved",
       placement: "bottom",
