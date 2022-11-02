@@ -1,0 +1,37 @@
+@import url("https://fonts.googleapis.com/css2?family=Bad+Script&family=Patrick+Hand+SC&family=Rajdhani:wght@300;400;600&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 62.5%;
+}
+
+.main {
+  background-image: url("https://res.cloudinary.com/ds4gbbc6g/image/upload/v1665863257/Vatika/React%20FrontEnd/Landing_Page_iuvtzj.jpg");
+  height: 90vh;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: 30% 50%;
+  position: relative;
+}
+
+/* Nav BG Color */
+.bg-color {
+  background-image: url("https://res.cloudinary.com/ds4gbbc6g/image/upload/v1665863258/Vatika/React%20FrontEnd/nav-image_k24akt.jpg");
+  height: 5.8rem;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  z-index: 1;
+}
+
+/* Back Button */
+.back button {
+  margin-top: 2%;
+  margin-left: 2%;
+  border: none;
+  font-size: 1.2rem;
+  font-weight: 400;
+  background-color: transparent;
+  color: black;
+  cursor: pointer;
+}

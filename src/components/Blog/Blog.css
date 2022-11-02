@@ -1,0 +1,106 @@
+/* Blog */
+.blog {
+  font-family: "Rajdhani", sans-serif;
+  font-size: 1.3rem;
+  color: gray;
+}
+
+.heading-blog {
+  background-image: url("https://res.cloudinary.com/ds4gbbc6g/image/upload/v1665863260/Vatika/React%20FrontEnd/Heading_Blog_d3ixdv.png");
+  height: 6rem;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: 40% 30%;
+}
+
+.main-blog {
+  display: flex;
+  justify-content: center;
+}
+
+.main-blog p {
+  margin-top: 1%;
+  margin-right: 1rem;
+  padding: 1rem;
+  padding-top: 2.5rem;
+  width: 40rem;
+  background-color: rgb(228, 228, 228);
+  border-radius: 1rem;
+  box-shadow: 0px 2px 10px 2px rgba(0, 0, 0, 0.2);
+}
+
+.main-blog img {
+  height: 20rem;
+  width: 20rem;
+}
+
+.all-blogs {
+  display: flex;
+  justify-content: space-around;
+  margin: 2%;
+  padding-bottom: 5%;
+  flex-wrap: wrap;
+  row-gap: 2rem;
+  margin-left: 5rem;
+  margin-right: 5rem;
+}
+
+.all-blogs .each-blog {
+  width: 18rem;
+  text-align: center;
+  padding: 1%;
+  background-color: rgb(204, 204, 204);
+  border-radius: 0.5rem;
+  box-shadow: 0px 2px 10px 2px rgba(0, 0, 0, 0.2);
+}
+
+.all-blogs .each-blog img {
+  width: 14rem;
+}
+
+.all-blogs .each-blog h3 {
+  margin-top: 2%;
+  font-weight: 600;
+}
+
+.all-blogs .each-blog button {
+  color: #fff;
+  background-color: #208854;
+  border: none;
+  padding: 0.3rem;
+  border-radius: 0.2rem;
+}
+
+/* Responsive */
+@media only screen and (max-width: 390px) {
+  .heading-blog {
+    position: relative;
+    top: -9px;
+  }
+  .main-blog h1 {
+    position: relative;
+    top: -20px;
+  }
+
+  .main-blog p {
+    position: relative;
+    top: 280px;
+    left: 7px;
+  }
+
+  .main-blog img {
+    position: relative;
+    top: -450px;
+    z-index: +1;
+  }
+
+  .main-blog {
+    width: auto;
+    flex-wrap: wrap;
+  }
+
+  .blog {
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+}

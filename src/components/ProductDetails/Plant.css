@@ -1,0 +1,179 @@
+/* Plant */
+.plant {
+  font-family: "Rajdhani", sans-serif;
+  letter-spacing: 0.1rem;
+}
+
+.plant .collection {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.plant .bigImage {
+  margin: 2%;
+  margin-left: 8%;
+}
+.plant .bigImage img {
+  height: 25rem;
+  width: 25rem;
+  box-shadow: 0px 2px 10px 2px rgba(0, 0, 0, 0.2);
+}
+
+.plant .plant-details {
+  margin: 5%;
+  margin-left: 2%;
+  line-height: 1.8rem;
+  width: 30rem;
+}
+
+.plant .plant-details h1 {
+  font-weight: 600;
+  font-size: 2rem;
+}
+
+.plant .plant-details .rating {
+  margin-bottom: 1rem;
+}
+
+.plant .plant-details h2 {
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+.plant .plant-details del {
+  font-weight: 400;
+  font-size: 1.1rem;
+  margin-left: 1rem;
+  color: #767676;
+}
+
+.plant .plant-details p {
+  font-weight: 600;
+  color: #208854;
+  font-size: 1rem;
+}
+
+.plant .plant-details h3 {
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.plant .plant-details .quantity {
+  display: flex;
+}
+
+.plant .plant-details .quantity h2 {
+  margin: 0 1rem;
+}
+
+.plant .plant-details .quant-icon {
+  font-size: 1rem;
+  margin-top: 0.3rem;
+  cursor: pointer;
+}
+
+.plant .plant-details .b {
+  padding: 0.6rem 3rem;
+  font-size: 1.2rem;
+  margin-top: 4%;
+  margin-bottom: 4%;
+  border: 0.1rem solid black;
+  border-radius: 0.2rem;
+  cursor: pointer;
+  transition: 0.5s;
+  margin-right: 1%;
+}
+
+.plant .plant-details .butOne {
+  border: 0.1rem solid #208854;
+  background-color: transparent;
+  color: #208854;
+}
+
+.plant .plant-details .butROne {
+  background-color: rgb(252, 49, 49);
+  border: 0.1rem solid #fff;
+  color: #fff;
+  border: 0.1rem solid rgb(250, 19, 19);
+}
+
+.plant .plant-details .butROne:hover {
+  background-color: rgb(250, 19, 19);
+  border: 0.1rem solid white;
+  color: #fff;
+  border: 0.1rem solid rgb(250, 19, 19);
+}
+
+.plant .plant-details .butOne:hover {
+  background-color: gray;
+  color: #fff;
+}
+
+.plant .plant-details .butTwo {
+  border: none;
+  border: 0.1rem solid #208854;
+  background-color: #208854;
+  color: #fff;
+}
+.plant .plant-details .butTwo:hover {
+  background-color: gray;
+  color: #fff;
+}
+
+.plant .plant-details .delivery h2 {
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+.plant .plant-details .delivery input {
+  background-color: transparent;
+  width: 12rem;
+  border-radius: 0.2rem;
+  padding: 0.1rem;
+  border: 0.1rem solid black;
+}
+
+.plant .plant-details .delivery button {
+  border: none;
+  background-color: #208854;
+  color: #fff;
+  height: 2.2rem;
+  width: 4rem;
+  margin-left: 0.1rem;
+  border-radius: 0.2rem;
+}
+
+.plant .about {
+  text-align: center;
+  width: 70%;
+  margin: auto;
+  margin-top: 3%;
+  margin-bottom: 5%;
+}
+
+.plant .about h1 {
+  font-weight: 600;
+}
+
+.plant .about p {
+  font-size: 1rem;
+}
+
+.plant .about img {
+  margin-top: 2%;
+  margin-bottom: 1%;
+  height: 2rem;
+  width: 2rem;
+}
+
+.plant .about h3 {
+  font-weight: 600;
+}
+
+/* Responsive */
+@media only screen and (max-width: 390px) {
+  .plant .collection {
+    flex-wrap: wrap;
+  }
+}

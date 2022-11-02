@@ -1,0 +1,107 @@
+/* AboutUs */
+.heading-aboutus {
+  width: 100%;
+  background-image: url("https://res.cloudinary.com/ds4gbbc6g/image/upload/v1665863259/Vatika/React%20FrontEnd/Heading_AboutUs_iedkvw.png");
+  height: 6rem;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: 40% 30%;
+}
+
+.aboutUs {
+  font-family: "Rajdhani";
+  font-size: 1.3rem;
+  color: gray;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.part-one {
+  padding: 2rem;
+  flex: 60%;
+  padding-top: 6rem;
+  align-items: center;
+  margin-left: 2rem;
+}
+
+.part-one-img {
+  flex: 30%;
+  padding: 1rem;
+  height: 25rem;
+  width: 20rem;
+  margin-right: 2rem;
+}
+
+.part-two-img {
+  height: 20rem;
+  width: 30rem;
+  margin-left: 10rem;
+}
+
+.part-two {
+  padding: 1rem;
+  padding-top: 2rem;
+  background: #b7d9bd;
+  border-radius: 1rem;
+  margin: 2rem;
+  height: 15rem;
+  width: 30rem;
+}
+
+.part-two h3 {
+  font-weight: 600;
+  font-size: 2rem;
+  color: #385a36;
+}
+
+.part-two p {
+  font-size: 1.3rem;
+  color: #000;
+}
+
+.part-three {
+  margin-left: 2rem;
+
+  padding: 2rem;
+  flex: 60%;
+}
+
+.part-three-img {
+  height: 20rem;
+  width: 20rem;
+  margin-bottom: 2rem;
+  margin-right: 4rem;
+}
+
+/* Responsive */
+@media only screen and (max-width: 390px) {
+  .heading-aboutus {
+    position: relative;
+    top: -9px;
+  }
+  .part-one {
+    position: relative;
+    top: -100px;
+  }
+  .part-one-img {
+    position: relative;
+    top: -120px;
+  }
+  .part-two-img {
+    position: relative;
+    left: -150px;
+    width: 370px;
+  }
+  .part-two {
+    height: auto;
+  }
+  .part-three {
+    position: relative;
+    top: -30px;
+  }
+  .part-three-img {
+    position: relative;
+    left: 25px;
+    top: -30px;
+  }
+}
