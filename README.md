@@ -17,7 +17,7 @@ Vatika is a company helping city dwellers who are looking to keep plants but do 
 
 ## Demo
 
-[SharedSpace Demo](https://vatika.netlify.app/)
+[Vatika Demo](https://vatika.netlify.app/)
 
 Please Note:
 
@@ -52,6 +52,8 @@ We have used MERN stack to develop the Application.
 - [React JS](https://reactjs.org/)
 - [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
 - [Javascript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+- [AntD](https://ant.design/)
+
 
 ## Authors
 
