@@ -23,7 +23,7 @@ Please Note:
 
 1. We recommend using this app in any browser other than Microsoft Edge
 
-**Test Credentials for SharedSpace Users:**
+**Test Credentials for Vatika Users:**
 | Role | Email / Username | Password |
 | ---- | ------------------------ | ----------- |
 | Guest | `review@pestoproject.com` | `1111111` |
