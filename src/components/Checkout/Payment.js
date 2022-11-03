@@ -45,7 +45,7 @@ function Payment({ coin }) {
         color: "green",
       },
       redirect: true,
-      // callback_url: process.env.REACT_APP_CONFIRMATION,
+      callback_url: process.env.REACT_APP_CONFIRMATION,
     };
     const rzp1 = new window.Razorpay(options);
     rzp1.open();

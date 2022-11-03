@@ -12,7 +12,7 @@ export const passwordRules = [
     type: "password",
   },
   {
-    min: 9,
-    message: "Password must be at least 8 characters long",
+    min: 6,
+    message: "Password must be at least 6 characters long",
   },
 ];
