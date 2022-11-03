@@ -2,10 +2,10 @@
 
 ![Vatika Logo](https://res.cloudinary.com/ds4gbbc6g/image/upload/v1665863257/Vatika/React%20FrontEnd/logo_lcxupl.png)
 
-Vatika is a company helping city dwellers who are looking to keep plants but do not have access to a nursery and also don’t know how to create and maintain a garden in a limited space. 
+Vatika is a company helping city dwellers who are looking to keep plants but do not have access to a nursery and also don’t know how to create and maintain a garden in a limited space.
 
--It's easy enough to buy plants but keeping healthy is another thing altogether. 
--Vatika uses a website chat service and its own social media sites to help   customers pick the right pots and plants and give them all the knowledge and information they need to get a garden going.
+It's easy enough to buy plants but keeping healthy is another thing altogether.
+Vatika uses a website chat service and its own social media sites to help customers pick the right pots and plants and give them all the knowledge and information they need to get a garden going.
 
 # Table of Contents
 
@@ -27,7 +27,6 @@ Please Note:
 | Role | Email / Username | Password |
 | ---- | ------------------------ | ----------- |
 | Guest | `review@pestoproject.com` | `1111111` |
-
 
 ## Installation
 
@@ -54,12 +53,10 @@ We have used MERN stack to develop the Application.
 - [Javascript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 - [AntD](https://ant.design/)
 
-
 ## Authors
 
 - [Kavish Garg](https://github.com/Kavish15)
 - [Mihir Soni](https://github.com/mihirsoni15)
-
 
 ## License
 
