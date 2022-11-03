@@ -8,7 +8,7 @@ function PromoCode() {
         <button className="apply">Applied</button>
       </div>
       <div>
-        <input type="radio" name="promo" id="first" checked />
+        <input type="radio" name="promo" id="first" disabled />
         <label htmlFor="first">LUCKYUSER</label>
       </div>
       <div>
