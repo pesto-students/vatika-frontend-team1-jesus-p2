@@ -1,10 +1,11 @@
 import React, { useState } from "react";
-import { HeartOutlined } from "@ant-design/icons";
+import { HeartOutlined, LoadingOutlined } from "@ant-design/icons";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { addToCart, removeFromCart } from "../../redux/actions/productActions";
 import { transformProduct, added, removed } from "./CardFunctions";
 import Pagination from "./Pagination";
+import { Spin } from "antd";
 
 function Card() {
   const { cart } = useSelector((state) => state.cart);
@@ -19,6 +20,18 @@ function Card() {
   const firstPostIndex = lastPostIndex - postPerPage;
 
   const filterProduct = transformProduct(filter, products);
+
+  const antIcon = (
+    <LoadingOutlined
+      style={{
+        fontSize: 40,
+        color: "#208854",
+        marginLeft: "500px",
+        marginTop: "200px",
+      }}
+      spin
+    />
+  );
 
   const renderProducts = filterProduct
     .slice(firstPostIndex, lastPostIndex)
@@ -35,7 +48,7 @@ function Card() {
             <h3>{product.name}</h3>
             <p>
               Rs {product.price}
-              <del>Rs {product.price+20}</del>
+              <del>Rs {product.price + 20}</del>
               {cart.some((p) => p.name === product.name) ? (
                 <button
                   className="removeButton"
@@ -64,13 +77,19 @@ function Card() {
 
   return (
     <>
-      <section>{renderProducts}</section>
-      <Pagination
-        totalPosts={filterProduct.length}
-        postPerPage={postPerPage}
-        setCurrentPage={setCurrentPage}
-        currentPage={currentPage}
-      />
+      {products.length > 0 ? (
+        <>
+          <section>{renderProducts}</section>
+          <Pagination
+            totalPosts={filterProduct.length}
+            postPerPage={postPerPage}
+            setCurrentPage={setCurrentPage}
+            currentPage={currentPage}
+          />
+        </>
+      ) : (
+        <Spin className="spin" indicator={antIcon} />
+      )}
     </>
   );
 }

@@ -15,8 +15,6 @@ function NavbarEndSection({ menu }) {
   const { cart } = useSelector((state) => state.cart);
   const login = useSelector((state) => state.login);
 
-  console.log(login.isLogin);
-
   return (
     <div>
       <div className="right">

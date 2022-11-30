@@ -32,7 +32,9 @@ function CartTotal({ cart, total }) {
       ) : (
         <>
           <Link to="/payment">
-            <button className="checkout">Process to Checkout</button>
+            <button className="checkout" onClick={() => alert("Please Login")}>
+              Process to Checkout
+            </button>
           </Link>
           <Link to="/product">
             <button className="shopping">Continue Shopping</button>

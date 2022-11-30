@@ -1,4 +1,3 @@
-
 # Vatika | FrontEnd
 
 ![Vatika Logo](https://res.cloudinary.com/ds4gbbc6g/image/upload/v1665863257/Vatika/React%20FrontEnd/logo_lcxupl.png)
@@ -23,11 +22,12 @@ Vatika uses a website chat service and its own social media sites to help custom
 Please Note:
 
 1. We recommend using this app in any browser other than Microsoft Edge
+2. Use the app on Laptop/desktop only as of now.
 
 **Test Credentials for Vatika Users:**
-| Role | Email / Username | Password |
+| Role | Email | Password |
 | ---- | ------------------------ | ----------- |
-| Guest | `review@pestoproject.com` | `1111111` |
+| Guest | `dummy@credentials.com` | `1111111` |
 
 ## Installation
 
@@ -45,17 +45,12 @@ npm install
  npm start
 ```
 
-- Run the below command to Run All TestCases
-
-```bash
- npm test
-```
-
 ## Technology Stack
 
 We have used MERN stack to develop the Application.
 
 - [React JS](https://reactjs.org/)
+- [Redux](https://react-redux.js.org/introduction/getting-started)
 - [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
 - [Javascript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 - [AntD](https://ant.design/)
@@ -64,12 +59,6 @@ We have used MERN stack to develop the Application.
 
 - [Kavish Garg](https://github.com/Kavish15)
 - [Mihir Soni](https://github.com/mihirsoni15)
-
-## Web Screen Shoots
-
-![Landing Page](https://res.cloudinary.com/ds4gbbc6g/image/upload/v1667506837/Vatika/React%20FrontEnd/Landing_Page_brbudd.png)
-
-![Product Page](https://res.cloudinary.com/ds4gbbc6g/image/upload/v1667506837/Vatika/React%20FrontEnd/Product_Page_njejpd.png)
 
 ## License
 

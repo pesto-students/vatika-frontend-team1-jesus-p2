@@ -8,7 +8,7 @@ function Loading() {
     <LoadingOutlined
       style={{
         fontSize: 40,
-        color: "green",
+        color: "#208854",
       }}
       spin
     />
