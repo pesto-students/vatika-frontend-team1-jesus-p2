@@ -1,0 +1,131 @@
+/* Why Us */
+.whyUs {
+  background-color: #eff0ef;
+}
+
+.whyUs main {
+  padding: 1rem 10rem;
+  display: grid;
+  grid-template-areas:
+    "oneG threeG fourG"
+    "twoG threeG fiveG";
+}
+
+.whyUs main div {
+  font-family: "Rajdhani", sans-serif;
+  text-align: center;
+  width: 14rem;
+}
+
+.whyUs .circle {
+  height: 7rem;
+  width: 7rem;
+}
+
+.whyUs main div h3 {
+  font-weight: 600;
+  color: #208854;
+  font-size: 1.2rem;
+}
+
+.whyUs main div p {
+  font-size: 1rem;
+}
+
+.whyUs .one {
+  grid-area: oneG;
+  justify-self: center;
+}
+.whyUs .two {
+  grid-area: twoG;
+  justify-self: center;
+}
+.whyUs .three {
+  grid-area: threeG;
+  align-self: center;
+}
+.whyUs .three {
+  grid-area: threeG;
+}
+
+.whyUs .three img {
+  height: 17rem;
+  width: 17rem;
+}
+
+.whyUs .four {
+  grid-area: fourG;
+  justify-self: center;
+}
+.whyUs .five {
+  grid-area: fiveG;
+  justify-self: center;
+}
+
+.whyUs .one img {
+  transition: 0.5s;
+}
+
+.whyUs .one img:hover {
+  scale: 107%;
+}
+
+.whyUs .two img {
+  transition: 0.5s;
+}
+
+.whyUs .two img:hover {
+  scale: 107%;
+}
+
+.whyUs .four img {
+  transition: 0.5s;
+}
+
+.whyUs .four img:hover {
+  scale: 107%;
+}
+
+.whyUs .five img {
+  transition: 0.5s;
+}
+
+.whyUs .five img:hover {
+  scale: 107%;
+}
+
+/* Responsive */
+@media only screen and (max-width: 390px) {
+  .whyUs {
+    position: relative;
+    left: -165px;
+    width: 390px;
+    background-color: #fff;
+  }
+
+  .whyUs h1 {
+    position: relative;
+    left: 150px;
+  }
+
+  .three {
+    display: none;
+  }
+
+  .whyUs p {
+    font-size: small;
+    width: 140px;
+    position: relative;
+    left: 12px;
+  }
+
+  .whyUs h3 {
+    position: relative;
+    left: -30px;
+  }
+
+  .whyUs img {
+    position: relative;
+    left: -25px;
+  }
+}

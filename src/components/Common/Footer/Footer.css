@@ -1,0 +1,95 @@
+/* Footer */
+footer {
+  font-family: "Rajdhani", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #fff;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  padding: 3rem;
+  background-image: url("https://res.cloudinary.com/ds4gbbc6g/image/upload/v1665863259/Vatika/React%20FrontEnd/footer_cwdnfw.jpg");
+  height: 50vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  letter-spacing: 0.1rem;
+}
+
+footer .section-3 {
+  border: 0.01rem solid #fff;
+  height: 12rem;
+  margin-top: 1rem;
+}
+
+footer .section-4 h1 {
+  color: #fff;
+  margin-top: 1.5rem;
+  padding-left: 3rem;
+}
+
+footer .section-4 img {
+  height: 3rem;
+  width: 3rem;
+  margin: 0.8rem;
+  transition: transform 0.3s;
+}
+
+footer .section-4 img:hover {
+  transform: scale(1.1);
+}
+
+.copy-right {
+  font-family: "Rajdhani", sans-serif;
+  text-align: center;
+  letter-spacing: 0.1rem;
+  background-color: #eff0ef;
+  padding: 0.3rem;
+}
+
+.copy-right h4 {
+  margin: 0;
+}
+
+/* Responsive */
+@media only screen and (max-width: 390px) {
+  footer {
+    width: 390px;
+  }
+
+  .section-1 {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    left: -10px;
+  }
+
+  .section-2 {
+    position: relative;
+    left: 10px;
+  }
+
+  .section-3 {
+    position: relative;
+    left: 38px;
+  }
+  .section-4 {
+    position: relative;
+    left: 15px;
+    font-size: large;
+  }
+
+  .section-4 h1 {
+    align-items: center;
+    justify-content: center;
+  }
+
+  .section-4 img {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    left: 55px;
+  }
+  .bg-color {
+    height: 100px;
+  }
+}

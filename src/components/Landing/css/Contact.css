@@ -1,0 +1,110 @@
+/* Contact Us */
+.contactUs {
+  font-family: "Rajdhani", sans-serif;
+  display: flex;
+  background-image: url("https://res.cloudinary.com/ds4gbbc6g/image/upload/v1665863254/Vatika/React%20FrontEnd/Contact_vsxswm.png");
+  height: 70vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  letter-spacing: 0.1rem;
+}
+
+.contactUs .left-part {
+  margin-top: 8rem;
+  margin-left: 1rem;
+}
+
+.contactUs .left-part .address {
+  margin-top: 1rem;
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+.contactUs .right-part {
+  border-radius: 1rem;
+  background-color: rgb(149, 149, 149);
+  padding: 1rem;
+  height: 19rem;
+  width: 15rem;
+  margin-top: 4rem;
+  margin-left: 6rem;
+}
+
+.contactUs .right-part h2 {
+  color: #fff;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.contactUs .right-part input {
+  margin-bottom: 1rem;
+  border-radius: 0.3rem;
+  color: black;
+  border: none;
+  width: 100%;
+  height: 2rem;
+}
+
+.contactUs .right-part input::placeholder {
+  font-family: "Rajdhani", sans-serif;
+  color: black;
+  padding-left: 0.3rem;
+}
+
+.contactUs .right-part textarea {
+  border-radius: 0.3rem;
+}
+
+.contactUs .right-part textarea::placeholder {
+  color: black;
+}
+
+.contactUs .right-part button {
+  background-color: #208854;
+  border: none;
+  border-radius: 0.2rem;
+  width: 100%;
+  height: 2rem;
+  color: #fff;
+  margin-top: 5%;
+  cursor: pointer;
+  border: 0.1rem solid #208854;
+  transition: 0.5s;
+}
+
+.contactUs .right-part button:hover {
+  background-color: #17663f;
+  border: 0.1rem solid #208854;
+}
+
+/* Responsive */
+@media only screen and (max-width: 390px) {
+  .contactUs {
+    background-image: none;
+    position: relative;
+    left: -3px;
+    height: 700px;
+    flex-wrap: wrap;
+  }
+
+  .left-part {
+    position: relative;
+    padding-bottom: -20px;
+  }
+
+  .contactUs span {
+    position: relative;
+    top: -120px;
+  }
+
+  .contactUs h1 {
+    position: relative;
+  }
+
+  .contactUs .right-part {
+    flex-wrap: wrap;
+    position: relative;
+    left: -30px;
+    top: -135px;
+  }
+}

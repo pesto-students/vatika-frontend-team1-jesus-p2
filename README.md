@@ -1,21 +1,65 @@
-# Pesto Assignments
+# Vatika | FrontEnd
 
-Welcome to Pesto assignments.
+![Vatika Logo](https://res.cloudinary.com/ds4gbbc6g/image/upload/v1665863257/Vatika/React%20FrontEnd/logo_lcxupl.png)
 
+Vatika is a company helping city dwellers who are looking to keep plants but do not have access to a nursery and also don’t know how to create and maintain a garden in a limited space.
 
-## How to solve assignments
+It's easy enough to buy plants but keeping healthy is another thing altogether.
+Vatika uses a website chat service and its own social media sites to help customers pick the right pots and plants and give them all the knowledge and information they need to get a garden going.
 
-Weekly Assignments will be shared by your mentor or instructor.
+# Table of Contents
 
-Make sure master or main branch is protected and you are not able to push any code directly to master.
+1. [Demo](#demo)
+2. [Installation](#installation)
+3. [Technology Stack](#technology-stack)
+4. [Authors](#authors)
+5. [License](#license)
 
-- Clone this repo to your local.
-- Checkout to new branch for submission. Suggestion you can name new branch week wise - branch for week 1 assignment can be week1
+## Demo
+
+[Vatika Demo](https://vatika.netlify.app/)
+
+Please Note:
+
+1. We recommend using this app in any browser other than Microsoft Edge
+2. Use the app on Laptop/desktop only as of now.
+
+**Test Credentials for Vatika Users:**
+| Role | Email | Password |
+| ---- | ------------------------ | ----------- |
+| Guest | `dummy@credentials.com` | `1111111` |
+
+## Installation
+
+- Fork or directly clone this repository to your local machine
+
+- Run the below command to install the packages in package.json
+
 ```bash
-git checkout -b week1
+npm install
 ```
-- Create Assignment week folder in root directory(if it doesn't exist) for eg. for solving week 1 assignment create folder with name "week1".
-- You can create subfolders in main week(week1) folder if required.
-- Add proper readme [(How to Write proper readme](https://meakaakka.medium.com/a-beginners-guide-to-writing-a-kickass-readme-7ac01da88ab3) )in week's folder or subfolder explaining about assignment, how to run assignment and any other instructions. 
-- Raise a PR against master and add your mentor as reviewer
-- Resolve PR comments if any and once your mentor approves your PR, Merge it.
+
+- Run the below command to start the app
+
+```bash
+ npm start
+```
+
+## Technology Stack
+
+We have used MERN stack to develop the Application.
+
+- [React JS](https://reactjs.org/)
+- [Redux](https://react-redux.js.org/introduction/getting-started)
+- [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
+- [Javascript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+- [AntD](https://ant.design/)
+
+## Authors
+
+- [Kavish Garg](https://github.com/Kavish15)
+- [Mihir Soni](https://github.com/mihirsoni15)
+
+## License
+
+[MIT](https://opensource.org/licenses/MIT)
