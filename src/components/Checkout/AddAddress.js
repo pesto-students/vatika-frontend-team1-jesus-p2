@@ -41,7 +41,7 @@ function AddAddress({ deleteOneAddressAPI, allAddress }) {
                 {add.firstName} {add.lastName}
               </h2>
               <p>
-                {add.address} {add.apartmentNo} {add.city} {add.state}
+                {add.address} {add.apartmentNo} {add.city} {add.state}{" "}
                 {add.pincode}
               </p>
               <button

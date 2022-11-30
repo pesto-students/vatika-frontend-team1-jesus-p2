@@ -38,7 +38,7 @@ function Product() {
                 background: "transparent",
                 border: "0.1rem solid #208854",
                 borderRadius: "0.25rem",
-                cursor:"pointer"
+                cursor: "pointer",
               }}
               onClick={() => {
                 dispatch(sortByPrice("lowToHigh"));
@@ -57,7 +57,7 @@ function Product() {
                 background: "transparent",
                 border: "0.1rem solid #208854",
                 borderRadius: "0.25rem",
-                cursor:"pointer"
+                cursor: "pointer",
               }}
               onClick={() => {
                 dispatch(sortByPrice("highToLow"));
