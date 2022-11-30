@@ -8,7 +8,7 @@
   height: 7rem;
   background-repeat: no-repeat;
   background-size: 100%;
-  background-position: 40% 30%;
+  background-position: 50% 40%;
 }
 
 .product .main-filter {
@@ -69,27 +69,33 @@
 }
 
 .product .right-section .search {
-  position: relative;
+  /* position: relative; */
 }
 
 .product .right-section .search .ant-space {
-  position: absolute;
-  top: 0;
-  right: 0;
+  /* position: absolute; */
+  /* top: 0; */
+  /* right: 0; */
 }
 
 .product .search .ant-input-affix-wrapper {
   border: 0.1rem solid #208854;
   width: 20rem;
+  margin-left: 1rem;
   border-radius: 0.5rem;
-  margin-left: 5%;
 }
 
 .product .search .dropDown {
+  position: absolute;
+  right: 1rem;
   border: 0.1rem solid #208854;
   border-radius: 0.2rem;
   padding: 0.25rem;
   color: #208854;
+}
+
+.product .search .dropDown button{
+color: #208854;
 }
 
 .product section {

@@ -33,6 +33,13 @@ function Product() {
         {
           label: (
             <button
+              style={{
+                color: "#208854",
+                background: "transparent",
+                border: "0.1rem solid #208854",
+                borderRadius: "0.25rem",
+                cursor:"pointer"
+              }}
               onClick={() => {
                 dispatch(sortByPrice("lowToHigh"));
               }}
@@ -45,6 +52,13 @@ function Product() {
         {
           label: (
             <button
+              style={{
+                color: "#208854",
+                background: "transparent",
+                border: "0.1rem solid #208854",
+                borderRadius: "0.25rem",
+                cursor:"pointer"
+              }}
               onClick={() => {
                 dispatch(sortByPrice("highToLow"));
               }}
