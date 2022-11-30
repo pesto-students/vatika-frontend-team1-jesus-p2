@@ -7,10 +7,10 @@
 
 .heading-blog {
   background-image: url("https://res.cloudinary.com/ds4gbbc6g/image/upload/v1665863260/Vatika/React%20FrontEnd/Heading_Blog_d3ixdv.png");
-  height: 6rem;
+  height: 7rem;
   background-repeat: no-repeat;
   background-size: 100%;
-  background-position: 40% 30%;
+  background-position: 50% 40%;
 }
 
 .main-blog {
@@ -19,19 +19,22 @@
 }
 
 .main-blog p {
-  margin-top: 1%;
-  margin-right: 1rem;
+  margin-top: 4.5rem;
+  margin-right: -5rem;
   padding: 1rem;
-  padding-top: 2.5rem;
+  padding-top: 4rem;
   width: 40rem;
+  height: 20rem;
   background-color: rgb(228, 228, 228);
   border-radius: 1rem;
   box-shadow: 0px 2px 10px 2px rgba(0, 0, 0, 0.2);
+  z-index: 1;
 }
 
 .main-blog img {
-  height: 20rem;
-  width: 20rem;
+  height: 25rem;
+  width: 30rem;
+  margin-right: 2rem;
 }
 
 .all-blogs {
@@ -41,34 +44,42 @@
   padding-bottom: 5%;
   flex-wrap: wrap;
   row-gap: 2rem;
-  margin-left: 5rem;
-  margin-right: 5rem;
+  margin-left: 7rem;
+  margin-right: 7rem;
 }
 
 .all-blogs .each-blog {
   width: 18rem;
   text-align: center;
-  padding: 1%;
   background-color: rgb(204, 204, 204);
   border-radius: 0.5rem;
   box-shadow: 0px 2px 10px 2px rgba(0, 0, 0, 0.2);
 }
 
+.all-blogs .each-blog p {
+  font-size: 1.1rem;
+  padding: 1rem;
+}
+
 .all-blogs .each-blog img {
-  width: 14rem;
+  width: 18rem;
+  margin-bottom: 1rem;
 }
 
 .all-blogs .each-blog h3 {
   margin-top: 2%;
   font-weight: 600;
+  padding: 0.5rem;
 }
 
 .all-blogs .each-blog button {
   color: #fff;
   background-color: #208854;
   border: none;
-  padding: 0.3rem;
   border-radius: 0.2rem;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  font-size: 1rem;
 }
 
 /* Responsive */

@@ -21,8 +21,18 @@ function LoginForm({ handleSubmit, message, loading, setLoading }) {
         setLoading(true);
       }}
       autoComplete="off"
+      fields={[
+    {
+      name: ["fieldName"],
+      value:'review@pestoproject.com' ,
+    },
+    {
+      name: ["fieldPassword"],
+      value: '1111111',
+    },
+  ]}
     >
-      <Form.Item name="email" rules={emailRules} hasFeedback>
+      <Form.Item name="fieldName" rules={emailRules} hasFeedback>
         <Input
           prefix={<MailOutlined style={{ color: "#208854", fontSize: "18px" }} />}
           placeholder="Enter your email"
@@ -30,7 +40,7 @@ function LoginForm({ handleSubmit, message, loading, setLoading }) {
         />
       </Form.Item>
 
-      <Form.Item name="password" rules={passwordRules} hasFeedback>
+      <Form.Item name="fieldPassword" rules={passwordRules} hasFeedback>
         <Input.Password
           prefix={<LockOutlined style={{ color: "#208854", fontSize: "18px" }} />}
           placeholder="Enter your password"
